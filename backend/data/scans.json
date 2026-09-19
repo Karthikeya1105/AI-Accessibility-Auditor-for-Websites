@@ -12474,5 +12474,3213 @@
         "quickTip": "Always test aria & semantics elements using assistive tools and keyboard navigation."
       }
     ]
+  },
+  {
+    "id": "batch-1789809778608-tmap1",
+    "websiteId": "5movierulz.solutions",
+    "url": "https://www.5movierulz.solutions/",
+    "pageTitle": "Batch Audit: www.5movierulz.solutions",
+    "mode": "batch",
+    "timestamp": "2026-09-19T09:22:58.608Z",
+    "durationSeconds": 3.99,
+    "performanceImpact": {
+      "loadDurationSeconds": 3.99,
+      "speedBadge": "Moderate",
+      "disclaimer": "Note: Accessibility improvements support better mobile user experience and search engine discoverability. Measured accessibility scores represent WCAG 2.1 compliance and do not guarantee search engine ranking placement.",
+      "impactNotes": [
+        {
+          "title": "Mobile Form Completion Rate",
+          "category": "Mobile Usability",
+          "icon": "FormInput",
+          "benefit": "Explicitly associated labels increase touch target area on mobile screens, reducing form abandonment and input frustration."
+        },
+        {
+          "title": "Outdoor & High-Glare Mobile Readability",
+          "category": "Mobile Usability",
+          "icon": "Sun",
+          "benefit": "High contrast ratio ensures text remains legible under bright sunlight or low-end mobile LCD screens."
+        }
+      ]
+    },
+    "baseUrl": "https://www.5movierulz.solutions/",
+    "isBatch": true,
+    "score": 40,
+    "wcagLevel": "WCAG Non-Compliant (Critical Violations)",
+    "statusBadge": "danger",
+    "counts": {
+      "critical": 25,
+      "major": 0,
+      "minor": 0,
+      "total": 25
+    },
+    "categoryScores": {
+      "Images & Media": 100,
+      "Color & Contrast": 52,
+      "Forms & Controls": 88,
+      "Headings & Structure": 100,
+      "Links & Navigation": 100,
+      "ARIA & Semantics": 100
+    },
+    "issueFrequency": [
+      {
+        "ruleId": "color-contrast-low",
+        "category": "Color & Contrast",
+        "severity": "Critical",
+        "wcag": "WCAG 1.4.3 Contrast (Minimum) (Level AA - 4.5:1 required)",
+        "context": "Element uses low contrast inline style: \"font-size: 11px; color: #888; margin-top: 15px;\".",
+        "originalSnippet": "<p style=\"font-size: 11px; color: #888; margin-top: 15px;\">\n            <a href=\"/about\" style=\"color: #888;\">About</a> | \n            <a href=\"/contact\" style=\"color: #888;\">Contact</a> | \n            <a href=\"/privacy\" style=\"color: #888;\">Privacy Policy</a>\n        </p>",
+        "suggestedFixCode": "<p style=\"color: #111827; background-color: #ffffff;\">About | \n            Contact | \n            Privacy Policy</p>",
+        "explanation": "Low contrast text is difficult or impossible to read for users with low vision, color blindness, or age-related vision loss.",
+        "occurrences": 20,
+        "affectedPagesCount": 5,
+        "affectedPages": [
+          "MovieRulz | Latest Telugu, Tamil, Malayalam & Hindi Movies",
+          "Contact | MovieRulz",
+          "About Us | MovieRulz",
+          "Watch News Movies Online | MovieRulz",
+          "Featured Movies Watch Online Free | MovieRulz"
+        ]
+      },
+      {
+        "ruleId": "form-label-missing",
+        "category": "Forms & Controls",
+        "severity": "Critical",
+        "wcag": "WCAG 1.3.1 / 4.1.2 Name, Role, Value (Level A)",
+        "context": "Form element <input name=\"s\"> lacks a associated <label> or aria-label.",
+        "originalSnippet": "<input style=\"width:250px;height:20px\" type=\"text\" name=\"s\" id=\"search_term\" placeholder=\"Search...\" autocomplete=\"off\" required=\"\">",
+        "suggestedFixCode": "<label for=\"search_term\">Field Label</label>\n<input id=\"search_term\" type=\"text\" name=\"s\">",
+        "explanation": "Form controls without labels cannot be announced correctly by screen readers, making forms impossible to complete.",
+        "occurrences": 5,
+        "affectedPagesCount": 5,
+        "affectedPages": [
+          "MovieRulz | Latest Telugu, Tamil, Malayalam & Hindi Movies",
+          "Contact | MovieRulz",
+          "About Us | MovieRulz",
+          "Watch News Movies Online | MovieRulz",
+          "Featured Movies Watch Online Free | MovieRulz"
+        ]
+      }
+    ],
+    "worstPages": [
+      {
+        "url": "https://www.5movierulz.solutions/",
+        "pageTitle": "MovieRulz | Latest Telugu, Tamil, Malayalam & Hindi Movies",
+        "score": 40,
+        "counts": {
+          "critical": 5,
+          "major": 0,
+          "minor": 0,
+          "total": 5
+        }
+      },
+      {
+        "url": "https://www.5movierulz.solutions/contact",
+        "pageTitle": "Contact | MovieRulz",
+        "score": 40,
+        "counts": {
+          "critical": 5,
+          "major": 0,
+          "minor": 0,
+          "total": 5
+        }
+      },
+      {
+        "url": "https://www.5movierulz.solutions/about",
+        "pageTitle": "About Us | MovieRulz",
+        "score": 40,
+        "counts": {
+          "critical": 5,
+          "major": 0,
+          "minor": 0,
+          "total": 5
+        }
+      },
+      {
+        "url": "https://www.5movierulz.solutions/genre/news",
+        "pageTitle": "Watch News Movies Online | MovieRulz",
+        "score": 40,
+        "counts": {
+          "critical": 5,
+          "major": 0,
+          "minor": 0,
+          "total": 5
+        }
+      },
+      {
+        "url": "https://www.5movierulz.solutions/movies?sort=featured",
+        "pageTitle": "Featured Movies Watch Online Free | MovieRulz",
+        "score": 40,
+        "counts": {
+          "critical": 5,
+          "major": 0,
+          "minor": 0,
+          "total": 5
+        }
+      }
+    ],
+    "pagesScanned": 5,
+    "pagesFailed": 0,
+    "pages": [
+      {
+        "url": "https://www.5movierulz.solutions/",
+        "pageTitle": "MovieRulz | Latest Telugu, Tamil, Malayalam & Hindi Movies",
+        "status": "completed",
+        "score": 40,
+        "wcagLevel": "WCAG Non-Compliant (Critical Violations)",
+        "statusBadge": "danger",
+        "counts": {
+          "critical": 5,
+          "major": 0,
+          "minor": 0,
+          "total": 5
+        },
+        "categoryScores": {
+          "Images & Media": 100,
+          "Color & Contrast": 52,
+          "Forms & Controls": 88,
+          "Headings & Structure": 100,
+          "Links & Navigation": 100,
+          "ARIA & Semantics": 100
+        },
+        "issues": [
+          {
+            "id": "issue-001",
+            "ruleId": "form-label-missing",
+            "category": "Forms & Controls",
+            "severity": "Critical",
+            "element": "input",
+            "selector": "input[name=\"s\"]",
+            "wcag": "WCAG 1.3.1 / 4.1.2 Name, Role, Value (Level A)",
+            "context": "Form element <input name=\"s\"> lacks a associated <label> or aria-label.",
+            "originalSnippet": "<input style=\"width:250px;height:20px\" type=\"text\" name=\"s\" id=\"search_term\" placeholder=\"Search...\" autocomplete=\"off\" required=\"\">",
+            "explanation": "Form controls without labels cannot be announced correctly by screen readers, making forms impossible to complete.",
+            "suggestedFixCode": "<label for=\"search_term\">Field Label</label>\n<input id=\"search_term\" type=\"text\" name=\"s\">",
+            "quickTip": "Always test forms & controls elements using assistive tools and keyboard navigation."
+          },
+          {
+            "id": "issue-002",
+            "ruleId": "color-contrast-low",
+            "category": "Color & Contrast",
+            "severity": "Critical",
+            "element": "p",
+            "selector": "p:contains(\"About | \n      \")",
+            "wcag": "WCAG 1.4.3 Contrast (Minimum) (Level AA - 4.5:1 required)",
+            "context": "Element uses low contrast inline style: \"font-size: 11px; color: #888; margin-top: 15px;\".",
+            "originalSnippet": "<p style=\"font-size: 11px; color: #888; margin-top: 15px;\">\n            <a href=\"/about\" style=\"color: #888;\">About</a> | \n            <a href=\"/contact\" style=\"color: #888;\">Contact</a> | \n            <a href=\"/privacy\" style=\"color: #888;\">Privacy Policy</a>\n        </p>",
+            "explanation": "Low contrast text is difficult or impossible to read for users with low vision, color blindness, or age-related vision loss.",
+            "suggestedFixCode": "<p style=\"color: #111827; background-color: #ffffff;\">About | \n            Contact | \n            Privacy Policy</p>",
+            "quickTip": "Always test color & contrast elements using assistive tools and keyboard navigation."
+          },
+          {
+            "id": "issue-003",
+            "ruleId": "color-contrast-low",
+            "category": "Color & Contrast",
+            "severity": "Critical",
+            "element": "a",
+            "selector": "a:contains(\"About\")",
+            "wcag": "WCAG 1.4.3 Contrast (Minimum) (Level AA - 4.5:1 required)",
+            "context": "Element uses low contrast inline style: \"color: #888;\".",
+            "originalSnippet": "<a href=\"/about\" style=\"color: #888;\">About</a>",
+            "explanation": "Low contrast text is difficult or impossible to read for users with low vision, color blindness, or age-related vision loss.",
+            "suggestedFixCode": "<p style=\"color: #111827; background-color: #ffffff;\">About</p>",
+            "quickTip": "Always test color & contrast elements using assistive tools and keyboard navigation."
+          },
+          {
+            "id": "issue-004",
+            "ruleId": "color-contrast-low",
+            "category": "Color & Contrast",
+            "severity": "Critical",
+            "element": "a",
+            "selector": "a:contains(\"Contact\")",
+            "wcag": "WCAG 1.4.3 Contrast (Minimum) (Level AA - 4.5:1 required)",
+            "context": "Element uses low contrast inline style: \"color: #888;\".",
+            "originalSnippet": "<a href=\"/contact\" style=\"color: #888;\">Contact</a>",
+            "explanation": "Low contrast text is difficult or impossible to read for users with low vision, color blindness, or age-related vision loss.",
+            "suggestedFixCode": "<p style=\"color: #111827; background-color: #ffffff;\">Contact</p>",
+            "quickTip": "Always test color & contrast elements using assistive tools and keyboard navigation."
+          },
+          {
+            "id": "issue-005",
+            "ruleId": "color-contrast-low",
+            "category": "Color & Contrast",
+            "severity": "Critical",
+            "element": "a",
+            "selector": "a:contains(\"Privacy Policy\")",
+            "wcag": "WCAG 1.4.3 Contrast (Minimum) (Level AA - 4.5:1 required)",
+            "context": "Element uses low contrast inline style: \"color: #888;\".",
+            "originalSnippet": "<a href=\"/privacy\" style=\"color: #888;\">Privacy Policy</a>",
+            "explanation": "Low contrast text is difficult or impossible to read for users with low vision, color blindness, or age-related vision loss.",
+            "suggestedFixCode": "<p style=\"color: #111827; background-color: #ffffff;\">Privacy Policy</p>",
+            "quickTip": "Always test color & contrast elements using assistive tools and keyboard navigation."
+          }
+        ]
+      },
+      {
+        "url": "https://www.5movierulz.solutions/contact",
+        "pageTitle": "Contact | MovieRulz",
+        "status": "completed",
+        "score": 40,
+        "wcagLevel": "WCAG Non-Compliant (Critical Violations)",
+        "statusBadge": "danger",
+        "counts": {
+          "critical": 5,
+          "major": 0,
+          "minor": 0,
+          "total": 5
+        },
+        "categoryScores": {
+          "Images & Media": 100,
+          "Color & Contrast": 52,
+          "Forms & Controls": 88,
+          "Headings & Structure": 100,
+          "Links & Navigation": 100,
+          "ARIA & Semantics": 100
+        },
+        "issues": [
+          {
+            "id": "issue-001",
+            "ruleId": "form-label-missing",
+            "category": "Forms & Controls",
+            "severity": "Critical",
+            "element": "input",
+            "selector": "input[name=\"s\"]",
+            "wcag": "WCAG 1.3.1 / 4.1.2 Name, Role, Value (Level A)",
+            "context": "Form element <input name=\"s\"> lacks a associated <label> or aria-label.",
+            "originalSnippet": "<input style=\"width:250px;height:20px\" type=\"text\" name=\"s\" id=\"search_term\" placeholder=\"Search...\" autocomplete=\"off\" required=\"\">",
+            "explanation": "Form controls without labels cannot be announced correctly by screen readers, making forms impossible to complete.",
+            "suggestedFixCode": "<label for=\"search_term\">Field Label</label>\n<input id=\"search_term\" type=\"text\" name=\"s\">",
+            "quickTip": "Always test forms & controls elements using assistive tools and keyboard navigation."
+          },
+          {
+            "id": "issue-002",
+            "ruleId": "color-contrast-low",
+            "category": "Color & Contrast",
+            "severity": "Critical",
+            "element": "p",
+            "selector": "p:contains(\"About | \n      \")",
+            "wcag": "WCAG 1.4.3 Contrast (Minimum) (Level AA - 4.5:1 required)",
+            "context": "Element uses low contrast inline style: \"font-size: 11px; color: #888; margin-top: 15px;\".",
+            "originalSnippet": "<p style=\"font-size: 11px; color: #888; margin-top: 15px;\">\n            <a href=\"/about\" style=\"color: #888;\">About</a> | \n            <a href=\"/contact\" style=\"color: #888;\">Contact</a> | \n            <a href=\"/privacy\" style=\"color: #888;\">Privacy Policy</a>\n        </p>",
+            "explanation": "Low contrast text is difficult or impossible to read for users with low vision, color blindness, or age-related vision loss.",
+            "suggestedFixCode": "<p style=\"color: #111827; background-color: #ffffff;\">About | \n            Contact | \n            Privacy Policy</p>",
+            "quickTip": "Always test color & contrast elements using assistive tools and keyboard navigation."
+          },
+          {
+            "id": "issue-003",
+            "ruleId": "color-contrast-low",
+            "category": "Color & Contrast",
+            "severity": "Critical",
+            "element": "a",
+            "selector": "a:contains(\"About\")",
+            "wcag": "WCAG 1.4.3 Contrast (Minimum) (Level AA - 4.5:1 required)",
+            "context": "Element uses low contrast inline style: \"color: #888;\".",
+            "originalSnippet": "<a href=\"/about\" style=\"color: #888;\">About</a>",
+            "explanation": "Low contrast text is difficult or impossible to read for users with low vision, color blindness, or age-related vision loss.",
+            "suggestedFixCode": "<p style=\"color: #111827; background-color: #ffffff;\">About</p>",
+            "quickTip": "Always test color & contrast elements using assistive tools and keyboard navigation."
+          },
+          {
+            "id": "issue-004",
+            "ruleId": "color-contrast-low",
+            "category": "Color & Contrast",
+            "severity": "Critical",
+            "element": "a",
+            "selector": "a:contains(\"Contact\")",
+            "wcag": "WCAG 1.4.3 Contrast (Minimum) (Level AA - 4.5:1 required)",
+            "context": "Element uses low contrast inline style: \"color: #888;\".",
+            "originalSnippet": "<a href=\"/contact\" style=\"color: #888;\">Contact</a>",
+            "explanation": "Low contrast text is difficult or impossible to read for users with low vision, color blindness, or age-related vision loss.",
+            "suggestedFixCode": "<p style=\"color: #111827; background-color: #ffffff;\">Contact</p>",
+            "quickTip": "Always test color & contrast elements using assistive tools and keyboard navigation."
+          },
+          {
+            "id": "issue-005",
+            "ruleId": "color-contrast-low",
+            "category": "Color & Contrast",
+            "severity": "Critical",
+            "element": "a",
+            "selector": "a:contains(\"Privacy Policy\")",
+            "wcag": "WCAG 1.4.3 Contrast (Minimum) (Level AA - 4.5:1 required)",
+            "context": "Element uses low contrast inline style: \"color: #888;\".",
+            "originalSnippet": "<a href=\"/privacy\" style=\"color: #888;\">Privacy Policy</a>",
+            "explanation": "Low contrast text is difficult or impossible to read for users with low vision, color blindness, or age-related vision loss.",
+            "suggestedFixCode": "<p style=\"color: #111827; background-color: #ffffff;\">Privacy Policy</p>",
+            "quickTip": "Always test color & contrast elements using assistive tools and keyboard navigation."
+          }
+        ]
+      },
+      {
+        "url": "https://www.5movierulz.solutions/about",
+        "pageTitle": "About Us | MovieRulz",
+        "status": "completed",
+        "score": 40,
+        "wcagLevel": "WCAG Non-Compliant (Critical Violations)",
+        "statusBadge": "danger",
+        "counts": {
+          "critical": 5,
+          "major": 0,
+          "minor": 0,
+          "total": 5
+        },
+        "categoryScores": {
+          "Images & Media": 100,
+          "Color & Contrast": 52,
+          "Forms & Controls": 88,
+          "Headings & Structure": 100,
+          "Links & Navigation": 100,
+          "ARIA & Semantics": 100
+        },
+        "issues": [
+          {
+            "id": "issue-001",
+            "ruleId": "form-label-missing",
+            "category": "Forms & Controls",
+            "severity": "Critical",
+            "element": "input",
+            "selector": "input[name=\"s\"]",
+            "wcag": "WCAG 1.3.1 / 4.1.2 Name, Role, Value (Level A)",
+            "context": "Form element <input name=\"s\"> lacks a associated <label> or aria-label.",
+            "originalSnippet": "<input style=\"width:250px;height:20px\" type=\"text\" name=\"s\" id=\"search_term\" placeholder=\"Search...\" autocomplete=\"off\" required=\"\">",
+            "explanation": "Form controls without labels cannot be announced correctly by screen readers, making forms impossible to complete.",
+            "suggestedFixCode": "<label for=\"search_term\">Field Label</label>\n<input id=\"search_term\" type=\"text\" name=\"s\">",
+            "quickTip": "Always test forms & controls elements using assistive tools and keyboard navigation."
+          },
+          {
+            "id": "issue-002",
+            "ruleId": "color-contrast-low",
+            "category": "Color & Contrast",
+            "severity": "Critical",
+            "element": "p",
+            "selector": "p:contains(\"About | \n      \")",
+            "wcag": "WCAG 1.4.3 Contrast (Minimum) (Level AA - 4.5:1 required)",
+            "context": "Element uses low contrast inline style: \"font-size: 11px; color: #888; margin-top: 15px;\".",
+            "originalSnippet": "<p style=\"font-size: 11px; color: #888; margin-top: 15px;\">\n            <a href=\"/about\" style=\"color: #888;\">About</a> | \n            <a href=\"/contact\" style=\"color: #888;\">Contact</a> | \n            <a href=\"/privacy\" style=\"color: #888;\">Privacy Policy</a>\n        </p>",
+            "explanation": "Low contrast text is difficult or impossible to read for users with low vision, color blindness, or age-related vision loss.",
+            "suggestedFixCode": "<p style=\"color: #111827; background-color: #ffffff;\">About | \n            Contact | \n            Privacy Policy</p>",
+            "quickTip": "Always test color & contrast elements using assistive tools and keyboard navigation."
+          },
+          {
+            "id": "issue-003",
+            "ruleId": "color-contrast-low",
+            "category": "Color & Contrast",
+            "severity": "Critical",
+            "element": "a",
+            "selector": "a:contains(\"About\")",
+            "wcag": "WCAG 1.4.3 Contrast (Minimum) (Level AA - 4.5:1 required)",
+            "context": "Element uses low contrast inline style: \"color: #888;\".",
+            "originalSnippet": "<a href=\"/about\" style=\"color: #888;\">About</a>",
+            "explanation": "Low contrast text is difficult or impossible to read for users with low vision, color blindness, or age-related vision loss.",
+            "suggestedFixCode": "<p style=\"color: #111827; background-color: #ffffff;\">About</p>",
+            "quickTip": "Always test color & contrast elements using assistive tools and keyboard navigation."
+          },
+          {
+            "id": "issue-004",
+            "ruleId": "color-contrast-low",
+            "category": "Color & Contrast",
+            "severity": "Critical",
+            "element": "a",
+            "selector": "a:contains(\"Contact\")",
+            "wcag": "WCAG 1.4.3 Contrast (Minimum) (Level AA - 4.5:1 required)",
+            "context": "Element uses low contrast inline style: \"color: #888;\".",
+            "originalSnippet": "<a href=\"/contact\" style=\"color: #888;\">Contact</a>",
+            "explanation": "Low contrast text is difficult or impossible to read for users with low vision, color blindness, or age-related vision loss.",
+            "suggestedFixCode": "<p style=\"color: #111827; background-color: #ffffff;\">Contact</p>",
+            "quickTip": "Always test color & contrast elements using assistive tools and keyboard navigation."
+          },
+          {
+            "id": "issue-005",
+            "ruleId": "color-contrast-low",
+            "category": "Color & Contrast",
+            "severity": "Critical",
+            "element": "a",
+            "selector": "a:contains(\"Privacy Policy\")",
+            "wcag": "WCAG 1.4.3 Contrast (Minimum) (Level AA - 4.5:1 required)",
+            "context": "Element uses low contrast inline style: \"color: #888;\".",
+            "originalSnippet": "<a href=\"/privacy\" style=\"color: #888;\">Privacy Policy</a>",
+            "explanation": "Low contrast text is difficult or impossible to read for users with low vision, color blindness, or age-related vision loss.",
+            "suggestedFixCode": "<p style=\"color: #111827; background-color: #ffffff;\">Privacy Policy</p>",
+            "quickTip": "Always test color & contrast elements using assistive tools and keyboard navigation."
+          }
+        ]
+      },
+      {
+        "url": "https://www.5movierulz.solutions/genre/news",
+        "pageTitle": "Watch News Movies Online | MovieRulz",
+        "status": "completed",
+        "score": 40,
+        "wcagLevel": "WCAG Non-Compliant (Critical Violations)",
+        "statusBadge": "danger",
+        "counts": {
+          "critical": 5,
+          "major": 0,
+          "minor": 0,
+          "total": 5
+        },
+        "categoryScores": {
+          "Images & Media": 100,
+          "Color & Contrast": 52,
+          "Forms & Controls": 88,
+          "Headings & Structure": 100,
+          "Links & Navigation": 100,
+          "ARIA & Semantics": 100
+        },
+        "issues": [
+          {
+            "id": "issue-001",
+            "ruleId": "form-label-missing",
+            "category": "Forms & Controls",
+            "severity": "Critical",
+            "element": "input",
+            "selector": "input[name=\"s\"]",
+            "wcag": "WCAG 1.3.1 / 4.1.2 Name, Role, Value (Level A)",
+            "context": "Form element <input name=\"s\"> lacks a associated <label> or aria-label.",
+            "originalSnippet": "<input style=\"width:250px;height:20px\" type=\"text\" name=\"s\" id=\"search_term\" placeholder=\"Search...\" autocomplete=\"off\" required=\"\">",
+            "explanation": "Form controls without labels cannot be announced correctly by screen readers, making forms impossible to complete.",
+            "suggestedFixCode": "<label for=\"search_term\">Field Label</label>\n<input id=\"search_term\" type=\"text\" name=\"s\">",
+            "quickTip": "Always test forms & controls elements using assistive tools and keyboard navigation."
+          },
+          {
+            "id": "issue-002",
+            "ruleId": "color-contrast-low",
+            "category": "Color & Contrast",
+            "severity": "Critical",
+            "element": "p",
+            "selector": "p:contains(\"About | \n      \")",
+            "wcag": "WCAG 1.4.3 Contrast (Minimum) (Level AA - 4.5:1 required)",
+            "context": "Element uses low contrast inline style: \"font-size: 11px; color: #888; margin-top: 15px;\".",
+            "originalSnippet": "<p style=\"font-size: 11px; color: #888; margin-top: 15px;\">\n            <a href=\"/about\" style=\"color: #888;\">About</a> | \n            <a href=\"/contact\" style=\"color: #888;\">Contact</a> | \n            <a href=\"/privacy\" style=\"color: #888;\">Privacy Policy</a>\n        </p>",
+            "explanation": "Low contrast text is difficult or impossible to read for users with low vision, color blindness, or age-related vision loss.",
+            "suggestedFixCode": "<p style=\"color: #111827; background-color: #ffffff;\">About | \n            Contact | \n            Privacy Policy</p>",
+            "quickTip": "Always test color & contrast elements using assistive tools and keyboard navigation."
+          },
+          {
+            "id": "issue-003",
+            "ruleId": "color-contrast-low",
+            "category": "Color & Contrast",
+            "severity": "Critical",
+            "element": "a",
+            "selector": "a:contains(\"About\")",
+            "wcag": "WCAG 1.4.3 Contrast (Minimum) (Level AA - 4.5:1 required)",
+            "context": "Element uses low contrast inline style: \"color: #888;\".",
+            "originalSnippet": "<a href=\"/about\" style=\"color: #888;\">About</a>",
+            "explanation": "Low contrast text is difficult or impossible to read for users with low vision, color blindness, or age-related vision loss.",
+            "suggestedFixCode": "<p style=\"color: #111827; background-color: #ffffff;\">About</p>",
+            "quickTip": "Always test color & contrast elements using assistive tools and keyboard navigation."
+          },
+          {
+            "id": "issue-004",
+            "ruleId": "color-contrast-low",
+            "category": "Color & Contrast",
+            "severity": "Critical",
+            "element": "a",
+            "selector": "a:contains(\"Contact\")",
+            "wcag": "WCAG 1.4.3 Contrast (Minimum) (Level AA - 4.5:1 required)",
+            "context": "Element uses low contrast inline style: \"color: #888;\".",
+            "originalSnippet": "<a href=\"/contact\" style=\"color: #888;\">Contact</a>",
+            "explanation": "Low contrast text is difficult or impossible to read for users with low vision, color blindness, or age-related vision loss.",
+            "suggestedFixCode": "<p style=\"color: #111827; background-color: #ffffff;\">Contact</p>",
+            "quickTip": "Always test color & contrast elements using assistive tools and keyboard navigation."
+          },
+          {
+            "id": "issue-005",
+            "ruleId": "color-contrast-low",
+            "category": "Color & Contrast",
+            "severity": "Critical",
+            "element": "a",
+            "selector": "a:contains(\"Privacy Policy\")",
+            "wcag": "WCAG 1.4.3 Contrast (Minimum) (Level AA - 4.5:1 required)",
+            "context": "Element uses low contrast inline style: \"color: #888;\".",
+            "originalSnippet": "<a href=\"/privacy\" style=\"color: #888;\">Privacy Policy</a>",
+            "explanation": "Low contrast text is difficult or impossible to read for users with low vision, color blindness, or age-related vision loss.",
+            "suggestedFixCode": "<p style=\"color: #111827; background-color: #ffffff;\">Privacy Policy</p>",
+            "quickTip": "Always test color & contrast elements using assistive tools and keyboard navigation."
+          }
+        ]
+      },
+      {
+        "url": "https://www.5movierulz.solutions/movies?sort=featured",
+        "pageTitle": "Featured Movies Watch Online Free | MovieRulz",
+        "status": "completed",
+        "score": 40,
+        "wcagLevel": "WCAG Non-Compliant (Critical Violations)",
+        "statusBadge": "danger",
+        "counts": {
+          "critical": 5,
+          "major": 0,
+          "minor": 0,
+          "total": 5
+        },
+        "categoryScores": {
+          "Images & Media": 100,
+          "Color & Contrast": 52,
+          "Forms & Controls": 88,
+          "Headings & Structure": 100,
+          "Links & Navigation": 100,
+          "ARIA & Semantics": 100
+        },
+        "issues": [
+          {
+            "id": "issue-001",
+            "ruleId": "form-label-missing",
+            "category": "Forms & Controls",
+            "severity": "Critical",
+            "element": "input",
+            "selector": "input[name=\"s\"]",
+            "wcag": "WCAG 1.3.1 / 4.1.2 Name, Role, Value (Level A)",
+            "context": "Form element <input name=\"s\"> lacks a associated <label> or aria-label.",
+            "originalSnippet": "<input style=\"width:250px;height:20px\" type=\"text\" name=\"s\" id=\"search_term\" placeholder=\"Search...\" autocomplete=\"off\" required=\"\">",
+            "explanation": "Form controls without labels cannot be announced correctly by screen readers, making forms impossible to complete.",
+            "suggestedFixCode": "<label for=\"search_term\">Field Label</label>\n<input id=\"search_term\" type=\"text\" name=\"s\">",
+            "quickTip": "Always test forms & controls elements using assistive tools and keyboard navigation."
+          },
+          {
+            "id": "issue-002",
+            "ruleId": "color-contrast-low",
+            "category": "Color & Contrast",
+            "severity": "Critical",
+            "element": "p",
+            "selector": "p:contains(\"About | \n      \")",
+            "wcag": "WCAG 1.4.3 Contrast (Minimum) (Level AA - 4.5:1 required)",
+            "context": "Element uses low contrast inline style: \"font-size: 11px; color: #888; margin-top: 15px;\".",
+            "originalSnippet": "<p style=\"font-size: 11px; color: #888; margin-top: 15px;\">\n            <a href=\"/about\" style=\"color: #888;\">About</a> | \n            <a href=\"/contact\" style=\"color: #888;\">Contact</a> | \n            <a href=\"/privacy\" style=\"color: #888;\">Privacy Policy</a>\n        </p>",
+            "explanation": "Low contrast text is difficult or impossible to read for users with low vision, color blindness, or age-related vision loss.",
+            "suggestedFixCode": "<p style=\"color: #111827; background-color: #ffffff;\">About | \n            Contact | \n            Privacy Policy</p>",
+            "quickTip": "Always test color & contrast elements using assistive tools and keyboard navigation."
+          },
+          {
+            "id": "issue-003",
+            "ruleId": "color-contrast-low",
+            "category": "Color & Contrast",
+            "severity": "Critical",
+            "element": "a",
+            "selector": "a:contains(\"About\")",
+            "wcag": "WCAG 1.4.3 Contrast (Minimum) (Level AA - 4.5:1 required)",
+            "context": "Element uses low contrast inline style: \"color: #888;\".",
+            "originalSnippet": "<a href=\"/about\" style=\"color: #888;\">About</a>",
+            "explanation": "Low contrast text is difficult or impossible to read for users with low vision, color blindness, or age-related vision loss.",
+            "suggestedFixCode": "<p style=\"color: #111827; background-color: #ffffff;\">About</p>",
+            "quickTip": "Always test color & contrast elements using assistive tools and keyboard navigation."
+          },
+          {
+            "id": "issue-004",
+            "ruleId": "color-contrast-low",
+            "category": "Color & Contrast",
+            "severity": "Critical",
+            "element": "a",
+            "selector": "a:contains(\"Contact\")",
+            "wcag": "WCAG 1.4.3 Contrast (Minimum) (Level AA - 4.5:1 required)",
+            "context": "Element uses low contrast inline style: \"color: #888;\".",
+            "originalSnippet": "<a href=\"/contact\" style=\"color: #888;\">Contact</a>",
+            "explanation": "Low contrast text is difficult or impossible to read for users with low vision, color blindness, or age-related vision loss.",
+            "suggestedFixCode": "<p style=\"color: #111827; background-color: #ffffff;\">Contact</p>",
+            "quickTip": "Always test color & contrast elements using assistive tools and keyboard navigation."
+          },
+          {
+            "id": "issue-005",
+            "ruleId": "color-contrast-low",
+            "category": "Color & Contrast",
+            "severity": "Critical",
+            "element": "a",
+            "selector": "a:contains(\"Privacy Policy\")",
+            "wcag": "WCAG 1.4.3 Contrast (Minimum) (Level AA - 4.5:1 required)",
+            "context": "Element uses low contrast inline style: \"color: #888;\".",
+            "originalSnippet": "<a href=\"/privacy\" style=\"color: #888;\">Privacy Policy</a>",
+            "explanation": "Low contrast text is difficult or impossible to read for users with low vision, color blindness, or age-related vision loss.",
+            "suggestedFixCode": "<p style=\"color: #111827; background-color: #ffffff;\">Privacy Policy</p>",
+            "quickTip": "Always test color & contrast elements using assistive tools and keyboard navigation."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "scan-1789809947282-sdk0h",
+    "websiteId": "raw-html",
+    "url": "Raw HTML Snippet",
+    "pageTitle": "Accessibility Test",
+    "mode": "html",
+    "isBatch": false,
+    "timestamp": "2026-09-19T09:25:47.282Z",
+    "durationSeconds": 0.34,
+    "score": 64,
+    "wcagLevel": "WCAG Non-Compliant (Critical Violations)",
+    "statusBadge": "danger",
+    "counts": {
+      "critical": 2,
+      "major": 2,
+      "minor": 0,
+      "total": 4
+    },
+    "categoryScores": {
+      "Images & Media": 94,
+      "Color & Contrast": 100,
+      "Forms & Controls": 76,
+      "Headings & Structure": 100,
+      "Links & Navigation": 100,
+      "ARIA & Semantics": 94
+    },
+    "manualReviewItems": [
+      {
+        "id": "mr-01",
+        "title": "Meaningful Alt Text Quality",
+        "description": "Verify image alt text provides equivalent context and meaning, not just superficial image tags.",
+        "wcag": "WCAG 1.1.1"
+      },
+      {
+        "id": "mr-02",
+        "title": "Keyboard Focus Order & Visibility",
+        "description": "Navigate the entire site using Tab and Shift+Tab keys to ensure all interactive elements receive visible focus rings in logical order.",
+        "wcag": "WCAG 2.4.7"
+      },
+      {
+        "id": "mr-03",
+        "title": "Screen Reader Interaction Testing",
+        "description": "Test interactive dropdowns, modals, and dynamic content updates with NVDA, VoiceOver, or JAWS.",
+        "wcag": "WCAG 4.1.2"
+      },
+      {
+        "id": "mr-04",
+        "title": "Responsive Text Scaling (200% Zoom)",
+        "description": "Zoom page to 200% in browser settings and ensure text does not truncate, overlap, or require horizontal scrolling.",
+        "wcag": "WCAG 1.4.4"
+      }
+    ],
+    "performanceImpact": {
+      "loadDurationSeconds": 0.34,
+      "speedBadge": "Fast (Sub-second)",
+      "disclaimer": "Note: Accessibility improvements support better mobile user experience and search engine discoverability. Measured accessibility scores represent WCAG 2.1 compliance and do not guarantee search engine ranking placement.",
+      "impactNotes": [
+        {
+          "title": "Image Search & SEO Indexability",
+          "category": "SEO & Search",
+          "icon": "Image",
+          "benefit": "Adding descriptive alt text allows search engine crawlers (Google Image Search) to index visual media, driving organic search traffic."
+        },
+        {
+          "title": "Mobile Form Completion Rate",
+          "category": "Mobile Usability",
+          "icon": "FormInput",
+          "benefit": "Explicitly associated labels increase touch target area on mobile screens, reducing form abandonment and input frustration."
+        }
+      ]
+    },
+    "issues": [
+      {
+        "id": "issue-001",
+        "ruleId": "form-label-missing",
+        "category": "Forms & Controls",
+        "severity": "Critical",
+        "element": "input",
+        "selector": "input[name=\"text\"]",
+        "wcag": "WCAG 1.3.1 / 4.1.2 Name, Role, Value (Level A)",
+        "context": "Form element <input name=\"text\"> lacks a associated <label> or aria-label.",
+        "originalSnippet": "<input type=\"text\">",
+        "explanation": "Form controls without labels cannot be announced correctly by screen readers, making forms impossible to complete.",
+        "suggestedFixCode": "<label for=\"input-id\">Field Label</label>\n<input id=\"input-id\" type=\"text\" name=\"text\">",
+        "quickTip": "Always test forms & controls elements using assistive tools and keyboard navigation."
+      },
+      {
+        "id": "issue-002",
+        "ruleId": "form-label-missing",
+        "category": "Forms & Controls",
+        "severity": "Critical",
+        "element": "input",
+        "selector": "input[name=\"email\"]",
+        "wcag": "WCAG 1.3.1 / 4.1.2 Name, Role, Value (Level A)",
+        "context": "Form element <input name=\"email\"> lacks a associated <label> or aria-label.",
+        "originalSnippet": "<input type=\"email\">",
+        "explanation": "Form controls without labels cannot be announced correctly by screen readers, making forms impossible to complete.",
+        "suggestedFixCode": "<label for=\"input-id\">Field Label</label>\n<input id=\"input-id\" type=\"email\" name=\"email\">",
+        "quickTip": "Always test forms & controls elements using assistive tools and keyboard navigation."
+      },
+      {
+        "id": "issue-003",
+        "ruleId": "video-captions-missing",
+        "category": "Images & Media",
+        "severity": "Major",
+        "element": "video",
+        "selector": "video",
+        "wcag": "WCAG 1.2.2 Captions (Prerecorded) (Level A)",
+        "context": "Video element lacks a <track kind=\"captions\"> child element.",
+        "originalSnippet": "<video controls=\"\">\n        <source src=\"video.mp4\">\n    </video>",
+        "explanation": "Deaf or hard-of-hearing users cannot understand audio content in video without synchronized closed captions.",
+        "suggestedFixCode": "<video controls>\n  <source src=\"video.mp4\" type=\"video/mp4\">\n  <track kind=\"captions\" src=\"captions.vtt\" srclang=\"en\" label=\"English Captions\">\n</video>",
+        "quickTip": "Always test images & media elements using assistive tools and keyboard navigation."
+      },
+      {
+        "id": "issue-004",
+        "ruleId": "html-lang-missing",
+        "category": "ARIA & Semantics",
+        "severity": "Major",
+        "element": "html",
+        "selector": "html",
+        "wcag": "WCAG 3.1.1 Language of Page (Level A)",
+        "context": "Root <html> element is missing a valid lang attribute (e.g. lang=\"en\").",
+        "originalSnippet": "<html>",
+        "explanation": "Without a lang attribute, screen readers default to the user OS language, pronouncing foreign words with incorrect speech synthesis.",
+        "suggestedFixCode": "<html lang=\"en\">",
+        "quickTip": "Always test aria & semantics elements using assistive tools and keyboard navigation."
+      }
+    ]
+  },
+  {
+    "id": "batch-1789809997259-5bsms",
+    "websiteId": "5movierulz.solutions",
+    "url": "https://www.5movierulz.solutions/",
+    "pageTitle": "Batch Audit: www.5movierulz.solutions",
+    "mode": "batch",
+    "timestamp": "2026-09-19T09:26:37.259Z",
+    "durationSeconds": 2.84,
+    "performanceImpact": {
+      "loadDurationSeconds": 2.84,
+      "speedBadge": "Moderate",
+      "disclaimer": "Note: Accessibility improvements support better mobile user experience and search engine discoverability. Measured accessibility scores represent WCAG 2.1 compliance and do not guarantee search engine ranking placement.",
+      "impactNotes": [
+        {
+          "title": "Mobile Form Completion Rate",
+          "category": "Mobile Usability",
+          "icon": "FormInput",
+          "benefit": "Explicitly associated labels increase touch target area on mobile screens, reducing form abandonment and input frustration."
+        },
+        {
+          "title": "Outdoor & High-Glare Mobile Readability",
+          "category": "Mobile Usability",
+          "icon": "Sun",
+          "benefit": "High contrast ratio ensures text remains legible under bright sunlight or low-end mobile LCD screens."
+        }
+      ]
+    },
+    "baseUrl": "https://www.5movierulz.solutions/",
+    "isBatch": true,
+    "score": 40,
+    "wcagLevel": "WCAG Non-Compliant (Critical Violations)",
+    "statusBadge": "danger",
+    "counts": {
+      "critical": 25,
+      "major": 0,
+      "minor": 0,
+      "total": 25
+    },
+    "categoryScores": {
+      "Images & Media": 100,
+      "Color & Contrast": 52,
+      "Forms & Controls": 88,
+      "Headings & Structure": 100,
+      "Links & Navigation": 100,
+      "ARIA & Semantics": 100
+    },
+    "issueFrequency": [
+      {
+        "ruleId": "color-contrast-low",
+        "category": "Color & Contrast",
+        "severity": "Critical",
+        "wcag": "WCAG 1.4.3 Contrast (Minimum) (Level AA - 4.5:1 required)",
+        "context": "Element uses low contrast inline style: \"font-size: 11px; color: #888; margin-top: 15px;\".",
+        "originalSnippet": "<p style=\"font-size: 11px; color: #888; margin-top: 15px;\">\n            <a href=\"/about\" style=\"color: #888;\">About</a> | \n            <a href=\"/contact\" style=\"color: #888;\">Contact</a> | \n            <a href=\"/privacy\" style=\"color: #888;\">Privacy Policy</a>\n        </p>",
+        "suggestedFixCode": "<p style=\"color: #111827; background-color: #ffffff;\">About | \n            Contact | \n            Privacy Policy</p>",
+        "explanation": "Low contrast text is difficult or impossible to read for users with low vision, color blindness, or age-related vision loss.",
+        "occurrences": 20,
+        "affectedPagesCount": 5,
+        "affectedPages": [
+          "MovieRulz | Latest Telugu, Tamil, Malayalam & Hindi Movies",
+          "Contact | MovieRulz",
+          "About Us | MovieRulz",
+          "Watch News Movies Online | MovieRulz",
+          "Featured Movies Watch Online Free | MovieRulz"
+        ]
+      },
+      {
+        "ruleId": "form-label-missing",
+        "category": "Forms & Controls",
+        "severity": "Critical",
+        "wcag": "WCAG 1.3.1 / 4.1.2 Name, Role, Value (Level A)",
+        "context": "Form element <input name=\"s\"> lacks a associated <label> or aria-label.",
+        "originalSnippet": "<input style=\"width:250px;height:20px\" type=\"text\" name=\"s\" id=\"search_term\" placeholder=\"Search...\" autocomplete=\"off\" required=\"\">",
+        "suggestedFixCode": "<label for=\"search_term\">Field Label</label>\n<input id=\"search_term\" type=\"text\" name=\"s\">",
+        "explanation": "Form controls without labels cannot be announced correctly by screen readers, making forms impossible to complete.",
+        "occurrences": 5,
+        "affectedPagesCount": 5,
+        "affectedPages": [
+          "MovieRulz | Latest Telugu, Tamil, Malayalam & Hindi Movies",
+          "Contact | MovieRulz",
+          "About Us | MovieRulz",
+          "Watch News Movies Online | MovieRulz",
+          "Featured Movies Watch Online Free | MovieRulz"
+        ]
+      }
+    ],
+    "worstPages": [
+      {
+        "url": "https://www.5movierulz.solutions/",
+        "pageTitle": "MovieRulz | Latest Telugu, Tamil, Malayalam & Hindi Movies",
+        "score": 40,
+        "counts": {
+          "critical": 5,
+          "major": 0,
+          "minor": 0,
+          "total": 5
+        }
+      },
+      {
+        "url": "https://www.5movierulz.solutions/contact",
+        "pageTitle": "Contact | MovieRulz",
+        "score": 40,
+        "counts": {
+          "critical": 5,
+          "major": 0,
+          "minor": 0,
+          "total": 5
+        }
+      },
+      {
+        "url": "https://www.5movierulz.solutions/about",
+        "pageTitle": "About Us | MovieRulz",
+        "score": 40,
+        "counts": {
+          "critical": 5,
+          "major": 0,
+          "minor": 0,
+          "total": 5
+        }
+      },
+      {
+        "url": "https://www.5movierulz.solutions/genre/news",
+        "pageTitle": "Watch News Movies Online | MovieRulz",
+        "score": 40,
+        "counts": {
+          "critical": 5,
+          "major": 0,
+          "minor": 0,
+          "total": 5
+        }
+      },
+      {
+        "url": "https://www.5movierulz.solutions/movies?sort=featured",
+        "pageTitle": "Featured Movies Watch Online Free | MovieRulz",
+        "score": 40,
+        "counts": {
+          "critical": 5,
+          "major": 0,
+          "minor": 0,
+          "total": 5
+        }
+      }
+    ],
+    "pagesScanned": 5,
+    "pagesFailed": 0,
+    "pages": [
+      {
+        "url": "https://www.5movierulz.solutions/",
+        "pageTitle": "MovieRulz | Latest Telugu, Tamil, Malayalam & Hindi Movies",
+        "status": "completed",
+        "score": 40,
+        "wcagLevel": "WCAG Non-Compliant (Critical Violations)",
+        "statusBadge": "danger",
+        "counts": {
+          "critical": 5,
+          "major": 0,
+          "minor": 0,
+          "total": 5
+        },
+        "categoryScores": {
+          "Images & Media": 100,
+          "Color & Contrast": 52,
+          "Forms & Controls": 88,
+          "Headings & Structure": 100,
+          "Links & Navigation": 100,
+          "ARIA & Semantics": 100
+        },
+        "issues": [
+          {
+            "id": "issue-001",
+            "ruleId": "form-label-missing",
+            "category": "Forms & Controls",
+            "severity": "Critical",
+            "element": "input",
+            "selector": "input[name=\"s\"]",
+            "wcag": "WCAG 1.3.1 / 4.1.2 Name, Role, Value (Level A)",
+            "context": "Form element <input name=\"s\"> lacks a associated <label> or aria-label.",
+            "originalSnippet": "<input style=\"width:250px;height:20px\" type=\"text\" name=\"s\" id=\"search_term\" placeholder=\"Search...\" autocomplete=\"off\" required=\"\">",
+            "explanation": "Form controls without labels cannot be announced correctly by screen readers, making forms impossible to complete.",
+            "suggestedFixCode": "<label for=\"search_term\">Field Label</label>\n<input id=\"search_term\" type=\"text\" name=\"s\">",
+            "quickTip": "Always test forms & controls elements using assistive tools and keyboard navigation."
+          },
+          {
+            "id": "issue-002",
+            "ruleId": "color-contrast-low",
+            "category": "Color & Contrast",
+            "severity": "Critical",
+            "element": "p",
+            "selector": "p:contains(\"About | \n      \")",
+            "wcag": "WCAG 1.4.3 Contrast (Minimum) (Level AA - 4.5:1 required)",
+            "context": "Element uses low contrast inline style: \"font-size: 11px; color: #888; margin-top: 15px;\".",
+            "originalSnippet": "<p style=\"font-size: 11px; color: #888; margin-top: 15px;\">\n            <a href=\"/about\" style=\"color: #888;\">About</a> | \n            <a href=\"/contact\" style=\"color: #888;\">Contact</a> | \n            <a href=\"/privacy\" style=\"color: #888;\">Privacy Policy</a>\n        </p>",
+            "explanation": "Low contrast text is difficult or impossible to read for users with low vision, color blindness, or age-related vision loss.",
+            "suggestedFixCode": "<p style=\"color: #111827; background-color: #ffffff;\">About | \n            Contact | \n            Privacy Policy</p>",
+            "quickTip": "Always test color & contrast elements using assistive tools and keyboard navigation."
+          },
+          {
+            "id": "issue-003",
+            "ruleId": "color-contrast-low",
+            "category": "Color & Contrast",
+            "severity": "Critical",
+            "element": "a",
+            "selector": "a:contains(\"About\")",
+            "wcag": "WCAG 1.4.3 Contrast (Minimum) (Level AA - 4.5:1 required)",
+            "context": "Element uses low contrast inline style: \"color: #888;\".",
+            "originalSnippet": "<a href=\"/about\" style=\"color: #888;\">About</a>",
+            "explanation": "Low contrast text is difficult or impossible to read for users with low vision, color blindness, or age-related vision loss.",
+            "suggestedFixCode": "<p style=\"color: #111827; background-color: #ffffff;\">About</p>",
+            "quickTip": "Always test color & contrast elements using assistive tools and keyboard navigation."
+          },
+          {
+            "id": "issue-004",
+            "ruleId": "color-contrast-low",
+            "category": "Color & Contrast",
+            "severity": "Critical",
+            "element": "a",
+            "selector": "a:contains(\"Contact\")",
+            "wcag": "WCAG 1.4.3 Contrast (Minimum) (Level AA - 4.5:1 required)",
+            "context": "Element uses low contrast inline style: \"color: #888;\".",
+            "originalSnippet": "<a href=\"/contact\" style=\"color: #888;\">Contact</a>",
+            "explanation": "Low contrast text is difficult or impossible to read for users with low vision, color blindness, or age-related vision loss.",
+            "suggestedFixCode": "<p style=\"color: #111827; background-color: #ffffff;\">Contact</p>",
+            "quickTip": "Always test color & contrast elements using assistive tools and keyboard navigation."
+          },
+          {
+            "id": "issue-005",
+            "ruleId": "color-contrast-low",
+            "category": "Color & Contrast",
+            "severity": "Critical",
+            "element": "a",
+            "selector": "a:contains(\"Privacy Policy\")",
+            "wcag": "WCAG 1.4.3 Contrast (Minimum) (Level AA - 4.5:1 required)",
+            "context": "Element uses low contrast inline style: \"color: #888;\".",
+            "originalSnippet": "<a href=\"/privacy\" style=\"color: #888;\">Privacy Policy</a>",
+            "explanation": "Low contrast text is difficult or impossible to read for users with low vision, color blindness, or age-related vision loss.",
+            "suggestedFixCode": "<p style=\"color: #111827; background-color: #ffffff;\">Privacy Policy</p>",
+            "quickTip": "Always test color & contrast elements using assistive tools and keyboard navigation."
+          }
+        ]
+      },
+      {
+        "url": "https://www.5movierulz.solutions/contact",
+        "pageTitle": "Contact | MovieRulz",
+        "status": "completed",
+        "score": 40,
+        "wcagLevel": "WCAG Non-Compliant (Critical Violations)",
+        "statusBadge": "danger",
+        "counts": {
+          "critical": 5,
+          "major": 0,
+          "minor": 0,
+          "total": 5
+        },
+        "categoryScores": {
+          "Images & Media": 100,
+          "Color & Contrast": 52,
+          "Forms & Controls": 88,
+          "Headings & Structure": 100,
+          "Links & Navigation": 100,
+          "ARIA & Semantics": 100
+        },
+        "issues": [
+          {
+            "id": "issue-001",
+            "ruleId": "form-label-missing",
+            "category": "Forms & Controls",
+            "severity": "Critical",
+            "element": "input",
+            "selector": "input[name=\"s\"]",
+            "wcag": "WCAG 1.3.1 / 4.1.2 Name, Role, Value (Level A)",
+            "context": "Form element <input name=\"s\"> lacks a associated <label> or aria-label.",
+            "originalSnippet": "<input style=\"width:250px;height:20px\" type=\"text\" name=\"s\" id=\"search_term\" placeholder=\"Search...\" autocomplete=\"off\" required=\"\">",
+            "explanation": "Form controls without labels cannot be announced correctly by screen readers, making forms impossible to complete.",
+            "suggestedFixCode": "<label for=\"search_term\">Field Label</label>\n<input id=\"search_term\" type=\"text\" name=\"s\">",
+            "quickTip": "Always test forms & controls elements using assistive tools and keyboard navigation."
+          },
+          {
+            "id": "issue-002",
+            "ruleId": "color-contrast-low",
+            "category": "Color & Contrast",
+            "severity": "Critical",
+            "element": "p",
+            "selector": "p:contains(\"About | \n      \")",
+            "wcag": "WCAG 1.4.3 Contrast (Minimum) (Level AA - 4.5:1 required)",
+            "context": "Element uses low contrast inline style: \"font-size: 11px; color: #888; margin-top: 15px;\".",
+            "originalSnippet": "<p style=\"font-size: 11px; color: #888; margin-top: 15px;\">\n            <a href=\"/about\" style=\"color: #888;\">About</a> | \n            <a href=\"/contact\" style=\"color: #888;\">Contact</a> | \n            <a href=\"/privacy\" style=\"color: #888;\">Privacy Policy</a>\n        </p>",
+            "explanation": "Low contrast text is difficult or impossible to read for users with low vision, color blindness, or age-related vision loss.",
+            "suggestedFixCode": "<p style=\"color: #111827; background-color: #ffffff;\">About | \n            Contact | \n            Privacy Policy</p>",
+            "quickTip": "Always test color & contrast elements using assistive tools and keyboard navigation."
+          },
+          {
+            "id": "issue-003",
+            "ruleId": "color-contrast-low",
+            "category": "Color & Contrast",
+            "severity": "Critical",
+            "element": "a",
+            "selector": "a:contains(\"About\")",
+            "wcag": "WCAG 1.4.3 Contrast (Minimum) (Level AA - 4.5:1 required)",
+            "context": "Element uses low contrast inline style: \"color: #888;\".",
+            "originalSnippet": "<a href=\"/about\" style=\"color: #888;\">About</a>",
+            "explanation": "Low contrast text is difficult or impossible to read for users with low vision, color blindness, or age-related vision loss.",
+            "suggestedFixCode": "<p style=\"color: #111827; background-color: #ffffff;\">About</p>",
+            "quickTip": "Always test color & contrast elements using assistive tools and keyboard navigation."
+          },
+          {
+            "id": "issue-004",
+            "ruleId": "color-contrast-low",
+            "category": "Color & Contrast",
+            "severity": "Critical",
+            "element": "a",
+            "selector": "a:contains(\"Contact\")",
+            "wcag": "WCAG 1.4.3 Contrast (Minimum) (Level AA - 4.5:1 required)",
+            "context": "Element uses low contrast inline style: \"color: #888;\".",
+            "originalSnippet": "<a href=\"/contact\" style=\"color: #888;\">Contact</a>",
+            "explanation": "Low contrast text is difficult or impossible to read for users with low vision, color blindness, or age-related vision loss.",
+            "suggestedFixCode": "<p style=\"color: #111827; background-color: #ffffff;\">Contact</p>",
+            "quickTip": "Always test color & contrast elements using assistive tools and keyboard navigation."
+          },
+          {
+            "id": "issue-005",
+            "ruleId": "color-contrast-low",
+            "category": "Color & Contrast",
+            "severity": "Critical",
+            "element": "a",
+            "selector": "a:contains(\"Privacy Policy\")",
+            "wcag": "WCAG 1.4.3 Contrast (Minimum) (Level AA - 4.5:1 required)",
+            "context": "Element uses low contrast inline style: \"color: #888;\".",
+            "originalSnippet": "<a href=\"/privacy\" style=\"color: #888;\">Privacy Policy</a>",
+            "explanation": "Low contrast text is difficult or impossible to read for users with low vision, color blindness, or age-related vision loss.",
+            "suggestedFixCode": "<p style=\"color: #111827; background-color: #ffffff;\">Privacy Policy</p>",
+            "quickTip": "Always test color & contrast elements using assistive tools and keyboard navigation."
+          }
+        ]
+      },
+      {
+        "url": "https://www.5movierulz.solutions/about",
+        "pageTitle": "About Us | MovieRulz",
+        "status": "completed",
+        "score": 40,
+        "wcagLevel": "WCAG Non-Compliant (Critical Violations)",
+        "statusBadge": "danger",
+        "counts": {
+          "critical": 5,
+          "major": 0,
+          "minor": 0,
+          "total": 5
+        },
+        "categoryScores": {
+          "Images & Media": 100,
+          "Color & Contrast": 52,
+          "Forms & Controls": 88,
+          "Headings & Structure": 100,
+          "Links & Navigation": 100,
+          "ARIA & Semantics": 100
+        },
+        "issues": [
+          {
+            "id": "issue-001",
+            "ruleId": "form-label-missing",
+            "category": "Forms & Controls",
+            "severity": "Critical",
+            "element": "input",
+            "selector": "input[name=\"s\"]",
+            "wcag": "WCAG 1.3.1 / 4.1.2 Name, Role, Value (Level A)",
+            "context": "Form element <input name=\"s\"> lacks a associated <label> or aria-label.",
+            "originalSnippet": "<input style=\"width:250px;height:20px\" type=\"text\" name=\"s\" id=\"search_term\" placeholder=\"Search...\" autocomplete=\"off\" required=\"\">",
+            "explanation": "Form controls without labels cannot be announced correctly by screen readers, making forms impossible to complete.",
+            "suggestedFixCode": "<label for=\"search_term\">Field Label</label>\n<input id=\"search_term\" type=\"text\" name=\"s\">",
+            "quickTip": "Always test forms & controls elements using assistive tools and keyboard navigation."
+          },
+          {
+            "id": "issue-002",
+            "ruleId": "color-contrast-low",
+            "category": "Color & Contrast",
+            "severity": "Critical",
+            "element": "p",
+            "selector": "p:contains(\"About | \n      \")",
+            "wcag": "WCAG 1.4.3 Contrast (Minimum) (Level AA - 4.5:1 required)",
+            "context": "Element uses low contrast inline style: \"font-size: 11px; color: #888; margin-top: 15px;\".",
+            "originalSnippet": "<p style=\"font-size: 11px; color: #888; margin-top: 15px;\">\n            <a href=\"/about\" style=\"color: #888;\">About</a> | \n            <a href=\"/contact\" style=\"color: #888;\">Contact</a> | \n            <a href=\"/privacy\" style=\"color: #888;\">Privacy Policy</a>\n        </p>",
+            "explanation": "Low contrast text is difficult or impossible to read for users with low vision, color blindness, or age-related vision loss.",
+            "suggestedFixCode": "<p style=\"color: #111827; background-color: #ffffff;\">About | \n            Contact | \n            Privacy Policy</p>",
+            "quickTip": "Always test color & contrast elements using assistive tools and keyboard navigation."
+          },
+          {
+            "id": "issue-003",
+            "ruleId": "color-contrast-low",
+            "category": "Color & Contrast",
+            "severity": "Critical",
+            "element": "a",
+            "selector": "a:contains(\"About\")",
+            "wcag": "WCAG 1.4.3 Contrast (Minimum) (Level AA - 4.5:1 required)",
+            "context": "Element uses low contrast inline style: \"color: #888;\".",
+            "originalSnippet": "<a href=\"/about\" style=\"color: #888;\">About</a>",
+            "explanation": "Low contrast text is difficult or impossible to read for users with low vision, color blindness, or age-related vision loss.",
+            "suggestedFixCode": "<p style=\"color: #111827; background-color: #ffffff;\">About</p>",
+            "quickTip": "Always test color & contrast elements using assistive tools and keyboard navigation."
+          },
+          {
+            "id": "issue-004",
+            "ruleId": "color-contrast-low",
+            "category": "Color & Contrast",
+            "severity": "Critical",
+            "element": "a",
+            "selector": "a:contains(\"Contact\")",
+            "wcag": "WCAG 1.4.3 Contrast (Minimum) (Level AA - 4.5:1 required)",
+            "context": "Element uses low contrast inline style: \"color: #888;\".",
+            "originalSnippet": "<a href=\"/contact\" style=\"color: #888;\">Contact</a>",
+            "explanation": "Low contrast text is difficult or impossible to read for users with low vision, color blindness, or age-related vision loss.",
+            "suggestedFixCode": "<p style=\"color: #111827; background-color: #ffffff;\">Contact</p>",
+            "quickTip": "Always test color & contrast elements using assistive tools and keyboard navigation."
+          },
+          {
+            "id": "issue-005",
+            "ruleId": "color-contrast-low",
+            "category": "Color & Contrast",
+            "severity": "Critical",
+            "element": "a",
+            "selector": "a:contains(\"Privacy Policy\")",
+            "wcag": "WCAG 1.4.3 Contrast (Minimum) (Level AA - 4.5:1 required)",
+            "context": "Element uses low contrast inline style: \"color: #888;\".",
+            "originalSnippet": "<a href=\"/privacy\" style=\"color: #888;\">Privacy Policy</a>",
+            "explanation": "Low contrast text is difficult or impossible to read for users with low vision, color blindness, or age-related vision loss.",
+            "suggestedFixCode": "<p style=\"color: #111827; background-color: #ffffff;\">Privacy Policy</p>",
+            "quickTip": "Always test color & contrast elements using assistive tools and keyboard navigation."
+          }
+        ]
+      },
+      {
+        "url": "https://www.5movierulz.solutions/genre/news",
+        "pageTitle": "Watch News Movies Online | MovieRulz",
+        "status": "completed",
+        "score": 40,
+        "wcagLevel": "WCAG Non-Compliant (Critical Violations)",
+        "statusBadge": "danger",
+        "counts": {
+          "critical": 5,
+          "major": 0,
+          "minor": 0,
+          "total": 5
+        },
+        "categoryScores": {
+          "Images & Media": 100,
+          "Color & Contrast": 52,
+          "Forms & Controls": 88,
+          "Headings & Structure": 100,
+          "Links & Navigation": 100,
+          "ARIA & Semantics": 100
+        },
+        "issues": [
+          {
+            "id": "issue-001",
+            "ruleId": "form-label-missing",
+            "category": "Forms & Controls",
+            "severity": "Critical",
+            "element": "input",
+            "selector": "input[name=\"s\"]",
+            "wcag": "WCAG 1.3.1 / 4.1.2 Name, Role, Value (Level A)",
+            "context": "Form element <input name=\"s\"> lacks a associated <label> or aria-label.",
+            "originalSnippet": "<input style=\"width:250px;height:20px\" type=\"text\" name=\"s\" id=\"search_term\" placeholder=\"Search...\" autocomplete=\"off\" required=\"\">",
+            "explanation": "Form controls without labels cannot be announced correctly by screen readers, making forms impossible to complete.",
+            "suggestedFixCode": "<label for=\"search_term\">Field Label</label>\n<input id=\"search_term\" type=\"text\" name=\"s\">",
+            "quickTip": "Always test forms & controls elements using assistive tools and keyboard navigation."
+          },
+          {
+            "id": "issue-002",
+            "ruleId": "color-contrast-low",
+            "category": "Color & Contrast",
+            "severity": "Critical",
+            "element": "p",
+            "selector": "p:contains(\"About | \n      \")",
+            "wcag": "WCAG 1.4.3 Contrast (Minimum) (Level AA - 4.5:1 required)",
+            "context": "Element uses low contrast inline style: \"font-size: 11px; color: #888; margin-top: 15px;\".",
+            "originalSnippet": "<p style=\"font-size: 11px; color: #888; margin-top: 15px;\">\n            <a href=\"/about\" style=\"color: #888;\">About</a> | \n            <a href=\"/contact\" style=\"color: #888;\">Contact</a> | \n            <a href=\"/privacy\" style=\"color: #888;\">Privacy Policy</a>\n        </p>",
+            "explanation": "Low contrast text is difficult or impossible to read for users with low vision, color blindness, or age-related vision loss.",
+            "suggestedFixCode": "<p style=\"color: #111827; background-color: #ffffff;\">About | \n            Contact | \n            Privacy Policy</p>",
+            "quickTip": "Always test color & contrast elements using assistive tools and keyboard navigation."
+          },
+          {
+            "id": "issue-003",
+            "ruleId": "color-contrast-low",
+            "category": "Color & Contrast",
+            "severity": "Critical",
+            "element": "a",
+            "selector": "a:contains(\"About\")",
+            "wcag": "WCAG 1.4.3 Contrast (Minimum) (Level AA - 4.5:1 required)",
+            "context": "Element uses low contrast inline style: \"color: #888;\".",
+            "originalSnippet": "<a href=\"/about\" style=\"color: #888;\">About</a>",
+            "explanation": "Low contrast text is difficult or impossible to read for users with low vision, color blindness, or age-related vision loss.",
+            "suggestedFixCode": "<p style=\"color: #111827; background-color: #ffffff;\">About</p>",
+            "quickTip": "Always test color & contrast elements using assistive tools and keyboard navigation."
+          },
+          {
+            "id": "issue-004",
+            "ruleId": "color-contrast-low",
+            "category": "Color & Contrast",
+            "severity": "Critical",
+            "element": "a",
+            "selector": "a:contains(\"Contact\")",
+            "wcag": "WCAG 1.4.3 Contrast (Minimum) (Level AA - 4.5:1 required)",
+            "context": "Element uses low contrast inline style: \"color: #888;\".",
+            "originalSnippet": "<a href=\"/contact\" style=\"color: #888;\">Contact</a>",
+            "explanation": "Low contrast text is difficult or impossible to read for users with low vision, color blindness, or age-related vision loss.",
+            "suggestedFixCode": "<p style=\"color: #111827; background-color: #ffffff;\">Contact</p>",
+            "quickTip": "Always test color & contrast elements using assistive tools and keyboard navigation."
+          },
+          {
+            "id": "issue-005",
+            "ruleId": "color-contrast-low",
+            "category": "Color & Contrast",
+            "severity": "Critical",
+            "element": "a",
+            "selector": "a:contains(\"Privacy Policy\")",
+            "wcag": "WCAG 1.4.3 Contrast (Minimum) (Level AA - 4.5:1 required)",
+            "context": "Element uses low contrast inline style: \"color: #888;\".",
+            "originalSnippet": "<a href=\"/privacy\" style=\"color: #888;\">Privacy Policy</a>",
+            "explanation": "Low contrast text is difficult or impossible to read for users with low vision, color blindness, or age-related vision loss.",
+            "suggestedFixCode": "<p style=\"color: #111827; background-color: #ffffff;\">Privacy Policy</p>",
+            "quickTip": "Always test color & contrast elements using assistive tools and keyboard navigation."
+          }
+        ]
+      },
+      {
+        "url": "https://www.5movierulz.solutions/movies?sort=featured",
+        "pageTitle": "Featured Movies Watch Online Free | MovieRulz",
+        "status": "completed",
+        "score": 40,
+        "wcagLevel": "WCAG Non-Compliant (Critical Violations)",
+        "statusBadge": "danger",
+        "counts": {
+          "critical": 5,
+          "major": 0,
+          "minor": 0,
+          "total": 5
+        },
+        "categoryScores": {
+          "Images & Media": 100,
+          "Color & Contrast": 52,
+          "Forms & Controls": 88,
+          "Headings & Structure": 100,
+          "Links & Navigation": 100,
+          "ARIA & Semantics": 100
+        },
+        "issues": [
+          {
+            "id": "issue-001",
+            "ruleId": "form-label-missing",
+            "category": "Forms & Controls",
+            "severity": "Critical",
+            "element": "input",
+            "selector": "input[name=\"s\"]",
+            "wcag": "WCAG 1.3.1 / 4.1.2 Name, Role, Value (Level A)",
+            "context": "Form element <input name=\"s\"> lacks a associated <label> or aria-label.",
+            "originalSnippet": "<input style=\"width:250px;height:20px\" type=\"text\" name=\"s\" id=\"search_term\" placeholder=\"Search...\" autocomplete=\"off\" required=\"\">",
+            "explanation": "Form controls without labels cannot be announced correctly by screen readers, making forms impossible to complete.",
+            "suggestedFixCode": "<label for=\"search_term\">Field Label</label>\n<input id=\"search_term\" type=\"text\" name=\"s\">",
+            "quickTip": "Always test forms & controls elements using assistive tools and keyboard navigation."
+          },
+          {
+            "id": "issue-002",
+            "ruleId": "color-contrast-low",
+            "category": "Color & Contrast",
+            "severity": "Critical",
+            "element": "p",
+            "selector": "p:contains(\"About | \n      \")",
+            "wcag": "WCAG 1.4.3 Contrast (Minimum) (Level AA - 4.5:1 required)",
+            "context": "Element uses low contrast inline style: \"font-size: 11px; color: #888; margin-top: 15px;\".",
+            "originalSnippet": "<p style=\"font-size: 11px; color: #888; margin-top: 15px;\">\n            <a href=\"/about\" style=\"color: #888;\">About</a> | \n            <a href=\"/contact\" style=\"color: #888;\">Contact</a> | \n            <a href=\"/privacy\" style=\"color: #888;\">Privacy Policy</a>\n        </p>",
+            "explanation": "Low contrast text is difficult or impossible to read for users with low vision, color blindness, or age-related vision loss.",
+            "suggestedFixCode": "<p style=\"color: #111827; background-color: #ffffff;\">About | \n            Contact | \n            Privacy Policy</p>",
+            "quickTip": "Always test color & contrast elements using assistive tools and keyboard navigation."
+          },
+          {
+            "id": "issue-003",
+            "ruleId": "color-contrast-low",
+            "category": "Color & Contrast",
+            "severity": "Critical",
+            "element": "a",
+            "selector": "a:contains(\"About\")",
+            "wcag": "WCAG 1.4.3 Contrast (Minimum) (Level AA - 4.5:1 required)",
+            "context": "Element uses low contrast inline style: \"color: #888;\".",
+            "originalSnippet": "<a href=\"/about\" style=\"color: #888;\">About</a>",
+            "explanation": "Low contrast text is difficult or impossible to read for users with low vision, color blindness, or age-related vision loss.",
+            "suggestedFixCode": "<p style=\"color: #111827; background-color: #ffffff;\">About</p>",
+            "quickTip": "Always test color & contrast elements using assistive tools and keyboard navigation."
+          },
+          {
+            "id": "issue-004",
+            "ruleId": "color-contrast-low",
+            "category": "Color & Contrast",
+            "severity": "Critical",
+            "element": "a",
+            "selector": "a:contains(\"Contact\")",
+            "wcag": "WCAG 1.4.3 Contrast (Minimum) (Level AA - 4.5:1 required)",
+            "context": "Element uses low contrast inline style: \"color: #888;\".",
+            "originalSnippet": "<a href=\"/contact\" style=\"color: #888;\">Contact</a>",
+            "explanation": "Low contrast text is difficult or impossible to read for users with low vision, color blindness, or age-related vision loss.",
+            "suggestedFixCode": "<p style=\"color: #111827; background-color: #ffffff;\">Contact</p>",
+            "quickTip": "Always test color & contrast elements using assistive tools and keyboard navigation."
+          },
+          {
+            "id": "issue-005",
+            "ruleId": "color-contrast-low",
+            "category": "Color & Contrast",
+            "severity": "Critical",
+            "element": "a",
+            "selector": "a:contains(\"Privacy Policy\")",
+            "wcag": "WCAG 1.4.3 Contrast (Minimum) (Level AA - 4.5:1 required)",
+            "context": "Element uses low contrast inline style: \"color: #888;\".",
+            "originalSnippet": "<a href=\"/privacy\" style=\"color: #888;\">Privacy Policy</a>",
+            "explanation": "Low contrast text is difficult or impossible to read for users with low vision, color blindness, or age-related vision loss.",
+            "suggestedFixCode": "<p style=\"color: #111827; background-color: #ffffff;\">Privacy Policy</p>",
+            "quickTip": "Always test color & contrast elements using assistive tools and keyboard navigation."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "scan-1789811354609-proao",
+    "websiteId": "vijay33391.github.io",
+    "url": "https://vijay33391.github.io/portfolio_web/",
+    "pageTitle": "Vijay Vardhan Portfolio",
+    "mode": "url",
+    "isBatch": false,
+    "timestamp": "2026-09-19T09:49:14.609Z",
+    "durationSeconds": 1.48,
+    "score": 88,
+    "wcagLevel": "WCAG 2.1 Level AA Compliant",
+    "statusBadge": "success",
+    "counts": {
+      "critical": 0,
+      "major": 2,
+      "minor": 0,
+      "total": 2
+    },
+    "categoryScores": {
+      "Images & Media": 100,
+      "Color & Contrast": 100,
+      "Forms & Controls": 100,
+      "Headings & Structure": 94,
+      "Links & Navigation": 94,
+      "ARIA & Semantics": 100
+    },
+    "manualReviewItems": [
+      {
+        "id": "mr-01",
+        "title": "Meaningful Alt Text Quality",
+        "description": "Verify image alt text provides equivalent context and meaning, not just superficial image tags.",
+        "wcag": "WCAG 1.1.1"
+      },
+      {
+        "id": "mr-02",
+        "title": "Keyboard Focus Order & Visibility",
+        "description": "Navigate the entire site using Tab and Shift+Tab keys to ensure all interactive elements receive visible focus rings in logical order.",
+        "wcag": "WCAG 2.4.7"
+      },
+      {
+        "id": "mr-03",
+        "title": "Screen Reader Interaction Testing",
+        "description": "Test interactive dropdowns, modals, and dynamic content updates with NVDA, VoiceOver, or JAWS.",
+        "wcag": "WCAG 4.1.2"
+      },
+      {
+        "id": "mr-04",
+        "title": "Responsive Text Scaling (200% Zoom)",
+        "description": "Zoom page to 200% in browser settings and ensure text does not truncate, overlap, or require horizontal scrolling.",
+        "wcag": "WCAG 1.4.4"
+      }
+    ],
+    "performanceImpact": {
+      "loadDurationSeconds": 1.48,
+      "speedBadge": "Moderate",
+      "disclaimer": "Note: Accessibility improvements support better mobile user experience and search engine discoverability. Measured accessibility scores represent WCAG 2.1 compliance and do not guarantee search engine ranking placement.",
+      "impactNotes": [
+        {
+          "title": "Content Document Outline",
+          "category": "Content Structure",
+          "icon": "Heading",
+          "benefit": "Logical heading hierarchy improves content scannability for human users and helps search engines understand page topic hierarchy."
+        }
+      ]
+    },
+    "issues": [
+      {
+        "id": "issue-001",
+        "ruleId": "heading-order-skipped",
+        "category": "Headings & Structure",
+        "severity": "Major",
+        "element": "h4",
+        "selector": "h4:contains(\"I love to solve\")",
+        "wcag": "WCAG 1.3.1 Info and Relationships (Level A)",
+        "context": "Heading level skipped from <h2> to <h4> (\"I love to solve business problems & uncover hidden data stories\").",
+        "originalSnippet": "<h4> I love to solve business problems &amp; uncover hidden data stories </h4>",
+        "explanation": "Skipping heading levels (e.g., H1 directly to H3) disrupts screen reader heading navigation structure.",
+        "suggestedFixCode": "<h3>I love to solve business problems & uncover hidden data stories</h3>",
+        "quickTip": "Always test headings & structure elements using assistive tools and keyboard navigation."
+      },
+      {
+        "id": "issue-002",
+        "ruleId": "link-text-generic",
+        "category": "Links & Navigation",
+        "severity": "Major",
+        "element": "a",
+        "selector": "a[href=\"https://docs.google.com/forms/d/e/1FAIpQLSey7etSpFfRCi3pnPv78882T5nJTTdRCb_l_l5DmRa0lZ6lEw/viewform?usp=sharing&ouid=112823315979809211042\"]",
+        "wcag": "WCAG 2.4.4 Link Purpose (In Context) (Level A)",
+        "context": "Link contains non-descriptive text \"Click Here\".",
+        "originalSnippet": "<a href=\"https://docs.google.com/forms/d/e/1FAIpQLSey7etSpFfRCi3pnPv78882T5nJTTdRCb_l_l5DmRa0lZ6lEw/viewform?usp=sharing&amp;ouid=112823315979809211042\" class=\"btn btn-primary py-3 px-5\">Click Here</a>",
+        "explanation": "Screen reader users navigating by links alone hear \"click here\" out of context and cannot determine link destinations.",
+        "suggestedFixCode": "<a href=\"https://docs.google.com/forms/d/e/1FAIpQLSey7etSpFfRCi3pnPv78882T5nJTTdRCb_l_l5DmRa0lZ6lEw/viewform?usp=sharing&ouid=112823315979809211042\">Read our annual accessibility audit report</a>",
+        "quickTip": "Always test links & navigation elements using assistive tools and keyboard navigation."
+      }
+    ]
+  },
+  {
+    "id": "batch-1789811665219-y3wry",
+    "websiteId": "leetcode.com",
+    "url": "https://leetcode.com/problemset/",
+    "pageTitle": "Batch Audit: leetcode.com",
+    "mode": "batch",
+    "timestamp": "2026-09-19T09:54:25.220Z",
+    "durationSeconds": 0.84,
+    "performanceImpact": {
+      "loadDurationSeconds": 0.84,
+      "speedBadge": "Fast (Sub-second)",
+      "disclaimer": "Note: Accessibility improvements support better mobile user experience and search engine discoverability. Measured accessibility scores represent WCAG 2.1 compliance and do not guarantee search engine ranking placement.",
+      "impactNotes": []
+    },
+    "baseUrl": "https://leetcode.com/problemset/",
+    "isBatch": true,
+    "score": 0,
+    "wcagLevel": "Scan Failed",
+    "statusBadge": "danger",
+    "summary": {
+      "pagesScanned": 0,
+      "pagesFailed": 1,
+      "critical": 0,
+      "major": 0,
+      "minor": 0
+    },
+    "pages": [
+      {
+        "url": "https://leetcode.com/problemset",
+        "status": "failed",
+        "error": "Target website returned HTTP status 403."
+      }
+    ],
+    "issueFrequency": [],
+    "worstPages": []
+  },
+  {
+    "id": "batch-1789811781925-89wt5",
+    "websiteId": "youtube.com",
+    "url": "https://www.youtube.com/",
+    "pageTitle": "Batch Audit: www.youtube.com",
+    "mode": "batch",
+    "timestamp": "2026-09-19T09:56:21.925Z",
+    "durationSeconds": 16.33,
+    "performanceImpact": {
+      "loadDurationSeconds": 16.33,
+      "speedBadge": "Moderate",
+      "disclaimer": "Note: Accessibility improvements support better mobile user experience and search engine discoverability. Measured accessibility scores represent WCAG 2.1 compliance and do not guarantee search engine ranking placement.",
+      "impactNotes": [
+        {
+          "title": "Image Search & SEO Indexability",
+          "category": "SEO & Search",
+          "icon": "Image",
+          "benefit": "Adding descriptive alt text allows search engine crawlers (Google Image Search) to index visual media, driving organic search traffic."
+        },
+        {
+          "title": "Mobile Form Completion Rate",
+          "category": "Mobile Usability",
+          "icon": "FormInput",
+          "benefit": "Explicitly associated labels increase touch target area on mobile screens, reducing form abandonment and input frustration."
+        },
+        {
+          "title": "Content Document Outline",
+          "category": "Content Structure",
+          "icon": "Heading",
+          "benefit": "Logical heading hierarchy improves content scannability for human users and helps search engines understand page topic hierarchy."
+        }
+      ]
+    },
+    "baseUrl": "https://www.youtube.com/",
+    "isBatch": true,
+    "score": 86,
+    "wcagLevel": "WCAG Non-Compliant (Critical Violations)",
+    "statusBadge": "danger",
+    "counts": {
+      "critical": 3,
+      "major": 6,
+      "minor": 0,
+      "total": 9
+    },
+    "categoryScores": {
+      "Images & Media": 95,
+      "Color & Contrast": 100,
+      "Forms & Controls": 98,
+      "Headings & Structure": 99,
+      "Links & Navigation": 99,
+      "ARIA & Semantics": 95
+    },
+    "issueFrequency": [
+      {
+        "ruleId": "video-captions-missing",
+        "category": "Images & Media",
+        "severity": "Major",
+        "wcag": "WCAG 1.2.2 Captions (Prerecorded) (Level A)",
+        "context": "Video element lacks a <track kind=\"captions\"> child element.",
+        "originalSnippet": "<video class=\"ytc-home-hero__video\" src=\"https://kstatic.googleusercontent.com/files/672eb440a65ddd748cb8013aea9a7d5ddaa955dd32a6e4bba3df21e1fe819d3c692cd891c02819eaa2f23a69e6709f2d7167404ccff538cf507f212d4e29cd57\" autoplay=\"\" muted=\"\" loop=\"\" playsinline=\"\" controls=\"\"></video>",
+        "suggestedFixCode": "<video controls>\n  <source src=\"video.mp4\" type=\"video/mp4\">\n  <track kind=\"captions\" src=\"captions.vtt\" srclang=\"en\" label=\"English Captions\">\n</video>",
+        "explanation": "Deaf or hard-of-hearing users cannot understand audio content in video without synchronized closed captions.",
+        "occurrences": 4,
+        "affectedPagesCount": 1,
+        "affectedPages": [
+          "Copyright tools: Rightsholders and creators – how YouTube works"
+        ]
+      },
+      {
+        "ruleId": "button-name-missing",
+        "category": "ARIA & Semantics",
+        "severity": "Critical",
+        "wcag": "WCAG 4.1.2 Name, Role, Value (Level A)",
+        "context": "Interactive <button> has no inner text or aria-label attribute.",
+        "originalSnippet": "<button class=\"lb-carousel-button lb-carousel-button--previous carousel-previous-btn\" lb-auto-init=\"LBCarouselButton\" lb-options=\"{'uid': 'copyright-protection-tools', 'previous': true, 'direction': -1}\">\n                  <img class=\"lb-carousel-button__icon\" src=\"https://fonts.gstatic.com/s/i/googlematerialicons/navigate_before/v10/24px.svg\" alt=\"Previous\">\n                </button>",
+        "suggestedFixCode": "<button type=\"button\" aria-label=\"Close dialog\">\n  <svg>...</svg>\n</button>",
+        "explanation": "Icon buttons or empty buttons without accessible names are announced as \"unlabelled button\" by screen readers.",
+        "occurrences": 2,
+        "affectedPagesCount": 1,
+        "affectedPages": [
+          "Copyright tools: Rightsholders and creators – how YouTube works"
+        ]
+      },
+      {
+        "ruleId": "heading-h1-missing",
+        "category": "Headings & Structure",
+        "severity": "Major",
+        "wcag": "WCAG 1.3.1 Info and Relationships (Level A)",
+        "context": "Page is missing a primary <h1> heading tag.",
+        "originalSnippet": "<body> ... </body>",
+        "suggestedFixCode": "<h1>Main Page Title</h1>",
+        "explanation": "A page without a main H1 heading makes it difficult for assistive technology users to identify the primary page topic.",
+        "occurrences": 1,
+        "affectedPagesCount": 1,
+        "affectedPages": [
+          "YouTube"
+        ]
+      },
+      {
+        "ruleId": "form-label-missing",
+        "category": "Forms & Controls",
+        "severity": "Critical",
+        "wcag": "WCAG 1.3.1 / 4.1.2 Name, Role, Value (Level A)",
+        "context": "Form element <input name=\"search_query\"> lacks a associated <label> or aria-label.",
+        "originalSnippet": "<input id=\"search\" autocapitalize=\"none\" autocomplete=\"off\" autocorrect=\"off\" hidden=\"\" name=\"search_query\" tabindex=\"0\" type=\"text\" spellcheck=\"false\">",
+        "suggestedFixCode": "<label for=\"search\">Field Label</label>\n<input id=\"search\" type=\"text\" name=\"search_query\">",
+        "explanation": "Form controls without labels cannot be announced correctly by screen readers, making forms impossible to complete.",
+        "occurrences": 1,
+        "affectedPagesCount": 1,
+        "affectedPages": [
+          "YouTube"
+        ]
+      },
+      {
+        "ruleId": "link-text-generic",
+        "category": "Links & Navigation",
+        "severity": "Major",
+        "wcag": "WCAG 2.4.4 Link Purpose (In Context) (Level A)",
+        "context": "Link contains non-descriptive text \"Read more\".",
+        "originalSnippet": "<a class=\"youtube-specific-topic__cta\" href=\"https://blog.youtube/topic-hub/kids-teens/\" data-ga4-analytics-click=\"{&quot;event&quot;:&quot;cta_click&quot;, &quot;event_template&quot;:&quot;CTA_CLICK_TEMPLATE&quot;, &quot;component_action&quot;: &quot;click&quot;}\">\n      <span class=\"youtube-specific-topic__cta-content\">\n        Read more\n      </span>\n    </a>",
+        "suggestedFixCode": "<a href=\"https://blog.youtube/topic-hub/kids-teens/\">Read our annual accessibility audit report</a>",
+        "explanation": "Screen reader users navigating by links alone hear \"click here\" out of context and cannot determine link destinations.",
+        "occurrences": 1,
+        "affectedPagesCount": 1,
+        "affectedPages": [
+          "Official YouTube Blog for Latest YouTube News & Insights\n            \n          \n          \n        ToggleToggleToggleToggleToggleToggleToggle"
+        ]
+      }
+    ],
+    "worstPages": [
+      {
+        "url": "https://www.youtube.com/about/copyright",
+        "pageTitle": "Copyright tools: Rightsholders and creators – how YouTube works",
+        "score": 52,
+        "counts": {
+          "critical": 2,
+          "major": 4,
+          "minor": 0,
+          "total": 6
+        }
+      },
+      {
+        "url": "https://www.youtube.com/",
+        "pageTitle": "YouTube",
+        "score": 82,
+        "counts": {
+          "critical": 1,
+          "major": 1,
+          "minor": 0,
+          "total": 2
+        }
+      },
+      {
+        "url": "https://www.youtube.com/about/press",
+        "pageTitle": "Official YouTube Blog for Latest YouTube News & Insights\n            \n          \n          \n        ToggleToggleToggleToggleToggleToggleToggle",
+        "score": 94,
+        "counts": {
+          "critical": 0,
+          "major": 1,
+          "minor": 0,
+          "total": 1
+        }
+      },
+      {
+        "url": "https://www.youtube.com/about",
+        "pageTitle": "About YouTube - YouTube",
+        "score": 100,
+        "counts": {
+          "critical": 0,
+          "major": 0,
+          "minor": 0,
+          "total": 0
+        }
+      },
+      {
+        "url": "https://www.youtube.com/t/contact_us",
+        "pageTitle": "Contact Us",
+        "score": 100,
+        "counts": {
+          "critical": 0,
+          "major": 0,
+          "minor": 0,
+          "total": 0
+        }
+      }
+    ],
+    "pagesScanned": 5,
+    "pagesFailed": 0,
+    "pages": [
+      {
+        "url": "https://www.youtube.com/",
+        "pageTitle": "YouTube",
+        "status": "completed",
+        "score": 82,
+        "wcagLevel": "WCAG Non-Compliant (Critical Violations)",
+        "statusBadge": "danger",
+        "counts": {
+          "critical": 1,
+          "major": 1,
+          "minor": 0,
+          "total": 2
+        },
+        "categoryScores": {
+          "Images & Media": 100,
+          "Color & Contrast": 100,
+          "Forms & Controls": 88,
+          "Headings & Structure": 94,
+          "Links & Navigation": 100,
+          "ARIA & Semantics": 100
+        },
+        "issues": [
+          {
+            "id": "issue-001",
+            "ruleId": "heading-h1-missing",
+            "category": "Headings & Structure",
+            "severity": "Major",
+            "element": "body",
+            "selector": "body",
+            "wcag": "WCAG 1.3.1 Info and Relationships (Level A)",
+            "context": "Page is missing a primary <h1> heading tag.",
+            "originalSnippet": "<body> ... </body>",
+            "explanation": "A page without a main H1 heading makes it difficult for assistive technology users to identify the primary page topic.",
+            "suggestedFixCode": "<h1>Main Page Title</h1>",
+            "quickTip": "Always test headings & structure elements using assistive tools and keyboard navigation."
+          },
+          {
+            "id": "issue-002",
+            "ruleId": "form-label-missing",
+            "category": "Forms & Controls",
+            "severity": "Critical",
+            "element": "input",
+            "selector": "input[name=\"search_query\"]",
+            "wcag": "WCAG 1.3.1 / 4.1.2 Name, Role, Value (Level A)",
+            "context": "Form element <input name=\"search_query\"> lacks a associated <label> or aria-label.",
+            "originalSnippet": "<input id=\"search\" autocapitalize=\"none\" autocomplete=\"off\" autocorrect=\"off\" hidden=\"\" name=\"search_query\" tabindex=\"0\" type=\"text\" spellcheck=\"false\">",
+            "explanation": "Form controls without labels cannot be announced correctly by screen readers, making forms impossible to complete.",
+            "suggestedFixCode": "<label for=\"search\">Field Label</label>\n<input id=\"search\" type=\"text\" name=\"search_query\">",
+            "quickTip": "Always test forms & controls elements using assistive tools and keyboard navigation."
+          }
+        ]
+      },
+      {
+        "url": "https://www.youtube.com/about",
+        "pageTitle": "About YouTube - YouTube",
+        "status": "completed",
+        "score": 100,
+        "wcagLevel": "WCAG 2.1 Level AA Compliant",
+        "statusBadge": "success",
+        "counts": {
+          "critical": 0,
+          "major": 0,
+          "minor": 0,
+          "total": 0
+        },
+        "categoryScores": {
+          "Images & Media": 100,
+          "Color & Contrast": 100,
+          "Forms & Controls": 100,
+          "Headings & Structure": 100,
+          "Links & Navigation": 100,
+          "ARIA & Semantics": 100
+        },
+        "issues": []
+      },
+      {
+        "url": "https://www.youtube.com/about/press",
+        "pageTitle": "Official YouTube Blog for Latest YouTube News & Insights\n            \n          \n          \n        ToggleToggleToggleToggleToggleToggleToggle",
+        "status": "completed",
+        "score": 94,
+        "wcagLevel": "WCAG 2.1 Level AA Compliant",
+        "statusBadge": "success",
+        "counts": {
+          "critical": 0,
+          "major": 1,
+          "minor": 0,
+          "total": 1
+        },
+        "categoryScores": {
+          "Images & Media": 100,
+          "Color & Contrast": 100,
+          "Forms & Controls": 100,
+          "Headings & Structure": 100,
+          "Links & Navigation": 94,
+          "ARIA & Semantics": 100
+        },
+        "issues": [
+          {
+            "id": "issue-001",
+            "ruleId": "link-text-generic",
+            "category": "Links & Navigation",
+            "severity": "Major",
+            "element": "a",
+            "selector": "a[href=\"https://blog.youtube/topic-hub/kids-teens/\"]",
+            "wcag": "WCAG 2.4.4 Link Purpose (In Context) (Level A)",
+            "context": "Link contains non-descriptive text \"Read more\".",
+            "originalSnippet": "<a class=\"youtube-specific-topic__cta\" href=\"https://blog.youtube/topic-hub/kids-teens/\" data-ga4-analytics-click=\"{&quot;event&quot;:&quot;cta_click&quot;, &quot;event_template&quot;:&quot;CTA_CLICK_TEMPLATE&quot;, &quot;component_action&quot;: &quot;click&quot;}\">\n      <span class=\"youtube-specific-topic__cta-content\">\n        Read more\n      </span>\n    </a>",
+            "explanation": "Screen reader users navigating by links alone hear \"click here\" out of context and cannot determine link destinations.",
+            "suggestedFixCode": "<a href=\"https://blog.youtube/topic-hub/kids-teens/\">Read our annual accessibility audit report</a>",
+            "quickTip": "Always test links & navigation elements using assistive tools and keyboard navigation."
+          }
+        ]
+      },
+      {
+        "url": "https://www.youtube.com/about/copyright",
+        "pageTitle": "Copyright tools: Rightsholders and creators – how YouTube works",
+        "status": "completed",
+        "score": 52,
+        "wcagLevel": "WCAG Non-Compliant (Critical Violations)",
+        "statusBadge": "danger",
+        "counts": {
+          "critical": 2,
+          "major": 4,
+          "minor": 0,
+          "total": 6
+        },
+        "categoryScores": {
+          "Images & Media": 76,
+          "Color & Contrast": 100,
+          "Forms & Controls": 100,
+          "Headings & Structure": 100,
+          "Links & Navigation": 100,
+          "ARIA & Semantics": 76
+        },
+        "issues": [
+          {
+            "id": "issue-001",
+            "ruleId": "video-captions-missing",
+            "category": "Images & Media",
+            "severity": "Major",
+            "element": "video",
+            "selector": "video",
+            "wcag": "WCAG 1.2.2 Captions (Prerecorded) (Level A)",
+            "context": "Video element lacks a <track kind=\"captions\"> child element.",
+            "originalSnippet": "<video class=\"ytc-home-hero__video\" src=\"https://kstatic.googleusercontent.com/files/672eb440a65ddd748cb8013aea9a7d5ddaa955dd32a6e4bba3df21e1fe819d3c692cd891c02819eaa2f23a69e6709f2d7167404ccff538cf507f212d4e29cd57\" autoplay=\"\" muted=\"\" loop=\"\" playsinline=\"\" controls=\"\"></video>",
+            "explanation": "Deaf or hard-of-hearing users cannot understand audio content in video without synchronized closed captions.",
+            "suggestedFixCode": "<video controls>\n  <source src=\"video.mp4\" type=\"video/mp4\">\n  <track kind=\"captions\" src=\"captions.vtt\" srclang=\"en\" label=\"English Captions\">\n</video>",
+            "quickTip": "Always test images & media elements using assistive tools and keyboard navigation."
+          },
+          {
+            "id": "issue-002",
+            "ruleId": "video-captions-missing",
+            "category": "Images & Media",
+            "severity": "Major",
+            "element": "video",
+            "selector": "video",
+            "wcag": "WCAG 1.2.2 Captions (Prerecorded) (Level A)",
+            "context": "Video element lacks a <track kind=\"captions\"> child element.",
+            "originalSnippet": "<video class=\"ytc-home-hero__video\" src=\"https://kstatic.googleusercontent.com/files/e3b805eaf4eeabe2fecc672c46b65f0120082d4b1a7c22a38c092c4a345049472dfc11456e548edcedab46fb4961d2a4dcd0867c6b53df8a5912079226b4728d\" autoplay=\"\" muted=\"\" loop=\"\" playsinline=\"\" controls=\"\"></video>",
+            "explanation": "Deaf or hard-of-hearing users cannot understand audio content in video without synchronized closed captions.",
+            "suggestedFixCode": "<video controls>\n  <source src=\"video.mp4\" type=\"video/mp4\">\n  <track kind=\"captions\" src=\"captions.vtt\" srclang=\"en\" label=\"English Captions\">\n</video>",
+            "quickTip": "Always test images & media elements using assistive tools and keyboard navigation."
+          },
+          {
+            "id": "issue-003",
+            "ruleId": "video-captions-missing",
+            "category": "Images & Media",
+            "severity": "Major",
+            "element": "video",
+            "selector": "video",
+            "wcag": "WCAG 1.2.2 Captions (Prerecorded) (Level A)",
+            "context": "Video element lacks a <track kind=\"captions\"> child element.",
+            "originalSnippet": "<video class=\"ytc-home-hero__video\" src=\"https://kstatic.googleusercontent.com/files/672eb440a65ddd748cb8013aea9a7d5ddaa955dd32a6e4bba3df21e1fe819d3c692cd891c02819eaa2f23a69e6709f2d7167404ccff538cf507f212d4e29cd57\" autoplay=\"\" muted=\"\" loop=\"\" playsinline=\"\" controls=\"\"></video>",
+            "explanation": "Deaf or hard-of-hearing users cannot understand audio content in video without synchronized closed captions.",
+            "suggestedFixCode": "<video controls>\n  <source src=\"video.mp4\" type=\"video/mp4\">\n  <track kind=\"captions\" src=\"captions.vtt\" srclang=\"en\" label=\"English Captions\">\n</video>",
+            "quickTip": "Always test images & media elements using assistive tools and keyboard navigation."
+          },
+          {
+            "id": "issue-004",
+            "ruleId": "video-captions-missing",
+            "category": "Images & Media",
+            "severity": "Major",
+            "element": "video",
+            "selector": "video",
+            "wcag": "WCAG 1.2.2 Captions (Prerecorded) (Level A)",
+            "context": "Video element lacks a <track kind=\"captions\"> child element.",
+            "originalSnippet": "<video class=\"ytc-home-hero__video\" src=\"https://kstatic.googleusercontent.com/files/e3b805eaf4eeabe2fecc672c46b65f0120082d4b1a7c22a38c092c4a345049472dfc11456e548edcedab46fb4961d2a4dcd0867c6b53df8a5912079226b4728d\" autoplay=\"\" muted=\"\" loop=\"\" playsinline=\"\" controls=\"\"></video>",
+            "explanation": "Deaf or hard-of-hearing users cannot understand audio content in video without synchronized closed captions.",
+            "suggestedFixCode": "<video controls>\n  <source src=\"video.mp4\" type=\"video/mp4\">\n  <track kind=\"captions\" src=\"captions.vtt\" srclang=\"en\" label=\"English Captions\">\n</video>",
+            "quickTip": "Always test images & media elements using assistive tools and keyboard navigation."
+          },
+          {
+            "id": "issue-005",
+            "ruleId": "button-name-missing",
+            "category": "ARIA & Semantics",
+            "severity": "Critical",
+            "element": "button",
+            "selector": "button",
+            "wcag": "WCAG 4.1.2 Name, Role, Value (Level A)",
+            "context": "Interactive <button> has no inner text or aria-label attribute.",
+            "originalSnippet": "<button class=\"lb-carousel-button lb-carousel-button--previous carousel-previous-btn\" lb-auto-init=\"LBCarouselButton\" lb-options=\"{'uid': 'copyright-protection-tools', 'previous': true, 'direction': -1}\">\n                  <img class=\"lb-carousel-button__icon\" src=\"https://fonts.gstatic.com/s/i/googlematerialicons/navigate_before/v10/24px.svg\" alt=\"Previous\">\n                </button>",
+            "explanation": "Icon buttons or empty buttons without accessible names are announced as \"unlabelled button\" by screen readers.",
+            "suggestedFixCode": "<button type=\"button\" aria-label=\"Close dialog\">\n  <svg>...</svg>\n</button>",
+            "quickTip": "Always test aria & semantics elements using assistive tools and keyboard navigation."
+          },
+          {
+            "id": "issue-006",
+            "ruleId": "button-name-missing",
+            "category": "ARIA & Semantics",
+            "severity": "Critical",
+            "element": "button",
+            "selector": "button",
+            "wcag": "WCAG 4.1.2 Name, Role, Value (Level A)",
+            "context": "Interactive <button> has no inner text or aria-label attribute.",
+            "originalSnippet": "<button class=\"lb-carousel-button lb-carousel-button--next carousel-next-btn\" lb-auto-init=\"LBCarouselButton\" lb-options=\"{'uid': 'copyright-protection-tools', 'next': true, 'direction': 1}\">\n                  <img class=\"lb-carousel-button__icon\" src=\"https://fonts.gstatic.com/s/i/googlematerialicons/navigate_next/v10/24px.svg\" alt=\"Next\">\n                </button>",
+            "explanation": "Icon buttons or empty buttons without accessible names are announced as \"unlabelled button\" by screen readers.",
+            "suggestedFixCode": "<button type=\"button\" aria-label=\"Close dialog\">\n  <svg>...</svg>\n</button>",
+            "quickTip": "Always test aria & semantics elements using assistive tools and keyboard navigation."
+          }
+        ]
+      },
+      {
+        "url": "https://www.youtube.com/t/contact_us",
+        "pageTitle": "Contact Us",
+        "status": "completed",
+        "score": 100,
+        "wcagLevel": "WCAG 2.1 Level AA Compliant",
+        "statusBadge": "success",
+        "counts": {
+          "critical": 0,
+          "major": 0,
+          "minor": 0,
+          "total": 0
+        },
+        "categoryScores": {
+          "Images & Media": 100,
+          "Color & Contrast": 100,
+          "Forms & Controls": 100,
+          "Headings & Structure": 100,
+          "Links & Navigation": 100,
+          "ARIA & Semantics": 100
+        },
+        "issues": []
+      }
+    ]
+  },
+  {
+    "id": "scan-1789812909683-18uiu",
+    "websiteId": "nonexistent-domain-test-12345.com",
+    "userId": null,
+    "inputType": "url",
+    "url": "http://nonexistent-domain-test-12345.com",
+    "status": "DNS_ERROR",
+    "score": 0,
+    "timestamp": "2026-09-19T10:15:09.683Z",
+    "error": "DNS resolution failed for the specified website domain. Please check the URL hostname."
+  },
+  {
+    "id": "scan-1789813321783-kuq5n",
+    "websiteId": "leetcode.com",
+    "userId": null,
+    "inputType": "url",
+    "url": "https://leetcode.com/problemset/",
+    "status": "ACCESS_DENIED",
+    "score": 0,
+    "timestamp": "2026-09-19T10:22:01.783Z",
+    "error": "Access Denied: The target website returned HTTP 403 and blocked automated accessibility inspection."
+  },
+  {
+    "id": "scan-1789813719449-lnzaq",
+    "websiteId": "example.com",
+    "userId": null,
+    "inputType": "url",
+    "source": {
+      "type": "url",
+      "url": "https://example.com"
+    },
+    "url": "https://example.com",
+    "pageTitle": "Example Domain",
+    "mode": "url",
+    "isBatch": false,
+    "status": "completed",
+    "timestamp": "2026-09-19T10:28:39.449Z",
+    "durationSeconds": 0.63,
+    "score": 94,
+    "wcagLevel": "WCAG 2.1 Level AA Compliant",
+    "statusBadge": "success",
+    "counts": {
+      "critical": 0,
+      "major": 1,
+      "minor": 0,
+      "total": 1
+    },
+    "categoryScores": {
+      "Images & Media": 100,
+      "Color & Contrast": 100,
+      "Forms & Controls": 100,
+      "Headings & Structure": 100,
+      "Links & Navigation": 94,
+      "ARIA & Semantics": 100
+    },
+    "manualReviewItems": [
+      {
+        "id": "mr-01",
+        "title": "Meaningful Alt Text Quality",
+        "description": "Verify image alt text provides equivalent context and meaning, not just superficial image tags.",
+        "wcag": "WCAG 1.1.1"
+      },
+      {
+        "id": "mr-02",
+        "title": "Keyboard Focus Order & Visibility",
+        "description": "Navigate the entire site using Tab and Shift+Tab keys to ensure all interactive elements receive visible focus rings in logical order.",
+        "wcag": "WCAG 2.4.7"
+      },
+      {
+        "id": "mr-03",
+        "title": "Screen Reader Interaction Testing",
+        "description": "Test interactive dropdowns, modals, and dynamic content updates with NVDA, VoiceOver, or JAWS.",
+        "wcag": "WCAG 4.1.2"
+      },
+      {
+        "id": "mr-04",
+        "title": "Responsive Text Scaling (200% Zoom)",
+        "description": "Zoom page to 200% in browser settings and ensure text does not truncate, overlap, or require horizontal scrolling.",
+        "wcag": "WCAG 1.4.4"
+      }
+    ],
+    "performanceImpact": {
+      "loadDurationSeconds": 0.63,
+      "speedBadge": "Fast (Sub-second)",
+      "disclaimer": "Note: Accessibility improvements support better mobile user experience and search engine discoverability. Measured accessibility scores represent WCAG 2.1 compliance and do not guarantee search engine ranking placement.",
+      "impactNotes": []
+    },
+    "issues": [
+      {
+        "id": "issue-001",
+        "ruleId": "link-text-generic",
+        "category": "Links & Navigation",
+        "severity": "Major",
+        "element": "a",
+        "selector": "a[href=\"https://iana.org/domains/example\"]",
+        "wcag": "WCAG 2.4.4 Link Purpose (In Context) (Level A)",
+        "context": "Link contains non-descriptive text \"Learn more\".",
+        "originalSnippet": "<a href=\"https://iana.org/domains/example\">Learn more</a>",
+        "explanation": "Screen reader users navigating by links alone hear \"click here\" out of context and cannot determine link destinations.",
+        "suggestedFixCode": "<a href=\"https://iana.org/domains/example\">Read our annual accessibility audit report</a>",
+        "quickTip": "Always test links & navigation elements using assistive tools and keyboard navigation."
+      }
+    ]
+  },
+  {
+    "id": "scan-1789814360004-sskmq",
+    "websiteId": "vijay33391.github.io",
+    "userId": null,
+    "inputType": "url",
+    "source": {
+      "type": "url",
+      "url": "https://vijay33391.github.io/portfolio_web/"
+    },
+    "url": "https://vijay33391.github.io/portfolio_web/",
+    "pageTitle": "Vijay Vardhan Portfolio",
+    "mode": "url",
+    "isBatch": false,
+    "status": "completed",
+    "timestamp": "2026-09-19T10:39:20.006Z",
+    "durationSeconds": 1.1,
+    "score": 88,
+    "wcagLevel": "WCAG 2.1 Level AA Compliant",
+    "statusBadge": "success",
+    "counts": {
+      "critical": 0,
+      "major": 2,
+      "minor": 0,
+      "total": 2
+    },
+    "categoryScores": {
+      "Images & Media": 100,
+      "Color & Contrast": 100,
+      "Forms & Controls": 100,
+      "Headings & Structure": 94,
+      "Links & Navigation": 94,
+      "ARIA & Semantics": 100
+    },
+    "manualReviewItems": [
+      {
+        "id": "mr-01",
+        "title": "Meaningful Alt Text Quality",
+        "description": "Verify image alt text provides equivalent context and meaning, not just superficial image tags.",
+        "wcag": "WCAG 1.1.1"
+      },
+      {
+        "id": "mr-02",
+        "title": "Keyboard Focus Order & Visibility",
+        "description": "Navigate the entire site using Tab and Shift+Tab keys to ensure all interactive elements receive visible focus rings in logical order.",
+        "wcag": "WCAG 2.4.7"
+      },
+      {
+        "id": "mr-03",
+        "title": "Screen Reader Interaction Testing",
+        "description": "Test interactive dropdowns, modals, and dynamic content updates with NVDA, VoiceOver, or JAWS.",
+        "wcag": "WCAG 4.1.2"
+      },
+      {
+        "id": "mr-04",
+        "title": "Responsive Text Scaling (200% Zoom)",
+        "description": "Zoom page to 200% in browser settings and ensure text does not truncate, overlap, or require horizontal scrolling.",
+        "wcag": "WCAG 1.4.4"
+      }
+    ],
+    "performanceImpact": {
+      "loadDurationSeconds": 1.1,
+      "speedBadge": "Moderate",
+      "disclaimer": "Note: Accessibility improvements support better mobile user experience and search engine discoverability. Measured accessibility scores represent WCAG 2.1 compliance and do not guarantee search engine ranking placement.",
+      "impactNotes": [
+        {
+          "title": "Content Document Outline",
+          "category": "Content Structure",
+          "icon": "Heading",
+          "benefit": "Logical heading hierarchy improves content scannability for human users and helps search engines understand page topic hierarchy."
+        }
+      ]
+    },
+    "issues": [
+      {
+        "id": "issue-001",
+        "ruleId": "heading-order-skipped",
+        "category": "Headings & Structure",
+        "severity": "Major",
+        "element": "h4",
+        "selector": "h4:contains(\"I love to solve\")",
+        "wcag": "WCAG 1.3.1 Info and Relationships (Level A)",
+        "context": "Heading level skipped from <h2> to <h4> (\"I love to solve business problems & uncover hidden data stories\").",
+        "originalSnippet": "<h4> I love to solve business problems &amp; uncover hidden data stories </h4>",
+        "explanation": "Skipping heading levels (e.g., H1 directly to H3) disrupts screen reader heading navigation structure.",
+        "suggestedFixCode": "<h3>I love to solve business problems & uncover hidden data stories</h3>",
+        "quickTip": "Always test headings & structure elements using assistive tools and keyboard navigation."
+      },
+      {
+        "id": "issue-002",
+        "ruleId": "link-text-generic",
+        "category": "Links & Navigation",
+        "severity": "Major",
+        "element": "a",
+        "selector": "a[href=\"https://docs.google.com/forms/d/e/1FAIpQLSey7etSpFfRCi3pnPv78882T5nJTTdRCb_l_l5DmRa0lZ6lEw/viewform?usp=sharing&ouid=112823315979809211042\"]",
+        "wcag": "WCAG 2.4.4 Link Purpose (In Context) (Level A)",
+        "context": "Link contains non-descriptive text \"Click Here\".",
+        "originalSnippet": "<a href=\"https://docs.google.com/forms/d/e/1FAIpQLSey7etSpFfRCi3pnPv78882T5nJTTdRCb_l_l5DmRa0lZ6lEw/viewform?usp=sharing&amp;ouid=112823315979809211042\" class=\"btn btn-primary py-3 px-5\">Click Here</a>",
+        "explanation": "Screen reader users navigating by links alone hear \"click here\" out of context and cannot determine link destinations.",
+        "suggestedFixCode": "<a href=\"https://docs.google.com/forms/d/e/1FAIpQLSey7etSpFfRCi3pnPv78882T5nJTTdRCb_l_l5DmRa0lZ6lEw/viewform?usp=sharing&ouid=112823315979809211042\">Read our annual accessibility audit report</a>",
+        "quickTip": "Always test links & navigation elements using assistive tools and keyboard navigation."
+      }
+    ]
+  },
+  {
+    "id": "scan-1789814646688-sw4w7",
+    "websiteId": "vijay33391.github.io",
+    "userId": null,
+    "inputType": "url",
+    "source": {
+      "type": "url",
+      "url": "https://vijay33391.github.io/portfolio_web/"
+    },
+    "url": "https://vijay33391.github.io/portfolio_web/",
+    "pageTitle": "Vijay Vardhan Portfolio",
+    "mode": "url",
+    "isBatch": false,
+    "status": "completed",
+    "timestamp": "2026-09-19T10:44:06.689Z",
+    "durationSeconds": 0.7,
+    "score": 88,
+    "wcagLevel": "WCAG 2.1 Level AA Compliant",
+    "statusBadge": "success",
+    "counts": {
+      "critical": 0,
+      "major": 2,
+      "minor": 0,
+      "total": 2
+    },
+    "categoryScores": {
+      "Images & Media": 100,
+      "Color & Contrast": 100,
+      "Forms & Controls": 100,
+      "Headings & Structure": 94,
+      "Links & Navigation": 94,
+      "ARIA & Semantics": 100
+    },
+    "manualReviewItems": [
+      {
+        "id": "mr-01",
+        "title": "Meaningful Alt Text Quality",
+        "description": "Verify image alt text provides equivalent context and meaning, not just superficial image tags.",
+        "wcag": "WCAG 1.1.1"
+      },
+      {
+        "id": "mr-02",
+        "title": "Keyboard Focus Order & Visibility",
+        "description": "Navigate the entire site using Tab and Shift+Tab keys to ensure all interactive elements receive visible focus rings in logical order.",
+        "wcag": "WCAG 2.4.7"
+      },
+      {
+        "id": "mr-03",
+        "title": "Screen Reader Interaction Testing",
+        "description": "Test interactive dropdowns, modals, and dynamic content updates with NVDA, VoiceOver, or JAWS.",
+        "wcag": "WCAG 4.1.2"
+      },
+      {
+        "id": "mr-04",
+        "title": "Responsive Text Scaling (200% Zoom)",
+        "description": "Zoom page to 200% in browser settings and ensure text does not truncate, overlap, or require horizontal scrolling.",
+        "wcag": "WCAG 1.4.4"
+      }
+    ],
+    "performanceImpact": {
+      "loadDurationSeconds": 0.7,
+      "speedBadge": "Fast (Sub-second)",
+      "disclaimer": "Note: Accessibility improvements support better mobile user experience and search engine discoverability. Measured accessibility scores represent WCAG 2.1 compliance and do not guarantee search engine ranking placement.",
+      "impactNotes": [
+        {
+          "title": "Content Document Outline",
+          "category": "Content Structure",
+          "icon": "Heading",
+          "benefit": "Logical heading hierarchy improves content scannability for human users and helps search engines understand page topic hierarchy."
+        }
+      ]
+    },
+    "issues": [
+      {
+        "id": "issue-001",
+        "ruleId": "heading-order-skipped",
+        "category": "Headings & Structure",
+        "severity": "Major",
+        "element": "h4",
+        "selector": "h4:contains(\"I love to solve\")",
+        "wcag": "WCAG 1.3.1 Info and Relationships (Level A)",
+        "context": "Heading level skipped from <h2> to <h4> (\"I love to solve business problems & uncover hidden data stories\").",
+        "originalSnippet": "<h4> I love to solve business problems &amp; uncover hidden data stories </h4>",
+        "explanation": "Skipping heading levels (e.g., H1 directly to H3) disrupts screen reader heading navigation structure.",
+        "suggestedFixCode": "<h3>I love to solve business problems & uncover hidden data stories</h3>",
+        "quickTip": "Always test headings & structure elements using assistive tools and keyboard navigation."
+      },
+      {
+        "id": "issue-002",
+        "ruleId": "link-text-generic",
+        "category": "Links & Navigation",
+        "severity": "Major",
+        "element": "a",
+        "selector": "a[href=\"https://docs.google.com/forms/d/e/1FAIpQLSey7etSpFfRCi3pnPv78882T5nJTTdRCb_l_l5DmRa0lZ6lEw/viewform?usp=sharing&ouid=112823315979809211042\"]",
+        "wcag": "WCAG 2.4.4 Link Purpose (In Context) (Level A)",
+        "context": "Link contains non-descriptive text \"Click Here\".",
+        "originalSnippet": "<a href=\"https://docs.google.com/forms/d/e/1FAIpQLSey7etSpFfRCi3pnPv78882T5nJTTdRCb_l_l5DmRa0lZ6lEw/viewform?usp=sharing&amp;ouid=112823315979809211042\" class=\"btn btn-primary py-3 px-5\">Click Here</a>",
+        "explanation": "Screen reader users navigating by links alone hear \"click here\" out of context and cannot determine link destinations.",
+        "suggestedFixCode": "<a href=\"https://docs.google.com/forms/d/e/1FAIpQLSey7etSpFfRCi3pnPv78882T5nJTTdRCb_l_l5DmRa0lZ6lEw/viewform?usp=sharing&ouid=112823315979809211042\">Read our annual accessibility audit report</a>",
+        "quickTip": "Always test links & navigation elements using assistive tools and keyboard navigation."
+      }
+    ]
+  },
+  {
+    "id": "scan-1789814912143-j2lsk",
+    "websiteId": "vijay33391.github.io",
+    "userId": null,
+    "inputType": "url",
+    "source": {
+      "type": "url",
+      "url": "https://vijay33391.github.io/portfolio_web/"
+    },
+    "url": "https://vijay33391.github.io/portfolio_web/",
+    "pageTitle": "Vijay Vardhan Portfolio",
+    "mode": "url",
+    "isBatch": false,
+    "status": "completed",
+    "timestamp": "2026-09-19T10:48:32.143Z",
+    "durationSeconds": 0.59,
+    "score": 88,
+    "wcagLevel": "WCAG 2.1 Level AA Compliant",
+    "statusBadge": "success",
+    "counts": {
+      "critical": 0,
+      "major": 2,
+      "minor": 0,
+      "total": 2
+    },
+    "categoryScores": {
+      "Images & Media": 100,
+      "Color & Contrast": 100,
+      "Forms & Controls": 100,
+      "Headings & Structure": 94,
+      "Links & Navigation": 94,
+      "ARIA & Semantics": 100
+    },
+    "manualReviewItems": [
+      {
+        "id": "mr-01",
+        "title": "Meaningful Alt Text Quality",
+        "description": "Verify image alt text provides equivalent context and meaning, not just superficial image tags.",
+        "wcag": "WCAG 1.1.1"
+      },
+      {
+        "id": "mr-02",
+        "title": "Keyboard Focus Order & Visibility",
+        "description": "Navigate the entire site using Tab and Shift+Tab keys to ensure all interactive elements receive visible focus rings in logical order.",
+        "wcag": "WCAG 2.4.7"
+      },
+      {
+        "id": "mr-03",
+        "title": "Screen Reader Interaction Testing",
+        "description": "Test interactive dropdowns, modals, and dynamic content updates with NVDA, VoiceOver, or JAWS.",
+        "wcag": "WCAG 4.1.2"
+      },
+      {
+        "id": "mr-04",
+        "title": "Responsive Text Scaling (200% Zoom)",
+        "description": "Zoom page to 200% in browser settings and ensure text does not truncate, overlap, or require horizontal scrolling.",
+        "wcag": "WCAG 1.4.4"
+      }
+    ],
+    "performanceImpact": {
+      "loadDurationSeconds": 0.59,
+      "speedBadge": "Fast (Sub-second)",
+      "disclaimer": "Note: Accessibility improvements support better mobile user experience and search engine discoverability. Measured accessibility scores represent WCAG 2.1 compliance and do not guarantee search engine ranking placement.",
+      "impactNotes": [
+        {
+          "title": "Content Document Outline",
+          "category": "Content Structure",
+          "icon": "Heading",
+          "benefit": "Logical heading hierarchy improves content scannability for human users and helps search engines understand page topic hierarchy."
+        }
+      ]
+    },
+    "issues": [
+      {
+        "id": "issue-001",
+        "ruleId": "heading-order-skipped",
+        "category": "Headings & Structure",
+        "severity": "Major",
+        "element": "h4",
+        "selector": "h4:contains(\"I love to solve\")",
+        "wcag": "WCAG 1.3.1 Info and Relationships (Level A)",
+        "context": "Heading level skipped from <h2> to <h4> (\"I love to solve business problems & uncover hidden data stories\").",
+        "originalSnippet": "<h4> I love to solve business problems &amp; uncover hidden data stories </h4>",
+        "explanation": "Skipping heading levels (e.g., H1 directly to H3) disrupts screen reader heading navigation structure.",
+        "suggestedFixCode": "<h3>I love to solve business problems & uncover hidden data stories</h3>",
+        "quickTip": "Always test headings & structure elements using assistive tools and keyboard navigation."
+      },
+      {
+        "id": "issue-002",
+        "ruleId": "link-text-generic",
+        "category": "Links & Navigation",
+        "severity": "Major",
+        "element": "a",
+        "selector": "a[href=\"https://docs.google.com/forms/d/e/1FAIpQLSey7etSpFfRCi3pnPv78882T5nJTTdRCb_l_l5DmRa0lZ6lEw/viewform?usp=sharing&ouid=112823315979809211042\"]",
+        "wcag": "WCAG 2.4.4 Link Purpose (In Context) (Level A)",
+        "context": "Link contains non-descriptive text \"Click Here\".",
+        "originalSnippet": "<a href=\"https://docs.google.com/forms/d/e/1FAIpQLSey7etSpFfRCi3pnPv78882T5nJTTdRCb_l_l5DmRa0lZ6lEw/viewform?usp=sharing&amp;ouid=112823315979809211042\" class=\"btn btn-primary py-3 px-5\">Click Here</a>",
+        "explanation": "Screen reader users navigating by links alone hear \"click here\" out of context and cannot determine link destinations.",
+        "suggestedFixCode": "<a href=\"https://docs.google.com/forms/d/e/1FAIpQLSey7etSpFfRCi3pnPv78882T5nJTTdRCb_l_l5DmRa0lZ6lEw/viewform?usp=sharing&ouid=112823315979809211042\">Read our annual accessibility audit report</a>",
+        "quickTip": "Always test links & navigation elements using assistive tools and keyboard navigation."
+      }
+    ]
+  },
+  {
+    "id": "scan-1789815593041-4r693",
+    "websiteId": "docs.google.com",
+    "userId": null,
+    "inputType": "url",
+    "source": {
+      "type": "url",
+      "url": "https://docs.google.com/document/d/1dxWd8wRyK-7lIDtJGDIUQKmLIV2JwIKsi4aWe9eGnbQ/edit?usp=sharing"
+    },
+    "url": "https://docs.google.com/document/d/1dxWd8wRyK-7lIDtJGDIUQKmLIV2JwIKsi4aWe9eGnbQ/edit?usp=sharing",
+    "pageTitle": "Demo_1 - Google Docs",
+    "mode": "url",
+    "isBatch": false,
+    "status": "completed",
+    "timestamp": "2026-09-19T10:59:53.041Z",
+    "durationSeconds": 1.06,
+    "score": 82,
+    "wcagLevel": "WCAG Non-Compliant (Critical Violations)",
+    "statusBadge": "danger",
+    "counts": {
+      "critical": 1,
+      "major": 1,
+      "minor": 0,
+      "total": 2
+    },
+    "categoryScores": {
+      "Images & Media": 100,
+      "Color & Contrast": 100,
+      "Forms & Controls": 88,
+      "Headings & Structure": 94,
+      "Links & Navigation": 100,
+      "ARIA & Semantics": 100
+    },
+    "manualReviewItems": [
+      {
+        "id": "mr-01",
+        "title": "Meaningful Alt Text Quality",
+        "description": "Verify image alt text provides equivalent context and meaning, not just superficial image tags.",
+        "wcag": "WCAG 1.1.1"
+      },
+      {
+        "id": "mr-02",
+        "title": "Keyboard Focus Order & Visibility",
+        "description": "Navigate the entire site using Tab and Shift+Tab keys to ensure all interactive elements receive visible focus rings in logical order.",
+        "wcag": "WCAG 2.4.7"
+      },
+      {
+        "id": "mr-03",
+        "title": "Screen Reader Interaction Testing",
+        "description": "Test interactive dropdowns, modals, and dynamic content updates with NVDA, VoiceOver, or JAWS.",
+        "wcag": "WCAG 4.1.2"
+      },
+      {
+        "id": "mr-04",
+        "title": "Responsive Text Scaling (200% Zoom)",
+        "description": "Zoom page to 200% in browser settings and ensure text does not truncate, overlap, or require horizontal scrolling.",
+        "wcag": "WCAG 1.4.4"
+      }
+    ],
+    "performanceImpact": {
+      "loadDurationSeconds": 1.06,
+      "speedBadge": "Moderate",
+      "disclaimer": "Note: Accessibility improvements support better mobile user experience and search engine discoverability. Measured accessibility scores represent WCAG 2.1 compliance and do not guarantee search engine ranking placement.",
+      "impactNotes": [
+        {
+          "title": "Mobile Form Completion Rate",
+          "category": "Mobile Usability",
+          "icon": "FormInput",
+          "benefit": "Explicitly associated labels increase touch target area on mobile screens, reducing form abandonment and input frustration."
+        },
+        {
+          "title": "Content Document Outline",
+          "category": "Content Structure",
+          "icon": "Heading",
+          "benefit": "Logical heading hierarchy improves content scannability for human users and helps search engines understand page topic hierarchy."
+        }
+      ]
+    },
+    "issues": [
+      {
+        "id": "issue-001",
+        "ruleId": "heading-h1-missing",
+        "category": "Headings & Structure",
+        "severity": "Major",
+        "element": "body",
+        "selector": "body",
+        "wcag": "WCAG 1.3.1 Info and Relationships (Level A)",
+        "context": "Page is missing a primary <h1> heading tag.",
+        "originalSnippet": "<body> ... </body>",
+        "explanation": "A page without a main H1 heading makes it difficult for assistive technology users to identify the primary page topic.",
+        "suggestedFixCode": "<h1>Main Page Title</h1>",
+        "quickTip": "Always test headings & structure elements using assistive tools and keyboard navigation."
+      },
+      {
+        "id": "issue-002",
+        "ruleId": "form-label-missing",
+        "category": "Forms & Controls",
+        "severity": "Critical",
+        "element": "input",
+        "selector": "input[name=\"text\"]",
+        "wcag": "WCAG 1.3.1 / 4.1.2 Name, Role, Value (Level A)",
+        "context": "Form element <input name=\"text\"> lacks a associated <label> or aria-label.",
+        "originalSnippet": "<input class=\"docs-title-input\" spellcheck=\"false\" type=\"text\" autocomplete=\"off\" aria-describedby=\"docs-parent-collections-container-outer\" value=\"Demo_1\" tabindex=\"0\">",
+        "explanation": "Form controls without labels cannot be announced correctly by screen readers, making forms impossible to complete.",
+        "suggestedFixCode": "<label for=\"input-id\">Field Label</label>\n<input id=\"input-id\" type=\"text\" name=\"text\">",
+        "quickTip": "Always test forms & controls elements using assistive tools and keyboard navigation."
+      }
+    ]
+  },
+  {
+    "id": "scan-1789815667243-5iksy",
+    "websiteId": "docs.google.com",
+    "userId": null,
+    "inputType": "url",
+    "source": {
+      "type": "url",
+      "url": "https://docs.google.com/document/d/11DdqStpINmkFkfXMeKS-_jxzzl9r-7y_2Nkqn9Ph1Dk/edit?usp=sharing"
+    },
+    "url": "https://docs.google.com/document/d/11DdqStpINmkFkfXMeKS-_jxzzl9r-7y_2Nkqn9Ph1Dk/edit?usp=sharing",
+    "pageTitle": "Demo_2 - Google Docs",
+    "mode": "url",
+    "isBatch": false,
+    "status": "completed",
+    "timestamp": "2026-09-19T11:01:07.243Z",
+    "durationSeconds": 0.99,
+    "score": 82,
+    "wcagLevel": "WCAG Non-Compliant (Critical Violations)",
+    "statusBadge": "danger",
+    "counts": {
+      "critical": 1,
+      "major": 1,
+      "minor": 0,
+      "total": 2
+    },
+    "categoryScores": {
+      "Images & Media": 100,
+      "Color & Contrast": 100,
+      "Forms & Controls": 88,
+      "Headings & Structure": 94,
+      "Links & Navigation": 100,
+      "ARIA & Semantics": 100
+    },
+    "manualReviewItems": [
+      {
+        "id": "mr-01",
+        "title": "Meaningful Alt Text Quality",
+        "description": "Verify image alt text provides equivalent context and meaning, not just superficial image tags.",
+        "wcag": "WCAG 1.1.1"
+      },
+      {
+        "id": "mr-02",
+        "title": "Keyboard Focus Order & Visibility",
+        "description": "Navigate the entire site using Tab and Shift+Tab keys to ensure all interactive elements receive visible focus rings in logical order.",
+        "wcag": "WCAG 2.4.7"
+      },
+      {
+        "id": "mr-03",
+        "title": "Screen Reader Interaction Testing",
+        "description": "Test interactive dropdowns, modals, and dynamic content updates with NVDA, VoiceOver, or JAWS.",
+        "wcag": "WCAG 4.1.2"
+      },
+      {
+        "id": "mr-04",
+        "title": "Responsive Text Scaling (200% Zoom)",
+        "description": "Zoom page to 200% in browser settings and ensure text does not truncate, overlap, or require horizontal scrolling.",
+        "wcag": "WCAG 1.4.4"
+      }
+    ],
+    "performanceImpact": {
+      "loadDurationSeconds": 0.99,
+      "speedBadge": "Fast (Sub-second)",
+      "disclaimer": "Note: Accessibility improvements support better mobile user experience and search engine discoverability. Measured accessibility scores represent WCAG 2.1 compliance and do not guarantee search engine ranking placement.",
+      "impactNotes": [
+        {
+          "title": "Mobile Form Completion Rate",
+          "category": "Mobile Usability",
+          "icon": "FormInput",
+          "benefit": "Explicitly associated labels increase touch target area on mobile screens, reducing form abandonment and input frustration."
+        },
+        {
+          "title": "Content Document Outline",
+          "category": "Content Structure",
+          "icon": "Heading",
+          "benefit": "Logical heading hierarchy improves content scannability for human users and helps search engines understand page topic hierarchy."
+        }
+      ]
+    },
+    "issues": [
+      {
+        "id": "issue-001",
+        "ruleId": "heading-h1-missing",
+        "category": "Headings & Structure",
+        "severity": "Major",
+        "element": "body",
+        "selector": "body",
+        "wcag": "WCAG 1.3.1 Info and Relationships (Level A)",
+        "context": "Page is missing a primary <h1> heading tag.",
+        "originalSnippet": "<body> ... </body>",
+        "explanation": "A page without a main H1 heading makes it difficult for assistive technology users to identify the primary page topic.",
+        "suggestedFixCode": "<h1>Main Page Title</h1>",
+        "quickTip": "Always test headings & structure elements using assistive tools and keyboard navigation."
+      },
+      {
+        "id": "issue-002",
+        "ruleId": "form-label-missing",
+        "category": "Forms & Controls",
+        "severity": "Critical",
+        "element": "input",
+        "selector": "input[name=\"text\"]",
+        "wcag": "WCAG 1.3.1 / 4.1.2 Name, Role, Value (Level A)",
+        "context": "Form element <input name=\"text\"> lacks a associated <label> or aria-label.",
+        "originalSnippet": "<input class=\"docs-title-input\" spellcheck=\"false\" type=\"text\" autocomplete=\"off\" aria-describedby=\"docs-parent-collections-container-outer\" value=\"Demo_2\" tabindex=\"0\">",
+        "explanation": "Form controls without labels cannot be announced correctly by screen readers, making forms impossible to complete.",
+        "suggestedFixCode": "<label for=\"input-id\">Field Label</label>\n<input id=\"input-id\" type=\"text\" name=\"text\">",
+        "quickTip": "Always test forms & controls elements using assistive tools and keyboard navigation."
+      }
+    ]
+  },
+  {
+    "id": "scan-1789815757470-lwfz7",
+    "websiteId": "docs.google.com",
+    "userId": null,
+    "inputType": "url",
+    "source": {
+      "type": "url",
+      "url": "https://docs.google.com/document/d/1dxWd8wRyK-7lIDtJGDIUQKmLIV2JwIKsi4aWe9eGnbQ/edit?usp=drive_link"
+    },
+    "url": "https://docs.google.com/document/d/1dxWd8wRyK-7lIDtJGDIUQKmLIV2JwIKsi4aWe9eGnbQ/edit?usp=drive_link",
+    "pageTitle": "Demo_1 - Google Docs",
+    "mode": "url",
+    "isBatch": false,
+    "status": "completed",
+    "timestamp": "2026-09-19T11:02:37.470Z",
+    "durationSeconds": 1.09,
+    "score": 82,
+    "wcagLevel": "WCAG Non-Compliant (Critical Violations)",
+    "statusBadge": "danger",
+    "counts": {
+      "critical": 1,
+      "major": 1,
+      "minor": 0,
+      "total": 2
+    },
+    "categoryScores": {
+      "Images & Media": 100,
+      "Color & Contrast": 100,
+      "Forms & Controls": 88,
+      "Headings & Structure": 94,
+      "Links & Navigation": 100,
+      "ARIA & Semantics": 100
+    },
+    "manualReviewItems": [
+      {
+        "id": "mr-01",
+        "title": "Meaningful Alt Text Quality",
+        "description": "Verify image alt text provides equivalent context and meaning, not just superficial image tags.",
+        "wcag": "WCAG 1.1.1"
+      },
+      {
+        "id": "mr-02",
+        "title": "Keyboard Focus Order & Visibility",
+        "description": "Navigate the entire site using Tab and Shift+Tab keys to ensure all interactive elements receive visible focus rings in logical order.",
+        "wcag": "WCAG 2.4.7"
+      },
+      {
+        "id": "mr-03",
+        "title": "Screen Reader Interaction Testing",
+        "description": "Test interactive dropdowns, modals, and dynamic content updates with NVDA, VoiceOver, or JAWS.",
+        "wcag": "WCAG 4.1.2"
+      },
+      {
+        "id": "mr-04",
+        "title": "Responsive Text Scaling (200% Zoom)",
+        "description": "Zoom page to 200% in browser settings and ensure text does not truncate, overlap, or require horizontal scrolling.",
+        "wcag": "WCAG 1.4.4"
+      }
+    ],
+    "performanceImpact": {
+      "loadDurationSeconds": 1.09,
+      "speedBadge": "Moderate",
+      "disclaimer": "Note: Accessibility improvements support better mobile user experience and search engine discoverability. Measured accessibility scores represent WCAG 2.1 compliance and do not guarantee search engine ranking placement.",
+      "impactNotes": [
+        {
+          "title": "Mobile Form Completion Rate",
+          "category": "Mobile Usability",
+          "icon": "FormInput",
+          "benefit": "Explicitly associated labels increase touch target area on mobile screens, reducing form abandonment and input frustration."
+        },
+        {
+          "title": "Content Document Outline",
+          "category": "Content Structure",
+          "icon": "Heading",
+          "benefit": "Logical heading hierarchy improves content scannability for human users and helps search engines understand page topic hierarchy."
+        }
+      ]
+    },
+    "issues": [
+      {
+        "id": "issue-001",
+        "ruleId": "heading-h1-missing",
+        "category": "Headings & Structure",
+        "severity": "Major",
+        "element": "body",
+        "selector": "body",
+        "wcag": "WCAG 1.3.1 Info and Relationships (Level A)",
+        "context": "Page is missing a primary <h1> heading tag.",
+        "originalSnippet": "<body> ... </body>",
+        "explanation": "A page without a main H1 heading makes it difficult for assistive technology users to identify the primary page topic.",
+        "suggestedFixCode": "<h1>Main Page Title</h1>",
+        "quickTip": "Always test headings & structure elements using assistive tools and keyboard navigation."
+      },
+      {
+        "id": "issue-002",
+        "ruleId": "form-label-missing",
+        "category": "Forms & Controls",
+        "severity": "Critical",
+        "element": "input",
+        "selector": "input[name=\"text\"]",
+        "wcag": "WCAG 1.3.1 / 4.1.2 Name, Role, Value (Level A)",
+        "context": "Form element <input name=\"text\"> lacks a associated <label> or aria-label.",
+        "originalSnippet": "<input class=\"docs-title-input\" spellcheck=\"false\" type=\"text\" autocomplete=\"off\" aria-describedby=\"docs-parent-collections-container-outer\" value=\"Demo_1\" tabindex=\"0\">",
+        "explanation": "Form controls without labels cannot be announced correctly by screen readers, making forms impossible to complete.",
+        "suggestedFixCode": "<label for=\"input-id\">Field Label</label>\n<input id=\"input-id\" type=\"text\" name=\"text\">",
+        "quickTip": "Always test forms & controls elements using assistive tools and keyboard navigation."
+      }
+    ]
+  },
+  {
+    "id": "scan-1789816044607-88tgr",
+    "websiteId": "vijay33391.github.io",
+    "userId": null,
+    "inputType": "url",
+    "source": {
+      "type": "url",
+      "url": "https://vijay33391.github.io/portfolio_web/"
+    },
+    "url": "https://vijay33391.github.io/portfolio_web/",
+    "pageTitle": "Vijay Vardhan Portfolio",
+    "mode": "url",
+    "isBatch": false,
+    "status": "completed",
+    "timestamp": "2026-09-19T11:07:24.607Z",
+    "durationSeconds": 0.83,
+    "score": 88,
+    "wcagLevel": "WCAG 2.1 Level AA Compliant",
+    "statusBadge": "success",
+    "counts": {
+      "critical": 0,
+      "major": 2,
+      "minor": 0,
+      "total": 2
+    },
+    "categoryScores": {
+      "Images & Media": 100,
+      "Color & Contrast": 100,
+      "Forms & Controls": 100,
+      "Headings & Structure": 94,
+      "Links & Navigation": 94,
+      "ARIA & Semantics": 100
+    },
+    "manualReviewItems": [
+      {
+        "id": "mr-01",
+        "title": "Meaningful Alt Text Quality",
+        "description": "Verify image alt text provides equivalent context and meaning, not just superficial image tags.",
+        "wcag": "WCAG 1.1.1"
+      },
+      {
+        "id": "mr-02",
+        "title": "Keyboard Focus Order & Visibility",
+        "description": "Navigate the entire site using Tab and Shift+Tab keys to ensure all interactive elements receive visible focus rings in logical order.",
+        "wcag": "WCAG 2.4.7"
+      },
+      {
+        "id": "mr-03",
+        "title": "Screen Reader Interaction Testing",
+        "description": "Test interactive dropdowns, modals, and dynamic content updates with NVDA, VoiceOver, or JAWS.",
+        "wcag": "WCAG 4.1.2"
+      },
+      {
+        "id": "mr-04",
+        "title": "Responsive Text Scaling (200% Zoom)",
+        "description": "Zoom page to 200% in browser settings and ensure text does not truncate, overlap, or require horizontal scrolling.",
+        "wcag": "WCAG 1.4.4"
+      }
+    ],
+    "performanceImpact": {
+      "loadDurationSeconds": 0.83,
+      "speedBadge": "Fast (Sub-second)",
+      "disclaimer": "Note: Accessibility improvements support better mobile user experience and search engine discoverability. Measured accessibility scores represent WCAG 2.1 compliance and do not guarantee search engine ranking placement.",
+      "impactNotes": [
+        {
+          "title": "Content Document Outline",
+          "category": "Content Structure",
+          "icon": "Heading",
+          "benefit": "Logical heading hierarchy improves content scannability for human users and helps search engines understand page topic hierarchy."
+        }
+      ]
+    },
+    "issues": [
+      {
+        "id": "issue-001",
+        "ruleId": "heading-order-skipped",
+        "category": "Headings & Structure",
+        "severity": "Major",
+        "element": "h4",
+        "selector": "h4:contains(\"I love to solve\")",
+        "wcag": "WCAG 1.3.1 Info and Relationships (Level A)",
+        "context": "Heading level skipped from <h2> to <h4> (\"I love to solve business problems & uncover hidden data stories\").",
+        "originalSnippet": "<h4> I love to solve business problems &amp; uncover hidden data stories </h4>",
+        "explanation": "Skipping heading levels (e.g., H1 directly to H3) disrupts screen reader heading navigation structure.",
+        "suggestedFixCode": "<h3>I love to solve business problems & uncover hidden data stories</h3>",
+        "quickTip": "Always test headings & structure elements using assistive tools and keyboard navigation."
+      },
+      {
+        "id": "issue-002",
+        "ruleId": "link-text-generic",
+        "category": "Links & Navigation",
+        "severity": "Major",
+        "element": "a",
+        "selector": "a[href=\"https://docs.google.com/forms/d/e/1FAIpQLSey7etSpFfRCi3pnPv78882T5nJTTdRCb_l_l5DmRa0lZ6lEw/viewform?usp=sharing&ouid=112823315979809211042\"]",
+        "wcag": "WCAG 2.4.4 Link Purpose (In Context) (Level A)",
+        "context": "Link contains non-descriptive text \"Click Here\".",
+        "originalSnippet": "<a href=\"https://docs.google.com/forms/d/e/1FAIpQLSey7etSpFfRCi3pnPv78882T5nJTTdRCb_l_l5DmRa0lZ6lEw/viewform?usp=sharing&amp;ouid=112823315979809211042\" class=\"btn btn-primary py-3 px-5\">Click Here</a>",
+        "explanation": "Screen reader users navigating by links alone hear \"click here\" out of context and cannot determine link destinations.",
+        "suggestedFixCode": "<a href=\"https://docs.google.com/forms/d/e/1FAIpQLSey7etSpFfRCi3pnPv78882T5nJTTdRCb_l_l5DmRa0lZ6lEw/viewform?usp=sharing&ouid=112823315979809211042\">Read our annual accessibility audit report</a>",
+        "quickTip": "Always test links & navigation elements using assistive tools and keyboard navigation."
+      }
+    ]
+  },
+  {
+    "id": "scan-1789816268040-k7lp6",
+    "websiteId": "vijay33391.github.io",
+    "userId": null,
+    "inputType": "url",
+    "source": {
+      "type": "url",
+      "url": "https://vijay33391.github.io/portfolio_web/"
+    },
+    "url": "https://vijay33391.github.io/portfolio_web/",
+    "pageTitle": "Vijay Vardhan Portfolio",
+    "mode": "url",
+    "isBatch": false,
+    "status": "completed",
+    "timestamp": "2026-09-19T11:11:08.040Z",
+    "durationSeconds": 0.48,
+    "score": 88,
+    "wcagLevel": "WCAG 2.1 Level AA Compliant",
+    "statusBadge": "success",
+    "counts": {
+      "critical": 0,
+      "major": 2,
+      "minor": 0,
+      "total": 2
+    },
+    "categoryScores": {
+      "Images & Media": 100,
+      "Color & Contrast": 100,
+      "Forms & Controls": 100,
+      "Headings & Structure": 94,
+      "Links & Navigation": 94,
+      "ARIA & Semantics": 100
+    },
+    "manualReviewItems": [
+      {
+        "id": "mr-01",
+        "title": "Meaningful Alt Text Quality",
+        "description": "Verify image alt text provides equivalent context and meaning, not just superficial image tags.",
+        "wcag": "WCAG 1.1.1"
+      },
+      {
+        "id": "mr-02",
+        "title": "Keyboard Focus Order & Visibility",
+        "description": "Navigate the entire site using Tab and Shift+Tab keys to ensure all interactive elements receive visible focus rings in logical order.",
+        "wcag": "WCAG 2.4.7"
+      },
+      {
+        "id": "mr-03",
+        "title": "Screen Reader Interaction Testing",
+        "description": "Test interactive dropdowns, modals, and dynamic content updates with NVDA, VoiceOver, or JAWS.",
+        "wcag": "WCAG 4.1.2"
+      },
+      {
+        "id": "mr-04",
+        "title": "Responsive Text Scaling (200% Zoom)",
+        "description": "Zoom page to 200% in browser settings and ensure text does not truncate, overlap, or require horizontal scrolling.",
+        "wcag": "WCAG 1.4.4"
+      }
+    ],
+    "performanceImpact": {
+      "loadDurationSeconds": 0.48,
+      "speedBadge": "Fast (Sub-second)",
+      "disclaimer": "Note: Accessibility improvements support better mobile user experience and search engine discoverability. Measured accessibility scores represent WCAG 2.1 compliance and do not guarantee search engine ranking placement.",
+      "impactNotes": [
+        {
+          "title": "Content Document Outline",
+          "category": "Content Structure",
+          "icon": "Heading",
+          "benefit": "Logical heading hierarchy improves content scannability for human users and helps search engines understand page topic hierarchy."
+        }
+      ]
+    },
+    "issues": [
+      {
+        "id": "issue-001",
+        "ruleId": "heading-order-skipped",
+        "category": "Headings & Structure",
+        "severity": "Major",
+        "element": "h4",
+        "selector": "h4:contains(\"I love to solve\")",
+        "wcag": "WCAG 1.3.1 Info and Relationships (Level A)",
+        "context": "Heading level skipped from <h2> to <h4> (\"I love to solve business problems & uncover hidden data stories\").",
+        "originalSnippet": "<h4> I love to solve business problems &amp; uncover hidden data stories </h4>",
+        "explanation": "Skipping heading levels (e.g., H1 directly to H3) disrupts screen reader heading navigation structure.",
+        "suggestedFixCode": "<h3>I love to solve business problems & uncover hidden data stories</h3>",
+        "quickTip": "Always test headings & structure elements using assistive tools and keyboard navigation."
+      },
+      {
+        "id": "issue-002",
+        "ruleId": "link-text-generic",
+        "category": "Links & Navigation",
+        "severity": "Major",
+        "element": "a",
+        "selector": "a[href=\"https://docs.google.com/forms/d/e/1FAIpQLSey7etSpFfRCi3pnPv78882T5nJTTdRCb_l_l5DmRa0lZ6lEw/viewform?usp=sharing&ouid=112823315979809211042\"]",
+        "wcag": "WCAG 2.4.4 Link Purpose (In Context) (Level A)",
+        "context": "Link contains non-descriptive text \"Click Here\".",
+        "originalSnippet": "<a href=\"https://docs.google.com/forms/d/e/1FAIpQLSey7etSpFfRCi3pnPv78882T5nJTTdRCb_l_l5DmRa0lZ6lEw/viewform?usp=sharing&amp;ouid=112823315979809211042\" class=\"btn btn-primary py-3 px-5\">Click Here</a>",
+        "explanation": "Screen reader users navigating by links alone hear \"click here\" out of context and cannot determine link destinations.",
+        "suggestedFixCode": "<a href=\"https://docs.google.com/forms/d/e/1FAIpQLSey7etSpFfRCi3pnPv78882T5nJTTdRCb_l_l5DmRa0lZ6lEw/viewform?usp=sharing&ouid=112823315979809211042\">Read our annual accessibility audit report</a>",
+        "quickTip": "Always test links & navigation elements using assistive tools and keyboard navigation."
+      }
+    ]
+  },
+  {
+    "id": "scan-1789816313310-s5xoe",
+    "websiteId": "coindcx.com",
+    "userId": null,
+    "inputType": "url",
+    "source": {
+      "type": "url",
+      "url": "https://coindcx.com/futures/B-ONE_USDT"
+    },
+    "url": "https://coindcx.com/futures/B-ONE_USDT",
+    "pageTitle": "B-ONE_USDT Perpetual | CoinDCX Futures Trading",
+    "mode": "url",
+    "isBatch": false,
+    "status": "completed",
+    "timestamp": "2026-09-19T11:11:53.310Z",
+    "durationSeconds": 0.68,
+    "score": 28,
+    "wcagLevel": "WCAG Non-Compliant (Critical Violations)",
+    "statusBadge": "danger",
+    "counts": {
+      "critical": 6,
+      "major": 0,
+      "minor": 0,
+      "total": 6
+    },
+    "categoryScores": {
+      "Images & Media": 100,
+      "Color & Contrast": 100,
+      "Forms & Controls": 88,
+      "Headings & Structure": 100,
+      "Links & Navigation": 100,
+      "ARIA & Semantics": 40
+    },
+    "manualReviewItems": [
+      {
+        "id": "mr-01",
+        "title": "Meaningful Alt Text Quality",
+        "description": "Verify image alt text provides equivalent context and meaning, not just superficial image tags.",
+        "wcag": "WCAG 1.1.1"
+      },
+      {
+        "id": "mr-02",
+        "title": "Keyboard Focus Order & Visibility",
+        "description": "Navigate the entire site using Tab and Shift+Tab keys to ensure all interactive elements receive visible focus rings in logical order.",
+        "wcag": "WCAG 2.4.7"
+      },
+      {
+        "id": "mr-03",
+        "title": "Screen Reader Interaction Testing",
+        "description": "Test interactive dropdowns, modals, and dynamic content updates with NVDA, VoiceOver, or JAWS.",
+        "wcag": "WCAG 4.1.2"
+      },
+      {
+        "id": "mr-04",
+        "title": "Responsive Text Scaling (200% Zoom)",
+        "description": "Zoom page to 200% in browser settings and ensure text does not truncate, overlap, or require horizontal scrolling.",
+        "wcag": "WCAG 1.4.4"
+      }
+    ],
+    "performanceImpact": {
+      "loadDurationSeconds": 0.68,
+      "speedBadge": "Fast (Sub-second)",
+      "disclaimer": "Note: Accessibility improvements support better mobile user experience and search engine discoverability. Measured accessibility scores represent WCAG 2.1 compliance and do not guarantee search engine ranking placement.",
+      "impactNotes": [
+        {
+          "title": "Mobile Form Completion Rate",
+          "category": "Mobile Usability",
+          "icon": "FormInput",
+          "benefit": "Explicitly associated labels increase touch target area on mobile screens, reducing form abandonment and input frustration."
+        }
+      ]
+    },
+    "issues": [
+      {
+        "id": "issue-001",
+        "ruleId": "form-label-missing",
+        "category": "Forms & Controls",
+        "severity": "Critical",
+        "element": "input",
+        "selector": "input[name=\"range\"]",
+        "wcag": "WCAG 1.3.1 / 4.1.2 Name, Role, Value (Level A)",
+        "context": "Form element <input name=\"range\"> lacks a associated <label> or aria-label.",
+        "originalSnippet": "<input data-index=\"0\" aria-valuenow=\"0\" aria-valuetext=\"0\" aria-orientation=\"horizontal\" aria-valuemax=\"100\" aria-valuemin=\"0\" type=\"range\" min=\"0\" max=\"100\" step=\"1\" style=\"border:0;clip:rect(0 0 0 0);height:100%;margin:-1px;overflow:hidden;padding:0;position:absolute;white-space:nowrap;width:100%;direction:ltr\" value=\"0\">",
+        "explanation": "Form controls without labels cannot be announced correctly by screen readers, making forms impossible to complete.",
+        "suggestedFixCode": "<label for=\"input-id\">Field Label</label>\n<input id=\"input-id\" type=\"range\" name=\"range\">",
+        "quickTip": "Always test forms & controls elements using assistive tools and keyboard navigation."
+      },
+      {
+        "id": "issue-002",
+        "ruleId": "button-name-missing",
+        "category": "ARIA & Semantics",
+        "severity": "Critical",
+        "element": "button",
+        "selector": "button",
+        "wcag": "WCAG 4.1.2 Name, Role, Value (Level A)",
+        "context": "Interactive <button> has no inner text or aria-label attribute.",
+        "originalSnippet": "<button id=\"awt-user-dp\" data-testid=\"awt-user-dp\" class=\"flex justify-center items-center bg-accent rounded-full w-24 h-24 relative\"><div class=\"user-dp_user_dp__XGaCU  relative flex justify-center items-center rounded-full place-content-center\"><img alt=\"Display picture\" loading=\"lazy\" decoding=\"async\" data-nimg=\"fill\" style=\"position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;object-fit:contain;color:transparent\" src=\"/trade-assets/images/component-assets/user-anonymous.svg\"></div></button>",
+        "explanation": "Icon buttons or empty buttons without accessible names are announced as \"unlabelled button\" by screen readers.",
+        "suggestedFixCode": "<button type=\"button\" aria-label=\"Close dialog\">\n  <svg>...</svg>\n</button>",
+        "quickTip": "Always test aria & semantics elements using assistive tools and keyboard navigation."
+      },
+      {
+        "id": "issue-003",
+        "ruleId": "button-name-missing",
+        "category": "ARIA & Semantics",
+        "severity": "Critical",
+        "element": "button",
+        "selector": "button",
+        "wcag": "WCAG 4.1.2 Name, Role, Value (Level A)",
+        "context": "Interactive <button> has no inner text or aria-label attribute.",
+        "originalSnippet": "<button class=\"mr-12 mr-0\"><img alt=\"star\" loading=\"lazy\" width=\"16\" height=\"16\" decoding=\"async\" data-nimg=\"1\" class=\"opacity-60 h-[1.6rem] w-[1.6rem] min-w-[1.6rem] min-h-[1.6rem] w-[2.4rem] h-[2.4rem] min-h-[2.4rem] min-w-[2.4rem] \" style=\"color:transparent\" src=\"/trade-assets/icons/star-empty.svg\"></button>",
+        "explanation": "Icon buttons or empty buttons without accessible names are announced as \"unlabelled button\" by screen readers.",
+        "suggestedFixCode": "<button type=\"button\" aria-label=\"Close dialog\">\n  <svg>...</svg>\n</button>",
+        "quickTip": "Always test aria & semantics elements using assistive tools and keyboard navigation."
+      },
+      {
+        "id": "issue-004",
+        "ruleId": "button-name-missing",
+        "category": "ARIA & Semantics",
+        "severity": "Critical",
+        "element": "button",
+        "selector": "button",
+        "wcag": "WCAG 4.1.2 Name, Role, Value (Level A)",
+        "context": "Interactive <button> has no inner text or aria-label attribute.",
+        "originalSnippet": "<button class=\"ml-auto\"><img alt=\"contract-details\" loading=\"lazy\" width=\"20\" height=\"20\" decoding=\"async\" data-nimg=\"1\" class=\"h-[2.4rem] w-[2.4rem]\" style=\"color:transparent\" src=\"/trade-assets/images/component-assets/info_icon.svg\"></button>",
+        "explanation": "Icon buttons or empty buttons without accessible names are announced as \"unlabelled button\" by screen readers.",
+        "suggestedFixCode": "<button type=\"button\" aria-label=\"Close dialog\">\n  <svg>...</svg>\n</button>",
+        "quickTip": "Always test aria & semantics elements using assistive tools and keyboard navigation."
+      },
+      {
+        "id": "issue-005",
+        "ruleId": "button-name-missing",
+        "category": "ARIA & Semantics",
+        "severity": "Critical",
+        "element": "button",
+        "selector": "button",
+        "wcag": "WCAG 4.1.2 Name, Role, Value (Level A)",
+        "context": "Interactive <button> has no inner text or aria-label attribute.",
+        "originalSnippet": "<button class=\"input_disabled__lbjmz\"><img alt=\"Subtract\" loading=\"lazy\" width=\"14\" height=\"14\" decoding=\"async\" data-nimg=\"1\" class=\"w-[1.4rem] h-[1.4rem]\" style=\"color:transparent\" src=\"/trade-assets/icons/minus-light.svg\"></button>",
+        "explanation": "Icon buttons or empty buttons without accessible names are announced as \"unlabelled button\" by screen readers.",
+        "suggestedFixCode": "<button type=\"button\" aria-label=\"Close dialog\">\n  <svg>...</svg>\n</button>",
+        "quickTip": "Always test aria & semantics elements using assistive tools and keyboard navigation."
+      },
+      {
+        "id": "issue-006",
+        "ruleId": "button-name-missing",
+        "category": "ARIA & Semantics",
+        "severity": "Critical",
+        "element": "button",
+        "selector": "button",
+        "wcag": "WCAG 4.1.2 Name, Role, Value (Level A)",
+        "context": "Interactive <button> has no inner text or aria-label attribute.",
+        "originalSnippet": "<button class=\"input_disabled__lbjmz\"><img alt=\"Add\" loading=\"lazy\" width=\"14\" height=\"14\" decoding=\"async\" data-nimg=\"1\" class=\"w-[1.4rem] h-[1.4rem]\" style=\"color:transparent\" src=\"/trade-assets/icons/plus-light.svg\"></button>",
+        "explanation": "Icon buttons or empty buttons without accessible names are announced as \"unlabelled button\" by screen readers.",
+        "suggestedFixCode": "<button type=\"button\" aria-label=\"Close dialog\">\n  <svg>...</svg>\n</button>",
+        "quickTip": "Always test aria & semantics elements using assistive tools and keyboard navigation."
+      }
+    ]
+  },
+  {
+    "id": "scan-1789816391756-s74w5",
+    "websiteId": "leetcode.com",
+    "userId": null,
+    "inputType": "url",
+    "url": "https://leetcode.com/problemset/",
+    "status": "ACCESS_DENIED",
+    "score": 0,
+    "timestamp": "2026-09-19T11:13:11.756Z",
+    "error": "Access Denied: The target website returned HTTP 403 and blocked automated accessibility inspection."
+  },
+  {
+    "id": "scan-1789816530841-rbkj9",
+    "websiteId": "coindcx.com",
+    "userId": null,
+    "inputType": "url",
+    "source": {
+      "type": "url",
+      "url": "https://coindcx.com/futures/B-ONE_USDT"
+    },
+    "url": "https://coindcx.com/futures/B-ONE_USDT",
+    "pageTitle": "B-ONE_USDT Perpetual | CoinDCX Futures Trading",
+    "mode": "url",
+    "isBatch": false,
+    "status": "completed",
+    "timestamp": "2026-09-19T11:15:30.841Z",
+    "durationSeconds": 1.8,
+    "score": 28,
+    "wcagLevel": "WCAG Non-Compliant (Critical Violations)",
+    "statusBadge": "danger",
+    "counts": {
+      "critical": 6,
+      "major": 0,
+      "minor": 0,
+      "total": 6
+    },
+    "categoryScores": {
+      "Images & Media": 100,
+      "Color & Contrast": 100,
+      "Forms & Controls": 88,
+      "Headings & Structure": 100,
+      "Links & Navigation": 100,
+      "ARIA & Semantics": 40
+    },
+    "manualReviewItems": [
+      {
+        "id": "mr-01",
+        "title": "Meaningful Alt Text Quality",
+        "description": "Verify image alt text provides equivalent context and meaning, not just superficial image tags.",
+        "wcag": "WCAG 1.1.1"
+      },
+      {
+        "id": "mr-02",
+        "title": "Keyboard Focus Order & Visibility",
+        "description": "Navigate the entire site using Tab and Shift+Tab keys to ensure all interactive elements receive visible focus rings in logical order.",
+        "wcag": "WCAG 2.4.7"
+      },
+      {
+        "id": "mr-03",
+        "title": "Screen Reader Interaction Testing",
+        "description": "Test interactive dropdowns, modals, and dynamic content updates with NVDA, VoiceOver, or JAWS.",
+        "wcag": "WCAG 4.1.2"
+      },
+      {
+        "id": "mr-04",
+        "title": "Responsive Text Scaling (200% Zoom)",
+        "description": "Zoom page to 200% in browser settings and ensure text does not truncate, overlap, or require horizontal scrolling.",
+        "wcag": "WCAG 1.4.4"
+      }
+    ],
+    "performanceImpact": {
+      "loadDurationSeconds": 1.8,
+      "speedBadge": "Moderate",
+      "disclaimer": "Note: Accessibility improvements support better mobile user experience and search engine discoverability. Measured accessibility scores represent WCAG 2.1 compliance and do not guarantee search engine ranking placement.",
+      "impactNotes": [
+        {
+          "title": "Mobile Form Completion Rate",
+          "category": "Mobile Usability",
+          "icon": "FormInput",
+          "benefit": "Explicitly associated labels increase touch target area on mobile screens, reducing form abandonment and input frustration."
+        }
+      ]
+    },
+    "issues": [
+      {
+        "id": "issue-001",
+        "ruleId": "form-label-missing",
+        "category": "Forms & Controls",
+        "severity": "Critical",
+        "element": "input",
+        "selector": "input[name=\"range\"]",
+        "wcag": "WCAG 1.3.1 / 4.1.2 Name, Role, Value (Level A)",
+        "context": "Form element <input name=\"range\"> lacks a associated <label> or aria-label.",
+        "originalSnippet": "<input data-index=\"0\" aria-valuenow=\"0\" aria-valuetext=\"0\" aria-orientation=\"horizontal\" aria-valuemax=\"100\" aria-valuemin=\"0\" type=\"range\" min=\"0\" max=\"100\" step=\"1\" style=\"border:0;clip:rect(0 0 0 0);height:100%;margin:-1px;overflow:hidden;padding:0;position:absolute;white-space:nowrap;width:100%;direction:ltr\" value=\"0\">",
+        "explanation": "Form controls without labels cannot be announced correctly by screen readers, making forms impossible to complete.",
+        "suggestedFixCode": "<label for=\"input-id\">Field Label</label>\n<input id=\"input-id\" type=\"range\" name=\"range\">",
+        "quickTip": "Always test forms & controls elements using assistive tools and keyboard navigation."
+      },
+      {
+        "id": "issue-002",
+        "ruleId": "button-name-missing",
+        "category": "ARIA & Semantics",
+        "severity": "Critical",
+        "element": "button",
+        "selector": "button",
+        "wcag": "WCAG 4.1.2 Name, Role, Value (Level A)",
+        "context": "Interactive <button> has no inner text or aria-label attribute.",
+        "originalSnippet": "<button id=\"awt-user-dp\" data-testid=\"awt-user-dp\" class=\"flex justify-center items-center bg-accent rounded-full w-24 h-24 relative\"><div class=\"user-dp_user_dp__XGaCU  relative flex justify-center items-center rounded-full place-content-center\"><img alt=\"Display picture\" loading=\"lazy\" decoding=\"async\" data-nimg=\"fill\" style=\"position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;object-fit:contain;color:transparent\" src=\"/trade-assets/images/component-assets/user-anonymous.svg\"></div></button>",
+        "explanation": "Icon buttons or empty buttons without accessible names are announced as \"unlabelled button\" by screen readers.",
+        "suggestedFixCode": "<button type=\"button\" aria-label=\"Close dialog\">\n  <svg>...</svg>\n</button>",
+        "quickTip": "Always test aria & semantics elements using assistive tools and keyboard navigation."
+      },
+      {
+        "id": "issue-003",
+        "ruleId": "button-name-missing",
+        "category": "ARIA & Semantics",
+        "severity": "Critical",
+        "element": "button",
+        "selector": "button",
+        "wcag": "WCAG 4.1.2 Name, Role, Value (Level A)",
+        "context": "Interactive <button> has no inner text or aria-label attribute.",
+        "originalSnippet": "<button class=\"mr-12 mr-0\"><img alt=\"star\" loading=\"lazy\" width=\"16\" height=\"16\" decoding=\"async\" data-nimg=\"1\" class=\"opacity-60 h-[1.6rem] w-[1.6rem] min-w-[1.6rem] min-h-[1.6rem] w-[2.4rem] h-[2.4rem] min-h-[2.4rem] min-w-[2.4rem] \" style=\"color:transparent\" src=\"/trade-assets/icons/star-empty.svg\"></button>",
+        "explanation": "Icon buttons or empty buttons without accessible names are announced as \"unlabelled button\" by screen readers.",
+        "suggestedFixCode": "<button type=\"button\" aria-label=\"Close dialog\">\n  <svg>...</svg>\n</button>",
+        "quickTip": "Always test aria & semantics elements using assistive tools and keyboard navigation."
+      },
+      {
+        "id": "issue-004",
+        "ruleId": "button-name-missing",
+        "category": "ARIA & Semantics",
+        "severity": "Critical",
+        "element": "button",
+        "selector": "button",
+        "wcag": "WCAG 4.1.2 Name, Role, Value (Level A)",
+        "context": "Interactive <button> has no inner text or aria-label attribute.",
+        "originalSnippet": "<button class=\"ml-auto\"><img alt=\"contract-details\" loading=\"lazy\" width=\"20\" height=\"20\" decoding=\"async\" data-nimg=\"1\" class=\"h-[2.4rem] w-[2.4rem]\" style=\"color:transparent\" src=\"/trade-assets/images/component-assets/info_icon.svg\"></button>",
+        "explanation": "Icon buttons or empty buttons without accessible names are announced as \"unlabelled button\" by screen readers.",
+        "suggestedFixCode": "<button type=\"button\" aria-label=\"Close dialog\">\n  <svg>...</svg>\n</button>",
+        "quickTip": "Always test aria & semantics elements using assistive tools and keyboard navigation."
+      },
+      {
+        "id": "issue-005",
+        "ruleId": "button-name-missing",
+        "category": "ARIA & Semantics",
+        "severity": "Critical",
+        "element": "button",
+        "selector": "button",
+        "wcag": "WCAG 4.1.2 Name, Role, Value (Level A)",
+        "context": "Interactive <button> has no inner text or aria-label attribute.",
+        "originalSnippet": "<button class=\"input_disabled__lbjmz\"><img alt=\"Subtract\" loading=\"lazy\" width=\"14\" height=\"14\" decoding=\"async\" data-nimg=\"1\" class=\"w-[1.4rem] h-[1.4rem]\" style=\"color:transparent\" src=\"/trade-assets/icons/minus-light.svg\"></button>",
+        "explanation": "Icon buttons or empty buttons without accessible names are announced as \"unlabelled button\" by screen readers.",
+        "suggestedFixCode": "<button type=\"button\" aria-label=\"Close dialog\">\n  <svg>...</svg>\n</button>",
+        "quickTip": "Always test aria & semantics elements using assistive tools and keyboard navigation."
+      },
+      {
+        "id": "issue-006",
+        "ruleId": "button-name-missing",
+        "category": "ARIA & Semantics",
+        "severity": "Critical",
+        "element": "button",
+        "selector": "button",
+        "wcag": "WCAG 4.1.2 Name, Role, Value (Level A)",
+        "context": "Interactive <button> has no inner text or aria-label attribute.",
+        "originalSnippet": "<button class=\"input_disabled__lbjmz\"><img alt=\"Add\" loading=\"lazy\" width=\"14\" height=\"14\" decoding=\"async\" data-nimg=\"1\" class=\"w-[1.4rem] h-[1.4rem]\" style=\"color:transparent\" src=\"/trade-assets/icons/plus-light.svg\"></button>",
+        "explanation": "Icon buttons or empty buttons without accessible names are announced as \"unlabelled button\" by screen readers.",
+        "suggestedFixCode": "<button type=\"button\" aria-label=\"Close dialog\">\n  <svg>...</svg>\n</button>",
+        "quickTip": "Always test aria & semantics elements using assistive tools and keyboard navigation."
+      }
+    ]
   }
 ]

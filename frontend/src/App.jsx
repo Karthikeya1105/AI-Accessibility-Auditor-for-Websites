@@ -15,6 +15,7 @@ import { ComparisonDashboard } from './components/ComparisonDashboard';
 import { PerformanceSEOImpact } from './components/PerformanceSEOImpact';
 import { TrendTimelineChart } from './components/TrendTimelineChart';
 import { HistoryDrawer } from './components/HistoryDrawer';
+import { AccessDeniedCard } from './components/AccessDeniedCard';
 import { api } from './services/api';
 import { CheckCircle2, AlertOctagon, TrendingUp, ShieldCheck, Gauge } from 'lucide-react';
 
@@ -23,6 +24,7 @@ export const App = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [isDiscovering, setIsDiscovering] = useState(false);
   const [errorMsg, setErrorMsg] = useState('');
+  const [accessError, setAccessError] = useState(null);
   const [isHistoryOpen, setIsHistoryOpen] = useState(false);
 
   // Discovery Modal state
@@ -44,6 +46,7 @@ export const App = () => {
   const handleStartScan = async (payload) => {
     setIsLoading(true);
     setErrorMsg('');
+    setAccessError(null);
     setSelectedPageUrl(null);
     setActiveTab('dashboard');
 
@@ -61,17 +64,33 @@ export const App = () => {
 
       if (response.success) {
         setScanResult(response.data);
-        // Load domain trends
         if (response.data.websiteId) {
           fetchTrends(response.data.websiteId);
         }
       } else {
-        setErrorMsg(response.error || 'Scan failed to return results.');
+        if (response.status && response.status !== 'SCAN_FAILED') {
+          setAccessError({
+            status: response.status,
+            message: response.message || response.error,
+            targetUrl: payload.url
+          });
+        } else {
+          setErrorMsg(response.error || response.message || 'Scan failed to return results.');
+        }
       }
     } catch (err) {
       console.error('Scan Error:', err);
-      const msg = err.response?.data?.error || err.message || 'Server error occurred during scan.';
-      setErrorMsg(msg);
+      const resData = err.response?.data;
+      if (resData && resData.status && resData.status !== 'SCAN_FAILED') {
+        setAccessError({
+          status: resData.status,
+          message: resData.message || resData.error,
+          targetUrl: payload.url
+        });
+      } else {
+        const msg = resData?.error || resData?.message || err.message || 'Server error occurred during scan.';
+        setErrorMsg(msg);
+      }
     } finally {
       setIsLoading(false);
     }
@@ -91,6 +110,7 @@ export const App = () => {
   const handleOpenDiscovery = async (url) => {
     setIsDiscovering(true);
     setErrorMsg('');
+    setAccessError(null);
     try {
       const response = await api.discoverPages(url);
       if (response.success) {
@@ -187,8 +207,17 @@ export const App = () => {
           />
         </section>
 
+        {/* Access Denied Alert Card */}
+        {accessError && (
+          <AccessDeniedCard
+            errorObj={accessError}
+            onReset={() => setAccessError(null)}
+            onSwitchToHtml={() => setAccessError(null)}
+          />
+        )}
+
         {/* Global Error Banner */}
-        {errorMsg && (
+        {errorMsg && !accessError && (
           <div class="max-w-4xl mx-auto p-4 rounded-xl bg-red-500/10 border border-red-500/30 text-red-400 flex items-center space-x-3 text-xs">
             <AlertOctagon class="w-5 h-5 shrink-0 text-red-400" />
             <div>
@@ -206,7 +235,7 @@ export const App = () => {
         )}
 
         {/* View Tabs Header (Audit Dashboard vs Historical Comparison) */}
-        {!isLoading && scanResult && (
+        {!isLoading && scanResult && !accessError && (
           <div class="flex items-center justify-between border-b border-slate-800 pb-3">
             <div class="flex space-x-2">
               <button
@@ -238,7 +267,7 @@ export const App = () => {
         )}
 
         {/* Tab 1: Audit Dashboard */}
-        {!isLoading && scanResult && activeTab === 'dashboard' && (
+        {!isLoading && scanResult && !accessError && activeTab === 'dashboard' && (
           <div class="space-y-8 animate-fadeIn">
             
             {/* Score Overview Header (Single Page vs Batch) */}

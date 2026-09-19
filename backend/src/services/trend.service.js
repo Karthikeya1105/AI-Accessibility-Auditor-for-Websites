@@ -8,16 +8,16 @@ export class TrendService {
    * Computes two-track historical baseline vs current improvement trends and multi-level analytics.
    * Filter: Only scans with status !== 'failed' are included.
    * @param {string} domainOrId 
-   * @returns {object} Two-track trend analytics report
+   * @returns {Promise<object>} Two-track trend analytics report
    */
-  static getWebsiteTrends(domainOrId) {
+  static async getWebsiteTrends(domainOrId) {
     const targetWebsiteId = WebsiteService.getWebsiteId(domainOrId);
-    const allScans = StorageService.getAllScans();
+    const allScans = await StorageService.getAllScans();
 
     // Filter scans matching this domain and exclude failed scans
     const completedScans = allScans.filter(scan => {
       const scanWebsiteId = WebsiteService.getWebsiteId(scan.url || scan.baseUrl || '');
-      return scanWebsiteId === targetWebsiteId && scan.status !== 'failed';
+      return scanWebsiteId === targetWebsiteId && scan.status !== 'failed' && scan.status !== 'ACCESS_DENIED';
     }).sort((a, b) => new Date(a.timestamp).getTime() - new Date(b.timestamp).getTime());
 
     if (completedScans.length === 0) {
@@ -53,8 +53,8 @@ export class TrendService {
     const currentScan = completedScans[completedScans.length - 1];
     const previousScan = completedScans.length > 1 ? completedScans[completedScans.length - 2] : baselineScan;
 
-    WebsiteService.registerScan(targetWebsiteId, baselineScan.id, baselineScan.timestamp);
-    WebsiteService.registerScan(targetWebsiteId, currentScan.id, currentScan.timestamp);
+    await WebsiteService.registerScan(targetWebsiteId, baselineScan.id, baselineScan.timestamp);
+    await WebsiteService.registerScan(targetWebsiteId, currentScan.id, currentScan.timestamp);
 
     const baselineTotalIssues = (baselineScan.counts?.critical || 0) + (baselineScan.counts?.major || 0) + (baselineScan.counts?.minor || 0);
     const currentTotalIssues = (currentScan.counts?.critical || 0) + (currentScan.counts?.major || 0) + (currentScan.counts?.minor || 0);

@@ -1,6 +1,8 @@
 import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
+import { connectDB } from './config/db.js';
+import authRoutes from './routes/auth.routes.js';
 import scanRoutes from './routes/scan.routes.js';
 import reportRoutes from './routes/report.routes.js';
 
@@ -8,6 +10,9 @@ dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT || 5000;
+
+// Connect Database
+connectDB();
 
 // Middleware
 app.use(cors({
@@ -28,6 +33,7 @@ app.get('/api/health', (req, res) => {
 });
 
 // Routes
+app.use('/api/auth', authRoutes);
 app.use('/api/scan', scanRoutes);
 app.use('/api/report', reportRoutes);
 
@@ -43,3 +49,4 @@ app.listen(PORT, () => {
   console.log(`🤖 Groq AI Engine: ${process.env.GROQ_API_KEY ? 'ACTIVE (GROQ_API_KEY detected)' : 'INACTIVE (Using template fallback)'}`);
   console.log(`====================================================`);
 });
+

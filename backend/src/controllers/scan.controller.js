@@ -1,5 +1,5 @@
 import { SecurityService } from '../services/security.service.js';
-import { BrowserService } from '../services/browser.service.js';
+import { BrowserService, ScanError } from '../services/browser.service.js';
 import { PageDiscoveryService } from '../services/pageDiscovery.service.js';
 import { CustomRulesService } from '../services/customRules.service.js';
 import { ScoringService } from '../services/scoring.service.js';
@@ -18,6 +18,7 @@ export class ScanController {
   static async scan(req, res) {
     const startTime = Date.now();
     const { url, html, mode = 'url' } = req.body;
+    const userId = req.user?.id || null;
 
     try {
       let pageData;
@@ -25,13 +26,23 @@ export class ScanController {
       if (mode === 'url' || (url && !html)) {
         const sec = SecurityService.validateUrl(url);
         if (!sec.safe) {
-          return res.status(400).json({ error: sec.error });
+          return res.status(400).json({
+            success: false,
+            status: 'INVALID_URL',
+            error: sec.error,
+            message: sec.error
+          });
         }
         pageData = await BrowserService.fetchUrlContent(sec.url);
       } else {
         const sec = SecurityService.validateHtml(html);
         if (!sec.safe) {
-          return res.status(400).json({ error: sec.error });
+          return res.status(400).json({
+            success: false,
+            status: 'INVALID_HTML',
+            error: sec.error,
+            message: sec.error
+          });
         }
         pageData = BrowserService.parseRawHtml(sec.html);
       }
@@ -48,10 +59,19 @@ export class ScanController {
       const scanResult = {
         id: scanId,
         websiteId,
+        userId,
+        inputType: mode === 'url' ? 'url' : 'html',
+        source: {
+          type: mode === 'url' ? 'url' : 'html',
+          url: mode === 'url' ? url : undefined,
+          fileSize: html ? html.length : undefined,
+          htmlSnippet: html ? html.substring(0, 500) : undefined
+        },
         url: mode === 'url' ? url : 'Raw HTML Snippet',
         pageTitle: pageData.pageTitle,
         mode,
         isBatch: false,
+        status: 'completed',
         timestamp: new Date().toISOString(),
         durationSeconds,
         score: scoreResult.overallScore,
@@ -64,15 +84,44 @@ export class ScanController {
         issues: enrichedIssues
       };
 
-      StorageService.saveScan(scanResult);
+      await StorageService.saveScan(scanResult);
 
       return res.status(200).json({
         success: true,
         data: scanResult
       });
     } catch (err) {
+      if (err instanceof ScanError) {
+        // Record failed scan attempt if URL was provided
+        if (url) {
+          const scanId = `scan-${Date.now()}-${Math.random().toString(36).substring(2, 7)}`;
+          const websiteId = WebsiteService.getWebsiteId(url);
+          const failedRecord = {
+            id: scanId,
+            websiteId,
+            userId,
+            inputType: 'url',
+            url,
+            status: err.status,
+            score: 0,
+            timestamp: new Date().toISOString(),
+            error: err.message
+          };
+          StorageService.saveScan(failedRecord);
+        }
+
+        return res.status(400).json({
+          success: false,
+          status: err.status,
+          message: err.message,
+          targetUrl: url
+        });
+      }
+
       console.error('[ScanController] Single scan failed:', err);
       return res.status(500).json({
+        success: false,
+        status: 'SCAN_FAILED',
         error: err.message || 'An unexpected error occurred during accessibility scanning.'
       });
     }
@@ -85,7 +134,7 @@ export class ScanController {
     const { url } = req.body;
     const sec = SecurityService.validateUrl(url);
     if (!sec.safe) {
-      return res.status(400).json({ error: sec.error });
+      return res.status(400).json({ success: false, status: 'INVALID_URL', error: sec.error });
     }
 
     try {
@@ -97,7 +146,7 @@ export class ScanController {
         pages: discovered
       });
     } catch (err) {
-      return res.status(500).json({ error: 'Page discovery failed for target URL.' });
+      return res.status(500).json({ success: false, error: 'Page discovery failed for target URL.' });
     }
   }
 
@@ -107,10 +156,11 @@ export class ScanController {
   static async batchScan(req, res) {
     const startTime = Date.now();
     const { url, selectedUrls, maxPages = 5 } = req.body;
+    const userId = req.user?.id || null;
 
     const sec = SecurityService.validateUrl(url);
     if (!sec.safe) {
-      return res.status(400).json({ error: sec.error });
+      return res.status(400).json({ success: false, status: 'INVALID_URL', error: sec.error });
     }
 
     try {
@@ -165,16 +215,19 @@ export class ScanController {
       const batchResult = {
         id: scanId,
         websiteId,
+        userId,
+        inputType: 'batch',
         url: sec.url,
         pageTitle: `Batch Audit: ${new URL(sec.url).hostname}`,
         mode: 'batch',
+        status: 'completed',
         timestamp: new Date().toISOString(),
         durationSeconds,
         performanceImpact,
         ...aggregated
       };
 
-      StorageService.saveScan(batchResult);
+      await StorageService.saveScan(batchResult);
 
       return res.status(200).json({
         success: true,
@@ -183,6 +236,7 @@ export class ScanController {
     } catch (err) {
       console.error('[ScanController] Batch scan failed:', err);
       return res.status(500).json({
+        success: false,
         error: err.message || 'An unexpected error occurred during batch scanning.'
       });
     }
@@ -194,8 +248,8 @@ export class ScanController {
   static async compareScans(req, res) {
     const { id1, id2 } = req.params;
     try {
-      const scanA = StorageService.getScan(id1);
-      const scanB = StorageService.getScan(id2);
+      const scanA = await StorageService.getScan(id1);
+      const scanB = await StorageService.getScan(id2);
 
       if (!scanA || !scanB) {
         return res.status(404).json({ error: 'One or both scan records were not found for comparison.' });
@@ -214,10 +268,10 @@ export class ScanController {
   /**
    * GET /api/scan/websites/:websiteId/trends
    */
-  static getWebsiteTrends(req, res) {
+  static async getWebsiteTrends(req, res) {
     const { websiteId } = req.params;
     try {
-      const trends = TrendService.getWebsiteTrends(websiteId);
+      const trends = await TrendService.getWebsiteTrends(websiteId);
       return res.status(200).json({
         success: true,
         data: trends
@@ -230,9 +284,9 @@ export class ScanController {
   /**
    * GET /api/scan/history
    */
-  static getHistory(req, res) {
+  static async getHistory(req, res) {
     try {
-      const scans = StorageService.getAllScans();
+      const scans = await StorageService.getAllScans();
       return res.status(200).json({
         success: true,
         count: scans.length,
@@ -246,9 +300,9 @@ export class ScanController {
   /**
    * GET /api/scan/:id
    */
-  static getScanById(req, res) {
+  static async getScanById(req, res) {
     const { id } = req.params;
-    const scan = StorageService.getScan(id);
+    const scan = await StorageService.getScan(id);
     if (!scan) {
       return res.status(404).json({ error: 'Scan record not found.' });
     }

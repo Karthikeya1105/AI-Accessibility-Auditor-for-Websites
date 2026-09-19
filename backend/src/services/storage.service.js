@@ -1,5 +1,7 @@
 import fs from 'fs';
 import path from 'path';
+import { isDatabaseConnected } from '../config/db.js';
+import { Scan } from '../models/Scan.js';
 
 const DATA_DIR = path.resolve(process.cwd(), 'data');
 const DATA_FILE = path.join(DATA_DIR, 'scans.json');
@@ -23,7 +25,8 @@ export class StorageService {
     }
   }
 
-  static saveScan(scanData) {
+  static async saveScan(scanData) {
+    // 1. In-memory & Disk Save
     StorageService.scans.set(scanData.id, scanData);
     try {
       if (!fs.existsSync(DATA_DIR)) {
@@ -34,14 +37,41 @@ export class StorageService {
     } catch (err) {
       console.warn('[StorageService] Failed to persist scan to disk:', err.message);
     }
+
+    // 2. MongoDB Save if connected
+    if (isDatabaseConnected()) {
+      try {
+        await Scan.findOneAndUpdate({ id: scanData.id }, scanData, { upsert: true, new: true });
+        console.log(`[StorageService] Scan ${scanData.id} saved to MongoDB collection 'scans'.`);
+      } catch (err) {
+        console.warn('[StorageService] MongoDB scan persistence warning:', err.message);
+      }
+    }
+
     return scanData;
   }
 
-  static getScan(scanId) {
+  static async getScan(scanId) {
+    if (isDatabaseConnected()) {
+      try {
+        const dbScan = await Scan.findOne({ id: scanId }).lean();
+        if (dbScan) return dbScan;
+      } catch (err) {
+        console.warn('[StorageService] MongoDB getScan error, using disk fallback:', err.message);
+      }
+    }
     return StorageService.scans.get(scanId) || null;
   }
 
-  static getAllScans() {
+  static async getAllScans(filter = {}) {
+    if (isDatabaseConnected()) {
+      try {
+        const dbScans = await Scan.find(filter).sort({ timestamp: -1 }).lean();
+        if (dbScans && dbScans.length > 0) return dbScans;
+      } catch (err) {
+        console.warn('[StorageService] MongoDB getAllScans error, using disk fallback:', err.message);
+      }
+    }
     return Array.from(StorageService.scans.values()).sort(
       (a, b) => new Date(b.timestamp).getTime() - new Date(a.timestamp).getTime()
     );

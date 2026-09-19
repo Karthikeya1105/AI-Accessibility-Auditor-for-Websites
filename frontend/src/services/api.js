@@ -2,12 +2,43 @@ import axios from 'axios';
 
 const API_BASE = '/api';
 
+// Create Axios Instance with Bearer Token Interceptor
+const apiClient = axios.create({
+  baseURL: API_BASE
+});
+
+apiClient.interceptors.request.use((config) => {
+  const token = localStorage.getItem('a11y_auth_token');
+  if (token) {
+    config.headers.Authorization = `Bearer ${token}`;
+  }
+  return config;
+});
+
 export const api = {
+  /**
+   * Auth Endpoints
+   */
+  async register(payload) {
+    const res = await apiClient.post('/auth/register', payload);
+    return res.data;
+  },
+
+  async login(payload) {
+    const res = await apiClient.post('/auth/login', payload);
+    return res.data;
+  },
+
+  async getMe() {
+    const res = await apiClient.get('/auth/me');
+    return res.data;
+  },
+
   /**
    * Health check
    */
   async checkHealth() {
-    const res = await axios.get(`${API_BASE}/health`);
+    const res = await apiClient.get('/health');
     return res.data;
   },
 
@@ -15,7 +46,7 @@ export const api = {
    * Initiate single scan
    */
   async runScan(payload) {
-    const res = await axios.post(`${API_BASE}/scan`, payload);
+    const res = await apiClient.post('/scan', payload);
     return res.data;
   },
 
@@ -23,7 +54,7 @@ export const api = {
    * Discover internal site pages
    */
   async discoverPages(url) {
-    const res = await axios.post(`${API_BASE}/scan/batch/discover`, { url });
+    const res = await apiClient.post('/scan/batch/discover', { url });
     return res.data;
   },
 
@@ -31,7 +62,7 @@ export const api = {
    * Initiate batch site scan
    */
   async runBatchScan(payload) {
-    const res = await axios.post(`${API_BASE}/scan/batch`, payload);
+    const res = await apiClient.post('/scan/batch', payload);
     return res.data;
   },
 
@@ -39,7 +70,7 @@ export const api = {
    * Compare two scan versions
    */
   async compareScans(id1, id2) {
-    const res = await axios.get(`${API_BASE}/scan/compare/${id1}/${id2}`);
+    const res = await apiClient.get(`/scan/compare/${id1}/${id2}`);
     return res.data;
   },
 
@@ -47,7 +78,7 @@ export const api = {
    * Fetch website trend analytics
    */
   async getWebsiteTrends(websiteId) {
-    const res = await axios.get(`${API_BASE}/scan/websites/${websiteId}/trends`);
+    const res = await apiClient.get(`/scan/websites/${websiteId}/trends`);
     return res.data;
   },
 
@@ -55,7 +86,7 @@ export const api = {
    * Fetch scan history
    */
   async getHistory() {
-    const res = await axios.get(`${API_BASE}/scan/history`);
+    const res = await apiClient.get('/scan/history');
     return res.data;
   },
 
@@ -63,7 +94,7 @@ export const api = {
    * Get scan by ID
    */
   async getScanById(scanId) {
-    const res = await axios.get(`${API_BASE}/scan/${scanId}`);
+    const res = await apiClient.get(`/scan/${scanId}`);
     return res.data;
   },
 
