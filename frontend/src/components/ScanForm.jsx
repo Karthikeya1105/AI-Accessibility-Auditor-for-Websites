@@ -29,13 +29,20 @@ const SAMPLE_INACCESSIBLE_HTML = `<!DOCTYPE html>
 </body>
 </html>`;
 
-export const ScanForm = ({ onStartScan, onOpenDiscovery, isLoading }) => {
+export const ScanForm = ({ onStartScan, onOpenDiscovery, isLoading, resetKey }) => {
   const [activeTab, setActiveTab] = useState('url'); // 'url' | 'html'
   const [scanScope, setScanScope] = useState('single'); // 'single' | 'auto_batch' | 'manual_batch'
   const [maxPages, setMaxPages] = useState(5);
   const [urlInput, setUrlInput] = useState('');
   const [htmlInput, setHtmlInput] = useState('');
   const [errorMsg, setErrorMsg] = useState('');
+
+  // Clear all form inputs on login, signup, or logout trigger
+  React.useEffect(() => {
+    setUrlInput('');
+    setHtmlInput('');
+    setErrorMsg('');
+  }, [resetKey]);
 
   const handleSubmit = (e) => {
     e.preventDefault();

@@ -48,6 +48,8 @@ export const App = () => {
   const [selectedCategory, setSelectedCategory] = useState('ALL');
   const [selectedPageUrl, setSelectedPageUrl] = useState(null);
 
+  const [resetKey, setResetKey] = useState(0);
+
   const handleLogoutClear = () => {
     setScanResult(null);
     setTrendData(null);
@@ -56,7 +58,13 @@ export const App = () => {
     setErrorMsg('');
     setAccessError(null);
     setUnchangedNotice('');
+    setResetKey(prev => prev + 1);
   };
+
+  // Reset form inputs and website scan data on authentication change (login, signup, logout)
+  useEffect(() => {
+    handleLogoutClear();
+  }, [isAuthenticated]);
 
   const handleStartScan = async (payload) => {
     setIsLoading(true);
@@ -226,6 +234,7 @@ export const App = () => {
             onStartScan={handleStartScan}
             onOpenDiscovery={handleOpenDiscovery}
             isLoading={isLoading || isDiscovering}
+            resetKey={resetKey}
           />
         </section>
 
