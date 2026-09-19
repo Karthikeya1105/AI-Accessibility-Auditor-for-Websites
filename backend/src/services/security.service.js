@@ -51,7 +51,8 @@ export class SecurityService {
           p1 === 127 ||
           p1 === 0 ||
           (p1 === 172 && p2 >= 16 && p2 <= 31) ||
-          (p1 === 192 && p2 === 168)
+          (p1 === 192 && p2 === 168) ||
+          (p1 === 169 && p2 === 254)
         ) {
           return { safe: false, error: 'Scanning private IP addresses is restricted for security.' };
         }
@@ -73,7 +74,7 @@ export class SecurityService {
    * @returns {{ safe: boolean, error?: string, html?: string }}
    */
   static validateHtml(html) {
-    if (!html || typeof html !== 'string') {
+    if (!html || typeof html !== 'string' || html.trim().length === 0) {
       return { safe: false, error: 'HTML payload must be a non-empty string.' };
     }
 
