@@ -8,15 +8,17 @@ export class TrendService {
    * Computes two-track historical baseline vs current improvement trends and multi-level analytics.
    * Filter: Only scans with status !== 'failed' are included.
    * @param {string} domainOrId 
+   * @param {string|null} userId
    * @returns {Promise<object>} Two-track trend analytics report
    */
-  static async getWebsiteTrends(domainOrId) {
+  static async getWebsiteTrends(domainOrId, userId = null) {
     const targetWebsiteId = WebsiteService.getWebsiteId(domainOrId);
-    const allScans = await StorageService.getAllScans();
+    const filter = userId ? { userId } : {};
+    const allScans = await StorageService.getAllScans(filter);
 
     // Filter scans matching this domain and exclude failed scans
     const completedScans = allScans.filter(scan => {
-      const scanWebsiteId = WebsiteService.getWebsiteId(scan.url || scan.baseUrl || '');
+      const scanWebsiteId = scan.websiteId || WebsiteService.getWebsiteId(scan.url || scan.baseUrl || '');
       return scanWebsiteId === targetWebsiteId && scan.status !== 'failed' && scan.status !== 'ACCESS_DENIED';
     }).sort((a, b) => new Date(a.timestamp).getTime() - new Date(b.timestamp).getTime());
 

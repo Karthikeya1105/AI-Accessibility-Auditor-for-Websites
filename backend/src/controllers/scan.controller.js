@@ -1,3 +1,4 @@
+import crypto from 'crypto';
 import { SecurityService } from '../services/security.service.js';
 import { BrowserService, ScanError } from '../services/browser.service.js';
 import { PageDiscoveryService } from '../services/pageDiscovery.service.js';
@@ -47,6 +48,20 @@ export class ScanController {
         pageData = BrowserService.parseRawHtml(sec.html);
       }
 
+      // SHA-256 Hash Computation & Duplicate HTML Detection
+      const contentHash = crypto.createHash('sha256').update(pageData.html || '').digest('hex');
+      const websiteId = mode === 'url' ? WebsiteService.getWebsiteId(url) : 'raw-html';
+
+      const existingScan = await StorageService.findScanByHash(websiteId, contentHash, userId);
+      if (existingScan) {
+        return res.status(200).json({
+          success: true,
+          unchanged: true,
+          message: 'No HTML changes detected since previous scan (SHA-256 hash matched).',
+          data: existingScan
+        });
+      }
+
       const rawIssues = CustomRulesService.runAllChecks(pageData.$);
       const scoreResult = ScoringService.calculateScore(rawIssues);
       const enrichedIssues = await AIService.enrichIssues(rawIssues);
@@ -54,18 +69,19 @@ export class ScanController {
       const durationSeconds = parseFloat(((Date.now() - startTime) / 1000).toFixed(2));
       const performanceImpact = PerformanceService.evaluateImpact(enrichedIssues, durationSeconds);
       const scanId = `scan-${Date.now()}-${Math.random().toString(36).substring(2, 7)}`;
-      const websiteId = mode === 'url' ? WebsiteService.getWebsiteId(url) : 'raw-html';
 
       const scanResult = {
         id: scanId,
         websiteId,
         userId,
+        contentHash,
         inputType: mode === 'url' ? 'url' : 'html',
         source: {
           type: mode === 'url' ? 'url' : 'html',
           url: mode === 'url' ? url : undefined,
-          fileSize: html ? html.length : undefined,
-          htmlSnippet: html ? html.substring(0, 500) : undefined
+          fileSize: html ? html.length : (pageData.html ? pageData.html.length : undefined),
+          htmlSnippet: pageData.html ? pageData.html.substring(0, 500) : undefined,
+          contentHash
         },
         url: mode === 'url' ? url : 'Raw HTML Snippet',
         pageTitle: pageData.pageTitle,
@@ -270,8 +286,9 @@ export class ScanController {
    */
   static async getWebsiteTrends(req, res) {
     const { websiteId } = req.params;
+    const userId = req.user?.id || null;
     try {
-      const trends = await TrendService.getWebsiteTrends(websiteId);
+      const trends = await TrendService.getWebsiteTrends(websiteId, userId);
       return res.status(200).json({
         success: true,
         data: trends
@@ -285,8 +302,10 @@ export class ScanController {
    * GET /api/scan/history
    */
   static async getHistory(req, res) {
+    const userId = req.user?.id || null;
     try {
-      const scans = await StorageService.getAllScans();
+      const filter = userId ? { userId } : {};
+      const scans = await StorageService.getAllScans(filter);
       return res.status(200).json({
         success: true,
         count: scans.length,

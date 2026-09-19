@@ -41,7 +41,7 @@ export class StorageService {
     // 2. MongoDB Save if connected
     if (isDatabaseConnected()) {
       try {
-        await Scan.findOneAndUpdate({ id: scanData.id }, scanData, { upsert: true, new: true });
+        await Scan.findOneAndUpdate({ id: scanData.id }, scanData, { upsert: true, returnDocument: 'after' });
         console.log(`[StorageService] Scan ${scanData.id} saved to MongoDB collection 'scans'.`);
       } catch (err) {
         console.warn('[StorageService] MongoDB scan persistence warning:', err.message);
@@ -63,16 +63,53 @@ export class StorageService {
     return StorageService.scans.get(scanId) || null;
   }
 
+  static async findScanByHash(websiteId, contentHash, userId = null) {
+    if (!contentHash) return null;
+    if (isDatabaseConnected()) {
+      try {
+        const filter = { websiteId, contentHash, status: 'completed' };
+        if (userId) {
+          filter.$or = [{ userId }, { userId: String(userId) }];
+        }
+        const match = await Scan.findOne(filter).sort({ timestamp: -1 }).lean();
+        if (match) return match;
+      } catch (err) {
+        console.warn('[StorageService] MongoDB findScanByHash error:', err.message);
+      }
+    }
+    // Disk fallback matching
+    const list = Array.from(StorageService.scans.values());
+    return list.find(s => 
+      s.websiteId === websiteId && 
+      (s.contentHash === contentHash || s.source?.contentHash === contentHash) && 
+      s.status === 'completed' &&
+      (!userId || String(s.userId) === String(userId))
+    ) || null;
+  }
+
   static async getAllScans(filter = {}) {
     if (isDatabaseConnected()) {
       try {
-        const dbScans = await Scan.find(filter).sort({ timestamp: -1 }).lean();
+        const queryFilter = { ...filter };
+        if (queryFilter.userId) {
+          const u = queryFilter.userId;
+          delete queryFilter.userId;
+          queryFilter.$or = [{ userId: u }, { userId: String(u) }];
+        }
+        const dbScans = await Scan.find(queryFilter).sort({ timestamp: -1 }).lean();
         if (dbScans && dbScans.length > 0) return dbScans;
       } catch (err) {
         console.warn('[StorageService] MongoDB getAllScans error, using disk fallback:', err.message);
       }
     }
-    return Array.from(StorageService.scans.values()).sort(
+    let list = Array.from(StorageService.scans.values());
+    if (filter.userId) {
+      list = list.filter(s => String(s.userId) === String(filter.userId));
+    }
+    if (filter.websiteId) {
+      list = list.filter(s => s.websiteId === filter.websiteId);
+    }
+    return list.sort(
       (a, b) => new Date(b.timestamp).getTime() - new Date(a.timestamp).getTime()
     );
   }

@@ -16,16 +16,21 @@ import { PerformanceSEOImpact } from './components/PerformanceSEOImpact';
 import { TrendTimelineChart } from './components/TrendTimelineChart';
 import { HistoryDrawer } from './components/HistoryDrawer';
 import { AccessDeniedCard } from './components/AccessDeniedCard';
+import { LoginModal } from './components/LoginModal';
+import { useAuth } from './context/AuthContext';
 import { api } from './services/api';
-import { CheckCircle2, AlertOctagon, TrendingUp, ShieldCheck, Gauge } from 'lucide-react';
+import { CheckCircle2, AlertOctagon, TrendingUp, ShieldCheck, Gauge, Info } from 'lucide-react';
 
 export const App = () => {
+  const { isAuthenticated } = useAuth();
   const [scanResult, setScanResult] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const [isDiscovering, setIsDiscovering] = useState(false);
   const [errorMsg, setErrorMsg] = useState('');
   const [accessError, setAccessError] = useState(null);
   const [isHistoryOpen, setIsHistoryOpen] = useState(false);
+  const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
+  const [unchangedNotice, setUnchangedNotice] = useState('');
 
   // Discovery Modal state
   const [discoveryData, setDiscoveryData] = useState(null);
@@ -43,10 +48,21 @@ export const App = () => {
   const [selectedCategory, setSelectedCategory] = useState('ALL');
   const [selectedPageUrl, setSelectedPageUrl] = useState(null);
 
+  const handleLogoutClear = () => {
+    setScanResult(null);
+    setTrendData(null);
+    setComparisonData(null);
+    setActiveTab('dashboard');
+    setErrorMsg('');
+    setAccessError(null);
+    setUnchangedNotice('');
+  };
+
   const handleStartScan = async (payload) => {
     setIsLoading(true);
     setErrorMsg('');
     setAccessError(null);
+    setUnchangedNotice('');
     setSelectedPageUrl(null);
     setActiveTab('dashboard');
 
@@ -64,6 +80,9 @@ export const App = () => {
 
       if (response.success) {
         setScanResult(response.data);
+        if (response.unchanged) {
+          setUnchangedNotice('No HTML changes detected since your previous scan (SHA-256 hash matched). Displaying existing scan version.');
+        }
         if (response.data.websiteId) {
           fetchTrends(response.data.websiteId);
         }
@@ -193,7 +212,10 @@ export const App = () => {
     <div class="min-h-screen bg-slate-950 text-slate-100 flex flex-col font-sans antialiased">
       
       {/* Top Sticky Header */}
-      <Navbar onOpenHistory={() => setIsHistoryOpen(true)} />
+      <Navbar
+        onOpenHistory={() => setIsHistoryOpen(true)}
+        onLogout={handleLogoutClear}
+      />
 
       {/* Main Container */}
       <main class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
@@ -206,6 +228,17 @@ export const App = () => {
             isLoading={isLoading || isDiscovering}
           />
         </section>
+
+        {/* SHA-256 Unchanged HTML Notice Banner */}
+        {unchangedNotice && (
+          <div class="max-w-4xl mx-auto p-4 rounded-xl bg-blue-500/10 border border-blue-500/30 text-blue-300 flex items-center space-x-3 text-xs animate-fadeIn">
+            <Info class="w-5 h-5 shrink-0 text-blue-400" />
+            <div>
+              <span class="font-bold block text-blue-200">No HTML Code Changes Detected</span>
+              <span>{unchangedNotice}</span>
+            </div>
+          </div>
+        )}
 
         {/* Access Denied Alert Card */}
         {accessError && (

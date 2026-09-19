@@ -5,7 +5,7 @@ import { useAuth } from '../context/AuthContext';
 import { LoginModal } from './LoginModal';
 import { ConfirmLogoutModal } from './ConfirmLogoutModal';
 
-export const Navbar = ({ onOpenHistory }) => {
+export const Navbar = ({ onOpenHistory, onLogout }) => {
   const [health, setHealth] = useState(null);
   const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
   const [isLogoutModalOpen, setIsLogoutModalOpen] = useState(false);
@@ -16,6 +16,11 @@ export const Navbar = ({ onOpenHistory }) => {
       .then(res => setHealth(res))
       .catch(() => setHealth({ status: 'offline' }));
   }, []);
+
+  const handleConfirmLogout = () => {
+    logout();
+    if (onLogout) onLogout();
+  };
 
   return (
     <>
@@ -107,7 +112,7 @@ export const Navbar = ({ onOpenHistory }) => {
       <ConfirmLogoutModal
         isOpen={isLogoutModalOpen}
         onClose={() => setIsLogoutModalOpen(false)}
-        onConfirm={logout}
+        onConfirm={handleConfirmLogout}
       />
     </>
   );

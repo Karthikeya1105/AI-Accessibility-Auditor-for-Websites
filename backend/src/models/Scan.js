@@ -13,9 +13,13 @@ const scanSchema = new mongoose.Schema({
     index: true
   },
   userId: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: 'User',
-    required: false
+    type: mongoose.Schema.Types.Mixed,
+    required: false,
+    index: true
+  },
+  contentHash: {
+    type: String,
+    index: true
   },
   inputType: {
     type: String,
@@ -27,7 +31,8 @@ const scanSchema = new mongoose.Schema({
     url: String,
     fileName: String,
     fileSize: Number,
-    htmlSnippet: String
+    htmlSnippet: String,
+    contentHash: String
   },
   url: {
     type: String,

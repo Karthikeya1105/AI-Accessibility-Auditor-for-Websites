@@ -1,7 +1,11 @@
 import { Router } from 'express';
 import { ScanController } from '../controllers/scan.controller.js';
+import { authenticate } from '../middleware/auth.middleware.js';
 
 const router = Router();
+
+// Attach Bearer token decoder middleware to all scan endpoints
+router.use(authenticate);
 
 router.post('/', ScanController.scan);
 router.post('/batch/discover', ScanController.discoverPages);
