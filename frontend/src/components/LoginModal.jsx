@@ -1,13 +1,19 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useAuth } from '../context/AuthContext';
-import { X, Lock, Mail, User, LogIn, UserPlus, AlertCircle } from 'lucide-react';
+import { X, Lock, Mail, User, LogIn, UserPlus, AlertCircle, ShieldAlert } from 'lucide-react';
 
-export const LoginModal = ({ isOpen, onClose }) => {
+export const LoginModal = ({ isOpen, onClose, isRequired = false }) => {
   const { login, register } = useAuth();
   const [isRegisterMode, setIsRegisterMode] = useState(false);
   const [formData, setFormData] = useState({ name: '', email: '', password: '' });
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
+
+  // Automatically clear form input fields and errors whenever modal opens or mode switches
+  useEffect(() => {
+    setFormData({ name: '', email: '', password: '' });
+    setError('');
+  }, [isOpen, isRegisterMode]);
 
   if (!isOpen) return null;
 
@@ -22,7 +28,9 @@ export const LoginModal = ({ isOpen, onClose }) => {
       } else {
         await login({ email: formData.email, password: formData.password });
       }
-      onClose();
+      setFormData({ name: '', email: '', password: '' });
+      setError('');
+      if (onClose) onClose();
     } catch (err) {
       setError(err.message || 'Authentication error.');
     } finally {
@@ -31,27 +39,37 @@ export const LoginModal = ({ isOpen, onClose }) => {
   };
 
   return (
-    <div class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-sm animate-fadeIn">
+    <div class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/85 backdrop-blur-md animate-fadeIn">
       <div class="glass-card w-full max-w-md rounded-2xl p-6 border border-slate-800 shadow-2xl space-y-6 relative">
         
-        {/* Close Button */}
-        <button
-          onClick={onClose}
-          class="absolute top-4 right-4 text-slate-400 hover:text-white p-1 rounded-lg hover:bg-slate-800 transition-colors"
-        >
-          <X class="w-5 h-5" />
-        </button>
+        {/* Close Button - Hidden if authentication is mandatory */}
+        {!isRequired && onClose && (
+          <button
+            onClick={() => {
+              setFormData({ name: '', email: '', password: '' });
+              setError('');
+              onClose();
+            }}
+            class="absolute top-4 right-4 text-slate-400 hover:text-white p-1 rounded-lg hover:bg-slate-800 transition-colors"
+          >
+            <X class="w-5 h-5" />
+          </button>
+        )}
 
         {/* Modal Header */}
         <div class="text-center space-y-1">
-          <div class="w-12 h-12 mx-auto rounded-xl bg-blue-500/10 border border-blue-500/30 flex items-center justify-center text-blue-400 mb-2">
-            {isRegisterMode ? <UserPlus class="w-6 h-6" /> : <LogIn class="w-6 h-6" />}
+          <div class="w-12 h-12 mx-auto rounded-xl bg-blue-500/10 border border-blue-500/30 flex items-center justify-center text-blue-400 mb-2 shadow-lg shadow-blue-500/10">
+            {isRequired ? <ShieldAlert class="w-6 h-6 text-amber-400" /> : isRegisterMode ? <UserPlus class="w-6 h-6" /> : <LogIn class="w-6 h-6" />}
           </div>
           <h3 class="text-xl font-bold text-white">
-            {isRegisterMode ? 'Create Auditor Account' : 'Welcome Back'}
+            {isRequired 
+              ? (isRegisterMode ? 'Create Account to Continue' : 'Sign In Required')
+              : (isRegisterMode ? 'Create Auditor Account' : 'Welcome Back')}
           </h3>
           <p class="text-xs text-slate-400">
-            {isRegisterMode ? 'Register to save audit snapshots & continuous trends' : 'Sign in to access saved site audits & domain trends'}
+            {isRequired 
+              ? 'Please sign in or create an account to use the AI Accessibility Auditor platform'
+              : (isRegisterMode ? 'Register to save audit snapshots & continuous trends' : 'Sign in to access saved site audits & domain trends')}
           </p>
         </div>
 

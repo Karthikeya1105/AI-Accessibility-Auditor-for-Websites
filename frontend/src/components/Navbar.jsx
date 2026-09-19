@@ -102,10 +102,11 @@ export const Navbar = ({ onOpenHistory, onLogout }) => {
         </div>
       </header>
 
-      {/* Login / Register Modal */}
+      {/* Login / Register Modal - Mandated for unauthenticated visitors */}
       <LoginModal
-        isOpen={isLoginModalOpen}
+        isOpen={!isAuthenticated || isLoginModalOpen}
         onClose={() => setIsLoginModalOpen(false)}
+        isRequired={!isAuthenticated}
       />
 
       {/* Confirm Logout Modal */}

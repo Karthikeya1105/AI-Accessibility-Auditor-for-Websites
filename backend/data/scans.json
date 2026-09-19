@@ -1,0 +1,1414 @@
+[
+  {
+    "id": "scan-1789820900016-di23o",
+    "websiteId": "coindcx.com",
+    "userId": "6aae7fcd690e117c0ba3b11d",
+    "contentHash": "e8367a12f94a48a786e8c3b1d46ee955ed43c3853313822bd38e56ba4498d0bf",
+    "inputType": "url",
+    "source": {
+      "type": "url",
+      "url": "https://coindcx.com/futures/B-ONE_USDT",
+      "fileSize": 80475,
+      "htmlSnippet": "<!DOCTYPE html><html lang=\"en\" data-theme=\"dark\"><head><meta charSet=\"utf-8\" data-next-head=\"\"/><meta name=\"viewport\" content=\"width=device-width\" data-next-head=\"\"/><meta name=\"google-site-verification\" content=\"tBwhy4prc9xNGdgSKBOXM2Gs2BU-ETEZAZpJfwGQqu4\" data-next-head=\"\"/><title data-next-head=\"\">B-ONE_USDT Perpetual | CoinDCX Futures Trading</title><meta name=\"description\" content=\"Trade B-ONE_USDT perpetual contracts on CoinDCX Futures | Start Crypto Futures Trading in India with high liqu",
+      "contentHash": "e8367a12f94a48a786e8c3b1d46ee955ed43c3853313822bd38e56ba4498d0bf"
+    },
+    "url": "https://coindcx.com/futures/B-ONE_USDT",
+    "pageTitle": "B-ONE_USDT Perpetual | CoinDCX Futures Trading",
+    "mode": "url",
+    "isBatch": false,
+    "status": "completed",
+    "timestamp": "2026-09-19T12:28:20.016Z",
+    "durationSeconds": 1.05,
+    "score": 28,
+    "wcagLevel": "WCAG Non-Compliant (Critical Violations)",
+    "statusBadge": "danger",
+    "counts": {
+      "critical": 6,
+      "major": 0,
+      "minor": 0,
+      "total": 6
+    },
+    "categoryScores": {
+      "Images & Media": 100,
+      "Color & Contrast": 100,
+      "Forms & Controls": 88,
+      "Headings & Structure": 100,
+      "Links & Navigation": 100,
+      "ARIA & Semantics": 40
+    },
+    "manualReviewItems": [
+      {
+        "id": "mr-01",
+        "title": "Meaningful Alt Text Quality",
+        "description": "Verify image alt text provides equivalent context and meaning, not just superficial image tags.",
+        "wcag": "WCAG 1.1.1"
+      },
+      {
+        "id": "mr-02",
+        "title": "Keyboard Focus Order & Visibility",
+        "description": "Navigate the entire site using Tab and Shift+Tab keys to ensure all interactive elements receive visible focus rings in logical order.",
+        "wcag": "WCAG 2.4.7"
+      },
+      {
+        "id": "mr-03",
+        "title": "Screen Reader Interaction Testing",
+        "description": "Test interactive dropdowns, modals, and dynamic content updates with NVDA, VoiceOver, or JAWS.",
+        "wcag": "WCAG 4.1.2"
+      },
+      {
+        "id": "mr-04",
+        "title": "Responsive Text Scaling (200% Zoom)",
+        "description": "Zoom page to 200% in browser settings and ensure text does not truncate, overlap, or require horizontal scrolling.",
+        "wcag": "WCAG 1.4.4"
+      }
+    ],
+    "performanceImpact": {
+      "loadDurationSeconds": 1.05,
+      "speedBadge": "Moderate",
+      "disclaimer": "Note: Accessibility improvements support better mobile user experience and search engine discoverability. Measured accessibility scores represent WCAG 2.1 compliance and do not guarantee search engine ranking placement.",
+      "impactNotes": [
+        {
+          "title": "Mobile Form Completion Rate",
+          "category": "Mobile Usability",
+          "icon": "FormInput",
+          "benefit": "Explicitly associated labels increase touch target area on mobile screens, reducing form abandonment and input frustration."
+        }
+      ]
+    },
+    "issues": [
+      {
+        "id": "issue-001",
+        "ruleId": "form-label-missing",
+        "category": "Forms & Controls",
+        "severity": "Critical",
+        "element": "input",
+        "selector": "input[name=\"range\"]",
+        "wcag": "WCAG 1.3.1 / 4.1.2 Name, Role, Value (Level A)",
+        "context": "Form element <input name=\"range\"> lacks a associated <label> or aria-label.",
+        "originalSnippet": "<input data-index=\"0\" aria-valuenow=\"0\" aria-valuetext=\"0\" aria-orientation=\"horizontal\" aria-valuemax=\"100\" aria-valuemin=\"0\" type=\"range\" min=\"0\" max=\"100\" step=\"1\" style=\"border:0;clip:rect(0 0 0 0);height:100%;margin:-1px;overflow:hidden;padding:0;position:absolute;white-space:nowrap;width:100%;direction:ltr\" value=\"0\">",
+        "explanation": "Form controls without labels cannot be announced correctly by screen readers, making forms impossible to complete.",
+        "suggestedFixCode": "<label for=\"input-id\">Field Label</label>\n<input id=\"input-id\" type=\"range\" name=\"range\">",
+        "quickTip": "Always test forms & controls elements using assistive tools and keyboard navigation."
+      },
+      {
+        "id": "issue-002",
+        "ruleId": "button-name-missing",
+        "category": "ARIA & Semantics",
+        "severity": "Critical",
+        "element": "button",
+        "selector": "button",
+        "wcag": "WCAG 4.1.2 Name, Role, Value (Level A)",
+        "context": "Interactive <button> has no inner text or aria-label attribute.",
+        "originalSnippet": "<button id=\"awt-user-dp\" data-testid=\"awt-user-dp\" class=\"flex justify-center items-center bg-accent rounded-full w-24 h-24 relative\"><div class=\"user-dp_user_dp__XGaCU  relative flex justify-center items-center rounded-full place-content-center\"><img alt=\"Display picture\" loading=\"lazy\" decoding=\"async\" data-nimg=\"fill\" style=\"position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;object-fit:contain;color:transparent\" src=\"/trade-assets/images/component-assets/user-anonymous.svg\"></div></button>",
+        "explanation": "Icon buttons or empty buttons without accessible names are announced as \"unlabelled button\" by screen readers.",
+        "suggestedFixCode": "<button type=\"button\" aria-label=\"Close dialog\">\n  <svg>...</svg>\n</button>",
+        "quickTip": "Always test aria & semantics elements using assistive tools and keyboard navigation."
+      },
+      {
+        "id": "issue-003",
+        "ruleId": "button-name-missing",
+        "category": "ARIA & Semantics",
+        "severity": "Critical",
+        "element": "button",
+        "selector": "button",
+        "wcag": "WCAG 4.1.2 Name, Role, Value (Level A)",
+        "context": "Interactive <button> has no inner text or aria-label attribute.",
+        "originalSnippet": "<button class=\"mr-12 mr-0\"><img alt=\"star\" loading=\"lazy\" width=\"16\" height=\"16\" decoding=\"async\" data-nimg=\"1\" class=\"opacity-60 h-[1.6rem] w-[1.6rem] min-w-[1.6rem] min-h-[1.6rem] w-[2.4rem] h-[2.4rem] min-h-[2.4rem] min-w-[2.4rem] \" style=\"color:transparent\" src=\"/trade-assets/icons/star-empty.svg\"></button>",
+        "explanation": "Icon buttons or empty buttons without accessible names are announced as \"unlabelled button\" by screen readers.",
+        "suggestedFixCode": "<button type=\"button\" aria-label=\"Close dialog\">\n  <svg>...</svg>\n</button>",
+        "quickTip": "Always test aria & semantics elements using assistive tools and keyboard navigation."
+      },
+      {
+        "id": "issue-004",
+        "ruleId": "button-name-missing",
+        "category": "ARIA & Semantics",
+        "severity": "Critical",
+        "element": "button",
+        "selector": "button",
+        "wcag": "WCAG 4.1.2 Name, Role, Value (Level A)",
+        "context": "Interactive <button> has no inner text or aria-label attribute.",
+        "originalSnippet": "<button class=\"ml-auto\"><img alt=\"contract-details\" loading=\"lazy\" width=\"20\" height=\"20\" decoding=\"async\" data-nimg=\"1\" class=\"h-[2.4rem] w-[2.4rem]\" style=\"color:transparent\" src=\"/trade-assets/images/component-assets/info_icon.svg\"></button>",
+        "explanation": "Icon buttons or empty buttons without accessible names are announced as \"unlabelled button\" by screen readers.",
+        "suggestedFixCode": "<button type=\"button\" aria-label=\"Close dialog\">\n  <svg>...</svg>\n</button>",
+        "quickTip": "Always test aria & semantics elements using assistive tools and keyboard navigation."
+      },
+      {
+        "id": "issue-005",
+        "ruleId": "button-name-missing",
+        "category": "ARIA & Semantics",
+        "severity": "Critical",
+        "element": "button",
+        "selector": "button",
+        "wcag": "WCAG 4.1.2 Name, Role, Value (Level A)",
+        "context": "Interactive <button> has no inner text or aria-label attribute.",
+        "originalSnippet": "<button class=\"input_disabled__lbjmz\"><img alt=\"Subtract\" loading=\"lazy\" width=\"14\" height=\"14\" decoding=\"async\" data-nimg=\"1\" class=\"w-[1.4rem] h-[1.4rem]\" style=\"color:transparent\" src=\"/trade-assets/icons/minus-light.svg\"></button>",
+        "explanation": "Icon buttons or empty buttons without accessible names are announced as \"unlabelled button\" by screen readers.",
+        "suggestedFixCode": "<button type=\"button\" aria-label=\"Close dialog\">\n  <svg>...</svg>\n</button>",
+        "quickTip": "Always test aria & semantics elements using assistive tools and keyboard navigation."
+      },
+      {
+        "id": "issue-006",
+        "ruleId": "button-name-missing",
+        "category": "ARIA & Semantics",
+        "severity": "Critical",
+        "element": "button",
+        "selector": "button",
+        "wcag": "WCAG 4.1.2 Name, Role, Value (Level A)",
+        "context": "Interactive <button> has no inner text or aria-label attribute.",
+        "originalSnippet": "<button class=\"input_disabled__lbjmz\"><img alt=\"Add\" loading=\"lazy\" width=\"14\" height=\"14\" decoding=\"async\" data-nimg=\"1\" class=\"w-[1.4rem] h-[1.4rem]\" style=\"color:transparent\" src=\"/trade-assets/icons/plus-light.svg\"></button>",
+        "explanation": "Icon buttons or empty buttons without accessible names are announced as \"unlabelled button\" by screen readers.",
+        "suggestedFixCode": "<button type=\"button\" aria-label=\"Close dialog\">\n  <svg>...</svg>\n</button>",
+        "quickTip": "Always test aria & semantics elements using assistive tools and keyboard navigation."
+      }
+    ]
+  },
+  {
+    "id": "batch-1789820945800-ebcqu",
+    "websiteId": "coindcx.com",
+    "userId": "6aae7fcd690e117c0ba3b11d",
+    "inputType": "batch",
+    "url": "https://coindcx.com/futures/B-ONE_USDT",
+    "pageTitle": "Batch Audit: coindcx.com",
+    "mode": "batch",
+    "status": "completed",
+    "timestamp": "2026-09-19T12:29:05.800Z",
+    "durationSeconds": 3.92,
+    "performanceImpact": {
+      "loadDurationSeconds": 3.92,
+      "speedBadge": "Moderate",
+      "disclaimer": "Note: Accessibility improvements support better mobile user experience and search engine discoverability. Measured accessibility scores represent WCAG 2.1 compliance and do not guarantee search engine ranking placement.",
+      "impactNotes": [
+        {
+          "title": "Image Search & SEO Indexability",
+          "category": "SEO & Search",
+          "icon": "Image",
+          "benefit": "Adding descriptive alt text allows search engine crawlers (Google Image Search) to index visual media, driving organic search traffic."
+        },
+        {
+          "title": "Mobile Form Completion Rate",
+          "category": "Mobile Usability",
+          "icon": "FormInput",
+          "benefit": "Explicitly associated labels increase touch target area on mobile screens, reducing form abandonment and input frustration."
+        },
+        {
+          "title": "Content Document Outline",
+          "category": "Content Structure",
+          "icon": "Heading",
+          "benefit": "Logical heading hierarchy improves content scannability for human users and helps search engines understand page topic hierarchy."
+        }
+      ]
+    },
+    "baseUrl": "https://coindcx.com/futures/B-ONE_USDT",
+    "isBatch": true,
+    "score": 54,
+    "wcagLevel": "WCAG Non-Compliant (Critical Violations)",
+    "statusBadge": "danger",
+    "counts": {
+      "critical": 12,
+      "major": 14,
+      "minor": 0,
+      "total": 26
+    },
+    "categoryScores": {
+      "Images & Media": 88,
+      "Color & Contrast": 100,
+      "Forms & Controls": 95,
+      "Headings & Structure": 98,
+      "Links & Navigation": 98,
+      "ARIA & Semantics": 76
+    },
+    "issueFrequency": [
+      {
+        "ruleId": "button-name-missing",
+        "category": "ARIA & Semantics",
+        "severity": "Critical",
+        "wcag": "WCAG 4.1.2 Name, Role, Value (Level A)",
+        "context": "Interactive <button> has no inner text or aria-label attribute.",
+        "originalSnippet": "<button id=\"awt-user-dp\" data-testid=\"awt-user-dp\" class=\"flex justify-center items-center bg-accent rounded-full w-24 h-24 relative\"><div class=\"user-dp_user_dp__XGaCU  relative flex justify-center items-center rounded-full place-content-center\"><img alt=\"Display picture\" loading=\"lazy\" decoding=\"async\" data-nimg=\"fill\" style=\"position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;object-fit:contain;color:transparent\" src=\"/trade-assets/images/component-assets/user-anonymous.svg\"></div></button>",
+        "suggestedFixCode": "<button type=\"button\" aria-label=\"Close dialog\">\n  <svg>...</svg>\n</button>",
+        "explanation": "Icon buttons or empty buttons without accessible names are announced as \"unlabelled button\" by screen readers.",
+        "occurrences": 10,
+        "affectedPagesCount": 2,
+        "affectedPages": [
+          "B-ONE_USDT Perpetual | CoinDCX Futures Trading",
+          "B-BTC_USDT Perpetual | CoinDCX Futures Trading"
+        ]
+      },
+      {
+        "ruleId": "video-captions-missing",
+        "category": "Images & Media",
+        "severity": "Major",
+        "wcag": "WCAG 1.2.2 Captions (Prerecorded) (Level A)",
+        "context": "Video element lacks a <track kind=\"captions\"> child element.",
+        "originalSnippet": "<video class=\"elementor-video\" src=\"https://coindcx.com/wp-content/uploads/2024/11/CoinDCX_LP_Hero-Animation_NEW.mp4\" autoplay=\"\" loop=\"\" muted=\"muted\" playsinline=\"\" controlslist=\"nodownload\" poster=\"https://coindcx.com/wp-content/uploads/2025/03/main-video-thumbnail.webp\"></video>",
+        "suggestedFixCode": "<video controls>\n  <source src=\"video.mp4\" type=\"video/mp4\">\n  <track kind=\"captions\" src=\"captions.vtt\" srclang=\"en\" label=\"English Captions\">\n</video>",
+        "explanation": "Deaf or hard-of-hearing users cannot understand audio content in video without synchronized closed captions.",
+        "occurrences": 10,
+        "affectedPagesCount": 1,
+        "affectedPages": [
+          "Trade Bitcoin & Buy Crypto with CoinDCX Crypto App"
+        ]
+      },
+      {
+        "ruleId": "form-label-missing",
+        "category": "Forms & Controls",
+        "severity": "Critical",
+        "wcag": "WCAG 1.3.1 / 4.1.2 Name, Role, Value (Level A)",
+        "context": "Form element <input name=\"range\"> lacks a associated <label> or aria-label.",
+        "originalSnippet": "<input data-index=\"0\" aria-valuenow=\"0\" aria-valuetext=\"0\" aria-orientation=\"horizontal\" aria-valuemax=\"100\" aria-valuemin=\"0\" type=\"range\" min=\"0\" max=\"100\" step=\"1\" style=\"border:0;clip:rect(0 0 0 0);height:100%;margin:-1px;overflow:hidden;padding:0;position:absolute;white-space:nowrap;width:100%;direction:ltr\" value=\"0\">",
+        "suggestedFixCode": "<label for=\"input-id\">Field Label</label>\n<input id=\"input-id\" type=\"range\" name=\"range\">",
+        "explanation": "Form controls without labels cannot be announced correctly by screen readers, making forms impossible to complete.",
+        "occurrences": 2,
+        "affectedPagesCount": 2,
+        "affectedPages": [
+          "B-ONE_USDT Perpetual | CoinDCX Futures Trading",
+          "B-BTC_USDT Perpetual | CoinDCX Futures Trading"
+        ]
+      },
+      {
+        "ruleId": "link-text-generic",
+        "category": "Links & Navigation",
+        "severity": "Major",
+        "wcag": "WCAG 2.4.4 Link Purpose (In Context) (Level A)",
+        "context": "Link contains non-descriptive text \"Read More\".",
+        "originalSnippet": "<a href=\"https://coindcx.com/blog/security-measures-at-coindcx/crypto-scams-protect-yourself-from-fraudsters-impersonating-coindcx/\" target=\"_blank\" rel=\"noopener\" style=\"color: rgb(255, 255, 255); font-weight: 600;\"><span><span style=\"text-decoration: underline;\">Read More</span></span></a>",
+        "suggestedFixCode": "<a href=\"https://coindcx.com/blog/security-measures-at-coindcx/crypto-scams-protect-yourself-from-fraudsters-impersonating-coindcx/\">Read our annual accessibility audit report</a>",
+        "explanation": "Screen reader users navigating by links alone hear \"click here\" out of context and cannot determine link destinations.",
+        "occurrences": 2,
+        "affectedPagesCount": 1,
+        "affectedPages": [
+          "Trade Bitcoin & Buy Crypto with CoinDCX Crypto App"
+        ]
+      },
+      {
+        "ruleId": "heading-h1-missing",
+        "category": "Headings & Structure",
+        "severity": "Major",
+        "wcag": "WCAG 1.3.1 Info and Relationships (Level A)",
+        "context": "Page is missing a primary <h1> heading tag.",
+        "originalSnippet": "<body> ... </body>",
+        "suggestedFixCode": "<h1>Main Page Title</h1>",
+        "explanation": "A page without a main H1 heading makes it difficult for assistive technology users to identify the primary page topic.",
+        "occurrences": 2,
+        "affectedPagesCount": 2,
+        "affectedPages": [
+          "CoinDCX: Crypto Investment App | Trusted by 1.4 Cr+ Users",
+          "Options Web - CoinDCX Trading Platform"
+        ]
+      }
+    ],
+    "worstPages": [
+      {
+        "url": "https://coindcx.com/futures/B-ONE_USDT",
+        "pageTitle": "B-ONE_USDT Perpetual | CoinDCX Futures Trading",
+        "score": 28,
+        "counts": {
+          "critical": 6,
+          "major": 0,
+          "minor": 0,
+          "total": 6
+        }
+      },
+      {
+        "url": "https://coindcx.com/",
+        "pageTitle": "Trade Bitcoin & Buy Crypto with CoinDCX Crypto App",
+        "score": 28,
+        "counts": {
+          "critical": 0,
+          "major": 12,
+          "minor": 0,
+          "total": 12
+        }
+      },
+      {
+        "url": "https://coindcx.com/futures/B-BTC_USDT",
+        "pageTitle": "B-BTC_USDT Perpetual | CoinDCX Futures Trading",
+        "score": 28,
+        "counts": {
+          "critical": 6,
+          "major": 0,
+          "minor": 0,
+          "total": 6
+        }
+      },
+      {
+        "url": "https://coindcx.com/trade",
+        "pageTitle": "CoinDCX: Crypto Investment App | Trusted by 1.4 Cr+ Users",
+        "score": 94,
+        "counts": {
+          "critical": 0,
+          "major": 1,
+          "minor": 0,
+          "total": 1
+        }
+      },
+      {
+        "url": "https://coindcx.com/options",
+        "pageTitle": "Options Web - CoinDCX Trading Platform",
+        "score": 94,
+        "counts": {
+          "critical": 0,
+          "major": 1,
+          "minor": 0,
+          "total": 1
+        }
+      }
+    ],
+    "pagesScanned": 5,
+    "pagesFailed": 0,
+    "pages": [
+      {
+        "url": "https://coindcx.com/futures/B-ONE_USDT",
+        "pageTitle": "B-ONE_USDT Perpetual | CoinDCX Futures Trading",
+        "status": "completed",
+        "score": 28,
+        "wcagLevel": "WCAG Non-Compliant (Critical Violations)",
+        "statusBadge": "danger",
+        "counts": {
+          "critical": 6,
+          "major": 0,
+          "minor": 0,
+          "total": 6
+        },
+        "categoryScores": {
+          "Images & Media": 100,
+          "Color & Contrast": 100,
+          "Forms & Controls": 88,
+          "Headings & Structure": 100,
+          "Links & Navigation": 100,
+          "ARIA & Semantics": 40
+        },
+        "issues": [
+          {
+            "id": "issue-001",
+            "ruleId": "form-label-missing",
+            "category": "Forms & Controls",
+            "severity": "Critical",
+            "element": "input",
+            "selector": "input[name=\"range\"]",
+            "wcag": "WCAG 1.3.1 / 4.1.2 Name, Role, Value (Level A)",
+            "context": "Form element <input name=\"range\"> lacks a associated <label> or aria-label.",
+            "originalSnippet": "<input data-index=\"0\" aria-valuenow=\"0\" aria-valuetext=\"0\" aria-orientation=\"horizontal\" aria-valuemax=\"100\" aria-valuemin=\"0\" type=\"range\" min=\"0\" max=\"100\" step=\"1\" style=\"border:0;clip:rect(0 0 0 0);height:100%;margin:-1px;overflow:hidden;padding:0;position:absolute;white-space:nowrap;width:100%;direction:ltr\" value=\"0\">",
+            "explanation": "Form controls without labels cannot be announced correctly by screen readers, making forms impossible to complete.",
+            "suggestedFixCode": "<label for=\"input-id\">Field Label</label>\n<input id=\"input-id\" type=\"range\" name=\"range\">",
+            "quickTip": "Always test forms & controls elements using assistive tools and keyboard navigation."
+          },
+          {
+            "id": "issue-002",
+            "ruleId": "button-name-missing",
+            "category": "ARIA & Semantics",
+            "severity": "Critical",
+            "element": "button",
+            "selector": "button",
+            "wcag": "WCAG 4.1.2 Name, Role, Value (Level A)",
+            "context": "Interactive <button> has no inner text or aria-label attribute.",
+            "originalSnippet": "<button id=\"awt-user-dp\" data-testid=\"awt-user-dp\" class=\"flex justify-center items-center bg-accent rounded-full w-24 h-24 relative\"><div class=\"user-dp_user_dp__XGaCU  relative flex justify-center items-center rounded-full place-content-center\"><img alt=\"Display picture\" loading=\"lazy\" decoding=\"async\" data-nimg=\"fill\" style=\"position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;object-fit:contain;color:transparent\" src=\"/trade-assets/images/component-assets/user-anonymous.svg\"></div></button>",
+            "explanation": "Icon buttons or empty buttons without accessible names are announced as \"unlabelled button\" by screen readers.",
+            "suggestedFixCode": "<button type=\"button\" aria-label=\"Close dialog\">\n  <svg>...</svg>\n</button>",
+            "quickTip": "Always test aria & semantics elements using assistive tools and keyboard navigation."
+          },
+          {
+            "id": "issue-003",
+            "ruleId": "button-name-missing",
+            "category": "ARIA & Semantics",
+            "severity": "Critical",
+            "element": "button",
+            "selector": "button",
+            "wcag": "WCAG 4.1.2 Name, Role, Value (Level A)",
+            "context": "Interactive <button> has no inner text or aria-label attribute.",
+            "originalSnippet": "<button class=\"mr-12 mr-0\"><img alt=\"star\" loading=\"lazy\" width=\"16\" height=\"16\" decoding=\"async\" data-nimg=\"1\" class=\"opacity-60 h-[1.6rem] w-[1.6rem] min-w-[1.6rem] min-h-[1.6rem] w-[2.4rem] h-[2.4rem] min-h-[2.4rem] min-w-[2.4rem] \" style=\"color:transparent\" src=\"/trade-assets/icons/star-empty.svg\"></button>",
+            "explanation": "Icon buttons or empty buttons without accessible names are announced as \"unlabelled button\" by screen readers.",
+            "suggestedFixCode": "<button type=\"button\" aria-label=\"Close dialog\">\n  <svg>...</svg>\n</button>",
+            "quickTip": "Always test aria & semantics elements using assistive tools and keyboard navigation."
+          },
+          {
+            "id": "issue-004",
+            "ruleId": "button-name-missing",
+            "category": "ARIA & Semantics",
+            "severity": "Critical",
+            "element": "button",
+            "selector": "button",
+            "wcag": "WCAG 4.1.2 Name, Role, Value (Level A)",
+            "context": "Interactive <button> has no inner text or aria-label attribute.",
+            "originalSnippet": "<button class=\"ml-auto\"><img alt=\"contract-details\" loading=\"lazy\" width=\"20\" height=\"20\" decoding=\"async\" data-nimg=\"1\" class=\"h-[2.4rem] w-[2.4rem]\" style=\"color:transparent\" src=\"/trade-assets/images/component-assets/info_icon.svg\"></button>",
+            "explanation": "Icon buttons or empty buttons without accessible names are announced as \"unlabelled button\" by screen readers.",
+            "suggestedFixCode": "<button type=\"button\" aria-label=\"Close dialog\">\n  <svg>...</svg>\n</button>",
+            "quickTip": "Always test aria & semantics elements using assistive tools and keyboard navigation."
+          },
+          {
+            "id": "issue-005",
+            "ruleId": "button-name-missing",
+            "category": "ARIA & Semantics",
+            "severity": "Critical",
+            "element": "button",
+            "selector": "button",
+            "wcag": "WCAG 4.1.2 Name, Role, Value (Level A)",
+            "context": "Interactive <button> has no inner text or aria-label attribute.",
+            "originalSnippet": "<button class=\"input_disabled__lbjmz\"><img alt=\"Subtract\" loading=\"lazy\" width=\"14\" height=\"14\" decoding=\"async\" data-nimg=\"1\" class=\"w-[1.4rem] h-[1.4rem]\" style=\"color:transparent\" src=\"/trade-assets/icons/minus-light.svg\"></button>",
+            "explanation": "Icon buttons or empty buttons without accessible names are announced as \"unlabelled button\" by screen readers.",
+            "suggestedFixCode": "<button type=\"button\" aria-label=\"Close dialog\">\n  <svg>...</svg>\n</button>",
+            "quickTip": "Always test aria & semantics elements using assistive tools and keyboard navigation."
+          },
+          {
+            "id": "issue-006",
+            "ruleId": "button-name-missing",
+            "category": "ARIA & Semantics",
+            "severity": "Critical",
+            "element": "button",
+            "selector": "button",
+            "wcag": "WCAG 4.1.2 Name, Role, Value (Level A)",
+            "context": "Interactive <button> has no inner text or aria-label attribute.",
+            "originalSnippet": "<button class=\"input_disabled__lbjmz\"><img alt=\"Add\" loading=\"lazy\" width=\"14\" height=\"14\" decoding=\"async\" data-nimg=\"1\" class=\"w-[1.4rem] h-[1.4rem]\" style=\"color:transparent\" src=\"/trade-assets/icons/plus-light.svg\"></button>",
+            "explanation": "Icon buttons or empty buttons without accessible names are announced as \"unlabelled button\" by screen readers.",
+            "suggestedFixCode": "<button type=\"button\" aria-label=\"Close dialog\">\n  <svg>...</svg>\n</button>",
+            "quickTip": "Always test aria & semantics elements using assistive tools and keyboard navigation."
+          }
+        ]
+      },
+      {
+        "url": "https://coindcx.com/",
+        "pageTitle": "Trade Bitcoin & Buy Crypto with CoinDCX Crypto App",
+        "status": "completed",
+        "score": 28,
+        "wcagLevel": "WCAG Non-Compliant (Critical Violations)",
+        "statusBadge": "danger",
+        "counts": {
+          "critical": 0,
+          "major": 12,
+          "minor": 0,
+          "total": 12
+        },
+        "categoryScores": {
+          "Images & Media": 40,
+          "Color & Contrast": 100,
+          "Forms & Controls": 100,
+          "Headings & Structure": 100,
+          "Links & Navigation": 88,
+          "ARIA & Semantics": 100
+        },
+        "issues": [
+          {
+            "id": "issue-001",
+            "ruleId": "link-text-generic",
+            "category": "Links & Navigation",
+            "severity": "Major",
+            "element": "a",
+            "selector": "a[href=\"https://coindcx.com/blog/security-measures-at-coindcx/crypto-scams-protect-yourself-from-fraudsters-impersonating-coindcx/\"]",
+            "wcag": "WCAG 2.4.4 Link Purpose (In Context) (Level A)",
+            "context": "Link contains non-descriptive text \"Read More\".",
+            "originalSnippet": "<a href=\"https://coindcx.com/blog/security-measures-at-coindcx/crypto-scams-protect-yourself-from-fraudsters-impersonating-coindcx/\" target=\"_blank\" rel=\"noopener\" style=\"color: rgb(255, 255, 255); font-weight: 600;\"><span><span style=\"text-decoration: underline;\">Read More</span></span></a>",
+            "explanation": "Screen reader users navigating by links alone hear \"click here\" out of context and cannot determine link destinations.",
+            "suggestedFixCode": "<a href=\"https://coindcx.com/blog/security-measures-at-coindcx/crypto-scams-protect-yourself-from-fraudsters-impersonating-coindcx/\">Read our annual accessibility audit report</a>",
+            "quickTip": "Always test links & navigation elements using assistive tools and keyboard navigation."
+          },
+          {
+            "id": "issue-002",
+            "ruleId": "link-text-generic",
+            "category": "Links & Navigation",
+            "severity": "Major",
+            "element": "a",
+            "selector": "a[href=\"https://support.coindcx.com/categories/account-related/638086aed7feab0cc03ac453\"]",
+            "wcag": "WCAG 2.4.4 Link Purpose (In Context) (Level A)",
+            "context": "Link contains non-descriptive text \"Click here\".",
+            "originalSnippet": "<a style=\"color: #000000; text-decoration: underline;\" href=\"https://support.coindcx.com/categories/account-related/638086aed7feab0cc03ac453\">Click here</a>",
+            "explanation": "Screen reader users navigating by links alone hear \"click here\" out of context and cannot determine link destinations.",
+            "suggestedFixCode": "<a href=\"https://support.coindcx.com/categories/account-related/638086aed7feab0cc03ac453\">Read our annual accessibility audit report</a>",
+            "quickTip": "Always test links & navigation elements using assistive tools and keyboard navigation."
+          },
+          {
+            "id": "issue-003",
+            "ruleId": "video-captions-missing",
+            "category": "Images & Media",
+            "severity": "Major",
+            "element": "video",
+            "selector": "video",
+            "wcag": "WCAG 1.2.2 Captions (Prerecorded) (Level A)",
+            "context": "Video element lacks a <track kind=\"captions\"> child element.",
+            "originalSnippet": "<video class=\"elementor-video\" src=\"https://coindcx.com/wp-content/uploads/2024/11/CoinDCX_LP_Hero-Animation_NEW.mp4\" autoplay=\"\" loop=\"\" muted=\"muted\" playsinline=\"\" controlslist=\"nodownload\" poster=\"https://coindcx.com/wp-content/uploads/2025/03/main-video-thumbnail.webp\"></video>",
+            "explanation": "Deaf or hard-of-hearing users cannot understand audio content in video without synchronized closed captions.",
+            "suggestedFixCode": "<video controls>\n  <source src=\"video.mp4\" type=\"video/mp4\">\n  <track kind=\"captions\" src=\"captions.vtt\" srclang=\"en\" label=\"English Captions\">\n</video>",
+            "quickTip": "Always test images & media elements using assistive tools and keyboard navigation."
+          },
+          {
+            "id": "issue-004",
+            "ruleId": "video-captions-missing",
+            "category": "Images & Media",
+            "severity": "Major",
+            "element": "video",
+            "selector": "video",
+            "wcag": "WCAG 1.2.2 Captions (Prerecorded) (Level A)",
+            "context": "Video element lacks a <track kind=\"captions\"> child element.",
+            "originalSnippet": "<video class=\"elementor-video\" src=\"https://coindcx.com/wp-content/uploads/2024/11/CoinDCX_LP_Hero-Animation_mWeb_2x.mp4\" autoplay=\"\" loop=\"\" muted=\"muted\" playsinline=\"\" controlslist=\"nodownload\" poster=\"https://coindcx.com/wp-content/uploads/2025/03/mweb-main-video-thumbnail.webp\"></video>",
+            "explanation": "Deaf or hard-of-hearing users cannot understand audio content in video without synchronized closed captions.",
+            "suggestedFixCode": "<video controls>\n  <source src=\"video.mp4\" type=\"video/mp4\">\n  <track kind=\"captions\" src=\"captions.vtt\" srclang=\"en\" label=\"English Captions\">\n</video>",
+            "quickTip": "Always test images & media elements using assistive tools and keyboard navigation."
+          },
+          {
+            "id": "issue-005",
+            "ruleId": "video-captions-missing",
+            "category": "Images & Media",
+            "severity": "Major",
+            "element": "video",
+            "selector": "video",
+            "wcag": "WCAG 1.2.2 Captions (Prerecorded) (Level A)",
+            "context": "Video element lacks a <track kind=\"captions\"> child element.",
+            "originalSnippet": "<video class=\"elementor-video\" src=\"https://coindcx.com/wp-content/uploads/2024/03/1-Buy-Sell-Screen-1-1.mp4\" autoplay=\"\" loop=\"\" muted=\"muted\" playsinline=\"\" controlslist=\"nodownload\"></video>",
+            "explanation": "Deaf or hard-of-hearing users cannot understand audio content in video without synchronized closed captions.",
+            "suggestedFixCode": "<video controls>\n  <source src=\"video.mp4\" type=\"video/mp4\">\n  <track kind=\"captions\" src=\"captions.vtt\" srclang=\"en\" label=\"English Captions\">\n</video>",
+            "quickTip": "Always test images & media elements using assistive tools and keyboard navigation."
+          },
+          {
+            "id": "issue-006",
+            "ruleId": "video-captions-missing",
+            "category": "Images & Media",
+            "severity": "Major",
+            "element": "video",
+            "selector": "video",
+            "wcag": "WCAG 1.2.2 Captions (Prerecorded) (Level A)",
+            "context": "Video element lacks a <track kind=\"captions\"> child element.",
+            "originalSnippet": "<video class=\"elementor-video\" src=\"https://coindcx.com/wp-content/uploads/2024/03/2-Earn-Screen-1.mp4\" autoplay=\"\" loop=\"\" muted=\"muted\" playsinline=\"\" controlslist=\"nodownload\"></video>",
+            "explanation": "Deaf or hard-of-hearing users cannot understand audio content in video without synchronized closed captions.",
+            "suggestedFixCode": "<video controls>\n  <source src=\"video.mp4\" type=\"video/mp4\">\n  <track kind=\"captions\" src=\"captions.vtt\" srclang=\"en\" label=\"English Captions\">\n</video>",
+            "quickTip": "Always test images & media elements using assistive tools and keyboard navigation."
+          },
+          {
+            "id": "issue-007",
+            "ruleId": "video-captions-missing",
+            "category": "Images & Media",
+            "severity": "Major",
+            "element": "video",
+            "selector": "video",
+            "wcag": "WCAG 1.2.2 Captions (Prerecorded) (Level A)",
+            "context": "Video element lacks a <track kind=\"captions\"> child element.",
+            "originalSnippet": "<video class=\"elementor-video\" src=\"https://coindcx.com/wp-content/uploads/2024/03/5-Spot-Screen-1.mp4\" autoplay=\"\" loop=\"\" muted=\"muted\" playsinline=\"\" controlslist=\"nodownload\"></video>",
+            "explanation": "Deaf or hard-of-hearing users cannot understand audio content in video without synchronized closed captions.",
+            "suggestedFixCode": "<video controls>\n  <source src=\"video.mp4\" type=\"video/mp4\">\n  <track kind=\"captions\" src=\"captions.vtt\" srclang=\"en\" label=\"English Captions\">\n</video>",
+            "quickTip": "Always test images & media elements using assistive tools and keyboard navigation."
+          },
+          {
+            "id": "issue-008",
+            "ruleId": "video-captions-missing",
+            "category": "Images & Media",
+            "severity": "Major",
+            "element": "video",
+            "selector": "video",
+            "wcag": "WCAG 1.2.2 Captions (Prerecorded) (Level A)",
+            "context": "Video element lacks a <track kind=\"captions\"> child element.",
+            "originalSnippet": "<video class=\"elementor-video\" src=\"https://coindcx.com/wp-content/uploads/2024/03/3-Futures_Screen-1.mp4\" autoplay=\"\" loop=\"\" muted=\"muted\" playsinline=\"\" controlslist=\"nodownload\"></video>",
+            "explanation": "Deaf or hard-of-hearing users cannot understand audio content in video without synchronized closed captions.",
+            "suggestedFixCode": "<video controls>\n  <source src=\"video.mp4\" type=\"video/mp4\">\n  <track kind=\"captions\" src=\"captions.vtt\" srclang=\"en\" label=\"English Captions\">\n</video>",
+            "quickTip": "Always test images & media elements using assistive tools and keyboard navigation."
+          },
+          {
+            "id": "issue-009",
+            "ruleId": "video-captions-missing",
+            "category": "Images & Media",
+            "severity": "Major",
+            "element": "video",
+            "selector": "video",
+            "wcag": "WCAG 1.2.2 Captions (Prerecorded) (Level A)",
+            "context": "Video element lacks a <track kind=\"captions\"> child element.",
+            "originalSnippet": "<video class=\"elementor-video\" src=\"https://coindcx.com/wp-content/uploads/2026/03/OPTIONS-Trading-revised-1.mp4\" autoplay=\"\" loop=\"\" muted=\"muted\" playsinline=\"\" controlslist=\"nodownload\"></video>",
+            "explanation": "Deaf or hard-of-hearing users cannot understand audio content in video without synchronized closed captions.",
+            "suggestedFixCode": "<video controls>\n  <source src=\"video.mp4\" type=\"video/mp4\">\n  <track kind=\"captions\" src=\"captions.vtt\" srclang=\"en\" label=\"English Captions\">\n</video>",
+            "quickTip": "Always test images & media elements using assistive tools and keyboard navigation."
+          },
+          {
+            "id": "issue-010",
+            "ruleId": "video-captions-missing",
+            "category": "Images & Media",
+            "severity": "Major",
+            "element": "video",
+            "selector": "video",
+            "wcag": "WCAG 1.2.2 Captions (Prerecorded) (Level A)",
+            "context": "Video element lacks a <track kind=\"captions\"> child element.",
+            "originalSnippet": "<video class=\"elementor-video\" src=\"https://coindcx.com/wp-content/uploads/2024/03/4-Signal-Screen-1.mp4\" autoplay=\"\" loop=\"\" muted=\"muted\" playsinline=\"\" controlslist=\"nodownload\"></video>",
+            "explanation": "Deaf or hard-of-hearing users cannot understand audio content in video without synchronized closed captions.",
+            "suggestedFixCode": "<video controls>\n  <source src=\"video.mp4\" type=\"video/mp4\">\n  <track kind=\"captions\" src=\"captions.vtt\" srclang=\"en\" label=\"English Captions\">\n</video>",
+            "quickTip": "Always test images & media elements using assistive tools and keyboard navigation."
+          },
+          {
+            "id": "issue-011",
+            "ruleId": "video-captions-missing",
+            "category": "Images & Media",
+            "severity": "Major",
+            "element": "video",
+            "selector": "video",
+            "wcag": "WCAG 1.2.2 Captions (Prerecorded) (Level A)",
+            "context": "Video element lacks a <track kind=\"captions\"> child element.",
+            "originalSnippet": "<video class=\"elementor-video\" src=\"https://coindcx.com/wp-content/uploads/2024/06/5-Web3-Screen.mp4\" autoplay=\"\" loop=\"\" muted=\"muted\" playsinline=\"\" controlslist=\"nodownload\"></video>",
+            "explanation": "Deaf or hard-of-hearing users cannot understand audio content in video without synchronized closed captions.",
+            "suggestedFixCode": "<video controls>\n  <source src=\"video.mp4\" type=\"video/mp4\">\n  <track kind=\"captions\" src=\"captions.vtt\" srclang=\"en\" label=\"English Captions\">\n</video>",
+            "quickTip": "Always test images & media elements using assistive tools and keyboard navigation."
+          },
+          {
+            "id": "issue-012",
+            "ruleId": "video-captions-missing",
+            "category": "Images & Media",
+            "severity": "Major",
+            "element": "video",
+            "selector": "video",
+            "wcag": "WCAG 1.2.2 Captions (Prerecorded) (Level A)",
+            "context": "Video element lacks a <track kind=\"captions\"> child element.",
+            "originalSnippet": "<video class=\"elementor-video\" src=\"https://coindcx.com/wp-content/uploads/2024/03/CoinDCX-International-LP_GLOBE-Animation-1.mp4\" autoplay=\"\" loop=\"\" muted=\"muted\" playsinline=\"\" controlslist=\"nodownload\"></video>",
+            "explanation": "Deaf or hard-of-hearing users cannot understand audio content in video without synchronized closed captions.",
+            "suggestedFixCode": "<video controls>\n  <source src=\"video.mp4\" type=\"video/mp4\">\n  <track kind=\"captions\" src=\"captions.vtt\" srclang=\"en\" label=\"English Captions\">\n</video>",
+            "quickTip": "Always test images & media elements using assistive tools and keyboard navigation."
+          }
+        ]
+      },
+      {
+        "url": "https://coindcx.com/trade",
+        "pageTitle": "CoinDCX: Crypto Investment App | Trusted by 1.4 Cr+ Users",
+        "status": "completed",
+        "score": 94,
+        "wcagLevel": "WCAG 2.1 Level AA Compliant",
+        "statusBadge": "success",
+        "counts": {
+          "critical": 0,
+          "major": 1,
+          "minor": 0,
+          "total": 1
+        },
+        "categoryScores": {
+          "Images & Media": 100,
+          "Color & Contrast": 100,
+          "Forms & Controls": 100,
+          "Headings & Structure": 94,
+          "Links & Navigation": 100,
+          "ARIA & Semantics": 100
+        },
+        "issues": [
+          {
+            "id": "issue-001",
+            "ruleId": "heading-h1-missing",
+            "category": "Headings & Structure",
+            "severity": "Major",
+            "element": "body",
+            "selector": "body",
+            "wcag": "WCAG 1.3.1 Info and Relationships (Level A)",
+            "context": "Page is missing a primary <h1> heading tag.",
+            "originalSnippet": "<body> ... </body>",
+            "explanation": "A page without a main H1 heading makes it difficult for assistive technology users to identify the primary page topic.",
+            "suggestedFixCode": "<h1>Main Page Title</h1>",
+            "quickTip": "Always test headings & structure elements using assistive tools and keyboard navigation."
+          }
+        ]
+      },
+      {
+        "url": "https://coindcx.com/futures/B-BTC_USDT",
+        "pageTitle": "B-BTC_USDT Perpetual | CoinDCX Futures Trading",
+        "status": "completed",
+        "score": 28,
+        "wcagLevel": "WCAG Non-Compliant (Critical Violations)",
+        "statusBadge": "danger",
+        "counts": {
+          "critical": 6,
+          "major": 0,
+          "minor": 0,
+          "total": 6
+        },
+        "categoryScores": {
+          "Images & Media": 100,
+          "Color & Contrast": 100,
+          "Forms & Controls": 88,
+          "Headings & Structure": 100,
+          "Links & Navigation": 100,
+          "ARIA & Semantics": 40
+        },
+        "issues": [
+          {
+            "id": "issue-001",
+            "ruleId": "form-label-missing",
+            "category": "Forms & Controls",
+            "severity": "Critical",
+            "element": "input",
+            "selector": "input[name=\"range\"]",
+            "wcag": "WCAG 1.3.1 / 4.1.2 Name, Role, Value (Level A)",
+            "context": "Form element <input name=\"range\"> lacks a associated <label> or aria-label.",
+            "originalSnippet": "<input data-index=\"0\" aria-valuenow=\"0\" aria-valuetext=\"0\" aria-orientation=\"horizontal\" aria-valuemax=\"100\" aria-valuemin=\"0\" type=\"range\" min=\"0\" max=\"100\" step=\"1\" style=\"border:0;clip:rect(0 0 0 0);height:100%;margin:-1px;overflow:hidden;padding:0;position:absolute;white-space:nowrap;width:100%;direction:ltr\" value=\"0\">",
+            "explanation": "Form controls without labels cannot be announced correctly by screen readers, making forms impossible to complete.",
+            "suggestedFixCode": "<label for=\"input-id\">Field Label</label>\n<input id=\"input-id\" type=\"range\" name=\"range\">",
+            "quickTip": "Always test forms & controls elements using assistive tools and keyboard navigation."
+          },
+          {
+            "id": "issue-002",
+            "ruleId": "button-name-missing",
+            "category": "ARIA & Semantics",
+            "severity": "Critical",
+            "element": "button",
+            "selector": "button",
+            "wcag": "WCAG 4.1.2 Name, Role, Value (Level A)",
+            "context": "Interactive <button> has no inner text or aria-label attribute.",
+            "originalSnippet": "<button id=\"awt-user-dp\" data-testid=\"awt-user-dp\" class=\"flex justify-center items-center bg-accent rounded-full w-24 h-24 relative\"><div class=\"user-dp_user_dp__XGaCU  relative flex justify-center items-center rounded-full place-content-center\"><img alt=\"Display picture\" loading=\"lazy\" decoding=\"async\" data-nimg=\"fill\" style=\"position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;object-fit:contain;color:transparent\" src=\"/trade-assets/images/component-assets/user-anonymous.svg\"></div></button>",
+            "explanation": "Icon buttons or empty buttons without accessible names are announced as \"unlabelled button\" by screen readers.",
+            "suggestedFixCode": "<button type=\"button\" aria-label=\"Close dialog\">\n  <svg>...</svg>\n</button>",
+            "quickTip": "Always test aria & semantics elements using assistive tools and keyboard navigation."
+          },
+          {
+            "id": "issue-003",
+            "ruleId": "button-name-missing",
+            "category": "ARIA & Semantics",
+            "severity": "Critical",
+            "element": "button",
+            "selector": "button",
+            "wcag": "WCAG 4.1.2 Name, Role, Value (Level A)",
+            "context": "Interactive <button> has no inner text or aria-label attribute.",
+            "originalSnippet": "<button class=\"mr-12 mr-0\"><img alt=\"star\" loading=\"lazy\" width=\"16\" height=\"16\" decoding=\"async\" data-nimg=\"1\" class=\"opacity-60 h-[1.6rem] w-[1.6rem] min-w-[1.6rem] min-h-[1.6rem] w-[2.4rem] h-[2.4rem] min-h-[2.4rem] min-w-[2.4rem] \" style=\"color:transparent\" src=\"/trade-assets/icons/star-empty.svg\"></button>",
+            "explanation": "Icon buttons or empty buttons without accessible names are announced as \"unlabelled button\" by screen readers.",
+            "suggestedFixCode": "<button type=\"button\" aria-label=\"Close dialog\">\n  <svg>...</svg>\n</button>",
+            "quickTip": "Always test aria & semantics elements using assistive tools and keyboard navigation."
+          },
+          {
+            "id": "issue-004",
+            "ruleId": "button-name-missing",
+            "category": "ARIA & Semantics",
+            "severity": "Critical",
+            "element": "button",
+            "selector": "button",
+            "wcag": "WCAG 4.1.2 Name, Role, Value (Level A)",
+            "context": "Interactive <button> has no inner text or aria-label attribute.",
+            "originalSnippet": "<button class=\"ml-auto\"><img alt=\"contract-details\" loading=\"lazy\" width=\"20\" height=\"20\" decoding=\"async\" data-nimg=\"1\" class=\"h-[2.4rem] w-[2.4rem]\" style=\"color:transparent\" src=\"/trade-assets/images/component-assets/info_icon.svg\"></button>",
+            "explanation": "Icon buttons or empty buttons without accessible names are announced as \"unlabelled button\" by screen readers.",
+            "suggestedFixCode": "<button type=\"button\" aria-label=\"Close dialog\">\n  <svg>...</svg>\n</button>",
+            "quickTip": "Always test aria & semantics elements using assistive tools and keyboard navigation."
+          },
+          {
+            "id": "issue-005",
+            "ruleId": "button-name-missing",
+            "category": "ARIA & Semantics",
+            "severity": "Critical",
+            "element": "button",
+            "selector": "button",
+            "wcag": "WCAG 4.1.2 Name, Role, Value (Level A)",
+            "context": "Interactive <button> has no inner text or aria-label attribute.",
+            "originalSnippet": "<button class=\"input_disabled__lbjmz\"><img alt=\"Subtract\" loading=\"lazy\" width=\"14\" height=\"14\" decoding=\"async\" data-nimg=\"1\" class=\"w-[1.4rem] h-[1.4rem]\" style=\"color:transparent\" src=\"/trade-assets/icons/minus-light.svg\"></button>",
+            "explanation": "Icon buttons or empty buttons without accessible names are announced as \"unlabelled button\" by screen readers.",
+            "suggestedFixCode": "<button type=\"button\" aria-label=\"Close dialog\">\n  <svg>...</svg>\n</button>",
+            "quickTip": "Always test aria & semantics elements using assistive tools and keyboard navigation."
+          },
+          {
+            "id": "issue-006",
+            "ruleId": "button-name-missing",
+            "category": "ARIA & Semantics",
+            "severity": "Critical",
+            "element": "button",
+            "selector": "button",
+            "wcag": "WCAG 4.1.2 Name, Role, Value (Level A)",
+            "context": "Interactive <button> has no inner text or aria-label attribute.",
+            "originalSnippet": "<button class=\"input_disabled__lbjmz\"><img alt=\"Add\" loading=\"lazy\" width=\"14\" height=\"14\" decoding=\"async\" data-nimg=\"1\" class=\"w-[1.4rem] h-[1.4rem]\" style=\"color:transparent\" src=\"/trade-assets/icons/plus-light.svg\"></button>",
+            "explanation": "Icon buttons or empty buttons without accessible names are announced as \"unlabelled button\" by screen readers.",
+            "suggestedFixCode": "<button type=\"button\" aria-label=\"Close dialog\">\n  <svg>...</svg>\n</button>",
+            "quickTip": "Always test aria & semantics elements using assistive tools and keyboard navigation."
+          }
+        ]
+      },
+      {
+        "url": "https://coindcx.com/options",
+        "pageTitle": "Options Web - CoinDCX Trading Platform",
+        "status": "completed",
+        "score": 94,
+        "wcagLevel": "WCAG 2.1 Level AA Compliant",
+        "statusBadge": "success",
+        "counts": {
+          "critical": 0,
+          "major": 1,
+          "minor": 0,
+          "total": 1
+        },
+        "categoryScores": {
+          "Images & Media": 100,
+          "Color & Contrast": 100,
+          "Forms & Controls": 100,
+          "Headings & Structure": 94,
+          "Links & Navigation": 100,
+          "ARIA & Semantics": 100
+        },
+        "issues": [
+          {
+            "id": "issue-001",
+            "ruleId": "heading-h1-missing",
+            "category": "Headings & Structure",
+            "severity": "Major",
+            "element": "body",
+            "selector": "body",
+            "wcag": "WCAG 1.3.1 Info and Relationships (Level A)",
+            "context": "Page is missing a primary <h1> heading tag.",
+            "originalSnippet": "<body> ... </body>",
+            "explanation": "A page without a main H1 heading makes it difficult for assistive technology users to identify the primary page topic.",
+            "suggestedFixCode": "<h1>Main Page Title</h1>",
+            "quickTip": "Always test headings & structure elements using assistive tools and keyboard navigation."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "batch-1789820979822-b32ts",
+    "websiteId": "coindcx.com",
+    "userId": "6aae7fcd690e117c0ba3b11d",
+    "inputType": "batch",
+    "url": "https://coindcx.com/futures/B-ONE_USDT",
+    "pageTitle": "Batch Audit: coindcx.com",
+    "mode": "batch",
+    "status": "completed",
+    "timestamp": "2026-09-19T12:29:39.823Z",
+    "durationSeconds": 2.37,
+    "performanceImpact": {
+      "loadDurationSeconds": 2.37,
+      "speedBadge": "Moderate",
+      "disclaimer": "Note: Accessibility improvements support better mobile user experience and search engine discoverability. Measured accessibility scores represent WCAG 2.1 compliance and do not guarantee search engine ranking placement.",
+      "impactNotes": [
+        {
+          "title": "Image Search & SEO Indexability",
+          "category": "SEO & Search",
+          "icon": "Image",
+          "benefit": "Adding descriptive alt text allows search engine crawlers (Google Image Search) to index visual media, driving organic search traffic."
+        },
+        {
+          "title": "Content Document Outline",
+          "category": "Content Structure",
+          "icon": "Heading",
+          "benefit": "Logical heading hierarchy improves content scannability for human users and helps search engines understand page topic hierarchy."
+        }
+      ]
+    },
+    "baseUrl": "https://coindcx.com/futures/B-ONE_USDT",
+    "isBatch": true,
+    "score": 72,
+    "wcagLevel": "WCAG Level A Partial (AA Action Needed)",
+    "statusBadge": "warning",
+    "counts": {
+      "critical": 0,
+      "major": 14,
+      "minor": 0,
+      "total": 14
+    },
+    "categoryScores": {
+      "Images & Media": 80,
+      "Color & Contrast": 100,
+      "Forms & Controls": 100,
+      "Headings & Structure": 96,
+      "Links & Navigation": 96,
+      "ARIA & Semantics": 100
+    },
+    "issueFrequency": [
+      {
+        "ruleId": "video-captions-missing",
+        "category": "Images & Media",
+        "severity": "Major",
+        "wcag": "WCAG 1.2.2 Captions (Prerecorded) (Level A)",
+        "context": "Video element lacks a <track kind=\"captions\"> child element.",
+        "originalSnippet": "<video class=\"elementor-video\" src=\"https://coindcx.com/wp-content/uploads/2024/11/CoinDCX_LP_Hero-Animation_NEW.mp4\" autoplay=\"\" loop=\"\" muted=\"muted\" playsinline=\"\" controlslist=\"nodownload\" poster=\"https://coindcx.com/wp-content/uploads/2025/03/main-video-thumbnail.webp\"></video>",
+        "suggestedFixCode": "<video controls>\n  <source src=\"video.mp4\" type=\"video/mp4\">\n  <track kind=\"captions\" src=\"captions.vtt\" srclang=\"en\" label=\"English Captions\">\n</video>",
+        "explanation": "Deaf or hard-of-hearing users cannot understand audio content in video without synchronized closed captions.",
+        "occurrences": 10,
+        "affectedPagesCount": 1,
+        "affectedPages": [
+          "Trade Bitcoin & Buy Crypto with CoinDCX Crypto App"
+        ]
+      },
+      {
+        "ruleId": "heading-h1-missing",
+        "category": "Headings & Structure",
+        "severity": "Major",
+        "wcag": "WCAG 1.3.1 Info and Relationships (Level A)",
+        "context": "Page is missing a primary <h1> heading tag.",
+        "originalSnippet": "<body> ... </body>",
+        "suggestedFixCode": "<h1>Main Page Title</h1>",
+        "explanation": "A page without a main H1 heading makes it difficult for assistive technology users to identify the primary page topic.",
+        "occurrences": 2,
+        "affectedPagesCount": 2,
+        "affectedPages": [
+          "CoinDCX: Crypto Investment App | Trusted by 1.4 Cr+ Users",
+          "Options Web - CoinDCX Trading Platform"
+        ]
+      },
+      {
+        "ruleId": "link-text-generic",
+        "category": "Links & Navigation",
+        "severity": "Major",
+        "wcag": "WCAG 2.4.4 Link Purpose (In Context) (Level A)",
+        "context": "Link contains non-descriptive text \"Read More\".",
+        "originalSnippet": "<a href=\"https://coindcx.com/blog/security-measures-at-coindcx/crypto-scams-protect-yourself-from-fraudsters-impersonating-coindcx/\" target=\"_blank\" rel=\"noopener\" style=\"color: rgb(255, 255, 255); font-weight: 600;\"><span><span style=\"text-decoration: underline;\">Read More</span></span></a>",
+        "suggestedFixCode": "<a href=\"https://coindcx.com/blog/security-measures-at-coindcx/crypto-scams-protect-yourself-from-fraudsters-impersonating-coindcx/\">Read our annual accessibility audit report</a>",
+        "explanation": "Screen reader users navigating by links alone hear \"click here\" out of context and cannot determine link destinations.",
+        "occurrences": 2,
+        "affectedPagesCount": 1,
+        "affectedPages": [
+          "Trade Bitcoin & Buy Crypto with CoinDCX Crypto App"
+        ]
+      }
+    ],
+    "worstPages": [
+      {
+        "url": "https://coindcx.com/",
+        "pageTitle": "Trade Bitcoin & Buy Crypto with CoinDCX Crypto App",
+        "score": 28,
+        "counts": {
+          "critical": 0,
+          "major": 12,
+          "minor": 0,
+          "total": 12
+        }
+      },
+      {
+        "url": "https://coindcx.com/trade",
+        "pageTitle": "CoinDCX: Crypto Investment App | Trusted by 1.4 Cr+ Users",
+        "score": 94,
+        "counts": {
+          "critical": 0,
+          "major": 1,
+          "minor": 0,
+          "total": 1
+        }
+      },
+      {
+        "url": "https://coindcx.com/options",
+        "pageTitle": "Options Web - CoinDCX Trading Platform",
+        "score": 94,
+        "counts": {
+          "critical": 0,
+          "major": 1,
+          "minor": 0,
+          "total": 1
+        }
+      }
+    ],
+    "pagesScanned": 3,
+    "pagesFailed": 0,
+    "pages": [
+      {
+        "url": "https://coindcx.com/trade",
+        "pageTitle": "CoinDCX: Crypto Investment App | Trusted by 1.4 Cr+ Users",
+        "status": "completed",
+        "score": 94,
+        "wcagLevel": "WCAG 2.1 Level AA Compliant",
+        "statusBadge": "success",
+        "counts": {
+          "critical": 0,
+          "major": 1,
+          "minor": 0,
+          "total": 1
+        },
+        "categoryScores": {
+          "Images & Media": 100,
+          "Color & Contrast": 100,
+          "Forms & Controls": 100,
+          "Headings & Structure": 94,
+          "Links & Navigation": 100,
+          "ARIA & Semantics": 100
+        },
+        "issues": [
+          {
+            "id": "issue-001",
+            "ruleId": "heading-h1-missing",
+            "category": "Headings & Structure",
+            "severity": "Major",
+            "element": "body",
+            "selector": "body",
+            "wcag": "WCAG 1.3.1 Info and Relationships (Level A)",
+            "context": "Page is missing a primary <h1> heading tag.",
+            "originalSnippet": "<body> ... </body>",
+            "explanation": "A page without a main H1 heading makes it difficult for assistive technology users to identify the primary page topic.",
+            "suggestedFixCode": "<h1>Main Page Title</h1>",
+            "quickTip": "Always test headings & structure elements using assistive tools and keyboard navigation."
+          }
+        ]
+      },
+      {
+        "url": "https://coindcx.com/",
+        "pageTitle": "Trade Bitcoin & Buy Crypto with CoinDCX Crypto App",
+        "status": "completed",
+        "score": 28,
+        "wcagLevel": "WCAG Non-Compliant (Critical Violations)",
+        "statusBadge": "danger",
+        "counts": {
+          "critical": 0,
+          "major": 12,
+          "minor": 0,
+          "total": 12
+        },
+        "categoryScores": {
+          "Images & Media": 40,
+          "Color & Contrast": 100,
+          "Forms & Controls": 100,
+          "Headings & Structure": 100,
+          "Links & Navigation": 88,
+          "ARIA & Semantics": 100
+        },
+        "issues": [
+          {
+            "id": "issue-001",
+            "ruleId": "link-text-generic",
+            "category": "Links & Navigation",
+            "severity": "Major",
+            "element": "a",
+            "selector": "a[href=\"https://coindcx.com/blog/security-measures-at-coindcx/crypto-scams-protect-yourself-from-fraudsters-impersonating-coindcx/\"]",
+            "wcag": "WCAG 2.4.4 Link Purpose (In Context) (Level A)",
+            "context": "Link contains non-descriptive text \"Read More\".",
+            "originalSnippet": "<a href=\"https://coindcx.com/blog/security-measures-at-coindcx/crypto-scams-protect-yourself-from-fraudsters-impersonating-coindcx/\" target=\"_blank\" rel=\"noopener\" style=\"color: rgb(255, 255, 255); font-weight: 600;\"><span><span style=\"text-decoration: underline;\">Read More</span></span></a>",
+            "explanation": "Screen reader users navigating by links alone hear \"click here\" out of context and cannot determine link destinations.",
+            "suggestedFixCode": "<a href=\"https://coindcx.com/blog/security-measures-at-coindcx/crypto-scams-protect-yourself-from-fraudsters-impersonating-coindcx/\">Read our annual accessibility audit report</a>",
+            "quickTip": "Always test links & navigation elements using assistive tools and keyboard navigation."
+          },
+          {
+            "id": "issue-002",
+            "ruleId": "link-text-generic",
+            "category": "Links & Navigation",
+            "severity": "Major",
+            "element": "a",
+            "selector": "a[href=\"https://support.coindcx.com/categories/account-related/638086aed7feab0cc03ac453\"]",
+            "wcag": "WCAG 2.4.4 Link Purpose (In Context) (Level A)",
+            "context": "Link contains non-descriptive text \"Click here\".",
+            "originalSnippet": "<a style=\"color: #000000; text-decoration: underline;\" href=\"https://support.coindcx.com/categories/account-related/638086aed7feab0cc03ac453\">Click here</a>",
+            "explanation": "Screen reader users navigating by links alone hear \"click here\" out of context and cannot determine link destinations.",
+            "suggestedFixCode": "<a href=\"https://support.coindcx.com/categories/account-related/638086aed7feab0cc03ac453\">Read our annual accessibility audit report</a>",
+            "quickTip": "Always test links & navigation elements using assistive tools and keyboard navigation."
+          },
+          {
+            "id": "issue-003",
+            "ruleId": "video-captions-missing",
+            "category": "Images & Media",
+            "severity": "Major",
+            "element": "video",
+            "selector": "video",
+            "wcag": "WCAG 1.2.2 Captions (Prerecorded) (Level A)",
+            "context": "Video element lacks a <track kind=\"captions\"> child element.",
+            "originalSnippet": "<video class=\"elementor-video\" src=\"https://coindcx.com/wp-content/uploads/2024/11/CoinDCX_LP_Hero-Animation_NEW.mp4\" autoplay=\"\" loop=\"\" muted=\"muted\" playsinline=\"\" controlslist=\"nodownload\" poster=\"https://coindcx.com/wp-content/uploads/2025/03/main-video-thumbnail.webp\"></video>",
+            "explanation": "Deaf or hard-of-hearing users cannot understand audio content in video without synchronized closed captions.",
+            "suggestedFixCode": "<video controls>\n  <source src=\"video.mp4\" type=\"video/mp4\">\n  <track kind=\"captions\" src=\"captions.vtt\" srclang=\"en\" label=\"English Captions\">\n</video>",
+            "quickTip": "Always test images & media elements using assistive tools and keyboard navigation."
+          },
+          {
+            "id": "issue-004",
+            "ruleId": "video-captions-missing",
+            "category": "Images & Media",
+            "severity": "Major",
+            "element": "video",
+            "selector": "video",
+            "wcag": "WCAG 1.2.2 Captions (Prerecorded) (Level A)",
+            "context": "Video element lacks a <track kind=\"captions\"> child element.",
+            "originalSnippet": "<video class=\"elementor-video\" src=\"https://coindcx.com/wp-content/uploads/2024/11/CoinDCX_LP_Hero-Animation_mWeb_2x.mp4\" autoplay=\"\" loop=\"\" muted=\"muted\" playsinline=\"\" controlslist=\"nodownload\" poster=\"https://coindcx.com/wp-content/uploads/2025/03/mweb-main-video-thumbnail.webp\"></video>",
+            "explanation": "Deaf or hard-of-hearing users cannot understand audio content in video without synchronized closed captions.",
+            "suggestedFixCode": "<video controls>\n  <source src=\"video.mp4\" type=\"video/mp4\">\n  <track kind=\"captions\" src=\"captions.vtt\" srclang=\"en\" label=\"English Captions\">\n</video>",
+            "quickTip": "Always test images & media elements using assistive tools and keyboard navigation."
+          },
+          {
+            "id": "issue-005",
+            "ruleId": "video-captions-missing",
+            "category": "Images & Media",
+            "severity": "Major",
+            "element": "video",
+            "selector": "video",
+            "wcag": "WCAG 1.2.2 Captions (Prerecorded) (Level A)",
+            "context": "Video element lacks a <track kind=\"captions\"> child element.",
+            "originalSnippet": "<video class=\"elementor-video\" src=\"https://coindcx.com/wp-content/uploads/2024/03/1-Buy-Sell-Screen-1-1.mp4\" autoplay=\"\" loop=\"\" muted=\"muted\" playsinline=\"\" controlslist=\"nodownload\"></video>",
+            "explanation": "Deaf or hard-of-hearing users cannot understand audio content in video without synchronized closed captions.",
+            "suggestedFixCode": "<video controls>\n  <source src=\"video.mp4\" type=\"video/mp4\">\n  <track kind=\"captions\" src=\"captions.vtt\" srclang=\"en\" label=\"English Captions\">\n</video>",
+            "quickTip": "Always test images & media elements using assistive tools and keyboard navigation."
+          },
+          {
+            "id": "issue-006",
+            "ruleId": "video-captions-missing",
+            "category": "Images & Media",
+            "severity": "Major",
+            "element": "video",
+            "selector": "video",
+            "wcag": "WCAG 1.2.2 Captions (Prerecorded) (Level A)",
+            "context": "Video element lacks a <track kind=\"captions\"> child element.",
+            "originalSnippet": "<video class=\"elementor-video\" src=\"https://coindcx.com/wp-content/uploads/2024/03/2-Earn-Screen-1.mp4\" autoplay=\"\" loop=\"\" muted=\"muted\" playsinline=\"\" controlslist=\"nodownload\"></video>",
+            "explanation": "Deaf or hard-of-hearing users cannot understand audio content in video without synchronized closed captions.",
+            "suggestedFixCode": "<video controls>\n  <source src=\"video.mp4\" type=\"video/mp4\">\n  <track kind=\"captions\" src=\"captions.vtt\" srclang=\"en\" label=\"English Captions\">\n</video>",
+            "quickTip": "Always test images & media elements using assistive tools and keyboard navigation."
+          },
+          {
+            "id": "issue-007",
+            "ruleId": "video-captions-missing",
+            "category": "Images & Media",
+            "severity": "Major",
+            "element": "video",
+            "selector": "video",
+            "wcag": "WCAG 1.2.2 Captions (Prerecorded) (Level A)",
+            "context": "Video element lacks a <track kind=\"captions\"> child element.",
+            "originalSnippet": "<video class=\"elementor-video\" src=\"https://coindcx.com/wp-content/uploads/2024/03/5-Spot-Screen-1.mp4\" autoplay=\"\" loop=\"\" muted=\"muted\" playsinline=\"\" controlslist=\"nodownload\"></video>",
+            "explanation": "Deaf or hard-of-hearing users cannot understand audio content in video without synchronized closed captions.",
+            "suggestedFixCode": "<video controls>\n  <source src=\"video.mp4\" type=\"video/mp4\">\n  <track kind=\"captions\" src=\"captions.vtt\" srclang=\"en\" label=\"English Captions\">\n</video>",
+            "quickTip": "Always test images & media elements using assistive tools and keyboard navigation."
+          },
+          {
+            "id": "issue-008",
+            "ruleId": "video-captions-missing",
+            "category": "Images & Media",
+            "severity": "Major",
+            "element": "video",
+            "selector": "video",
+            "wcag": "WCAG 1.2.2 Captions (Prerecorded) (Level A)",
+            "context": "Video element lacks a <track kind=\"captions\"> child element.",
+            "originalSnippet": "<video class=\"elementor-video\" src=\"https://coindcx.com/wp-content/uploads/2024/03/3-Futures_Screen-1.mp4\" autoplay=\"\" loop=\"\" muted=\"muted\" playsinline=\"\" controlslist=\"nodownload\"></video>",
+            "explanation": "Deaf or hard-of-hearing users cannot understand audio content in video without synchronized closed captions.",
+            "suggestedFixCode": "<video controls>\n  <source src=\"video.mp4\" type=\"video/mp4\">\n  <track kind=\"captions\" src=\"captions.vtt\" srclang=\"en\" label=\"English Captions\">\n</video>",
+            "quickTip": "Always test images & media elements using assistive tools and keyboard navigation."
+          },
+          {
+            "id": "issue-009",
+            "ruleId": "video-captions-missing",
+            "category": "Images & Media",
+            "severity": "Major",
+            "element": "video",
+            "selector": "video",
+            "wcag": "WCAG 1.2.2 Captions (Prerecorded) (Level A)",
+            "context": "Video element lacks a <track kind=\"captions\"> child element.",
+            "originalSnippet": "<video class=\"elementor-video\" src=\"https://coindcx.com/wp-content/uploads/2026/03/OPTIONS-Trading-revised-1.mp4\" autoplay=\"\" loop=\"\" muted=\"muted\" playsinline=\"\" controlslist=\"nodownload\"></video>",
+            "explanation": "Deaf or hard-of-hearing users cannot understand audio content in video without synchronized closed captions.",
+            "suggestedFixCode": "<video controls>\n  <source src=\"video.mp4\" type=\"video/mp4\">\n  <track kind=\"captions\" src=\"captions.vtt\" srclang=\"en\" label=\"English Captions\">\n</video>",
+            "quickTip": "Always test images & media elements using assistive tools and keyboard navigation."
+          },
+          {
+            "id": "issue-010",
+            "ruleId": "video-captions-missing",
+            "category": "Images & Media",
+            "severity": "Major",
+            "element": "video",
+            "selector": "video",
+            "wcag": "WCAG 1.2.2 Captions (Prerecorded) (Level A)",
+            "context": "Video element lacks a <track kind=\"captions\"> child element.",
+            "originalSnippet": "<video class=\"elementor-video\" src=\"https://coindcx.com/wp-content/uploads/2024/03/4-Signal-Screen-1.mp4\" autoplay=\"\" loop=\"\" muted=\"muted\" playsinline=\"\" controlslist=\"nodownload\"></video>",
+            "explanation": "Deaf or hard-of-hearing users cannot understand audio content in video without synchronized closed captions.",
+            "suggestedFixCode": "<video controls>\n  <source src=\"video.mp4\" type=\"video/mp4\">\n  <track kind=\"captions\" src=\"captions.vtt\" srclang=\"en\" label=\"English Captions\">\n</video>",
+            "quickTip": "Always test images & media elements using assistive tools and keyboard navigation."
+          },
+          {
+            "id": "issue-011",
+            "ruleId": "video-captions-missing",
+            "category": "Images & Media",
+            "severity": "Major",
+            "element": "video",
+            "selector": "video",
+            "wcag": "WCAG 1.2.2 Captions (Prerecorded) (Level A)",
+            "context": "Video element lacks a <track kind=\"captions\"> child element.",
+            "originalSnippet": "<video class=\"elementor-video\" src=\"https://coindcx.com/wp-content/uploads/2024/06/5-Web3-Screen.mp4\" autoplay=\"\" loop=\"\" muted=\"muted\" playsinline=\"\" controlslist=\"nodownload\"></video>",
+            "explanation": "Deaf or hard-of-hearing users cannot understand audio content in video without synchronized closed captions.",
+            "suggestedFixCode": "<video controls>\n  <source src=\"video.mp4\" type=\"video/mp4\">\n  <track kind=\"captions\" src=\"captions.vtt\" srclang=\"en\" label=\"English Captions\">\n</video>",
+            "quickTip": "Always test images & media elements using assistive tools and keyboard navigation."
+          },
+          {
+            "id": "issue-012",
+            "ruleId": "video-captions-missing",
+            "category": "Images & Media",
+            "severity": "Major",
+            "element": "video",
+            "selector": "video",
+            "wcag": "WCAG 1.2.2 Captions (Prerecorded) (Level A)",
+            "context": "Video element lacks a <track kind=\"captions\"> child element.",
+            "originalSnippet": "<video class=\"elementor-video\" src=\"https://coindcx.com/wp-content/uploads/2024/03/CoinDCX-International-LP_GLOBE-Animation-1.mp4\" autoplay=\"\" loop=\"\" muted=\"muted\" playsinline=\"\" controlslist=\"nodownload\"></video>",
+            "explanation": "Deaf or hard-of-hearing users cannot understand audio content in video without synchronized closed captions.",
+            "suggestedFixCode": "<video controls>\n  <source src=\"video.mp4\" type=\"video/mp4\">\n  <track kind=\"captions\" src=\"captions.vtt\" srclang=\"en\" label=\"English Captions\">\n</video>",
+            "quickTip": "Always test images & media elements using assistive tools and keyboard navigation."
+          }
+        ]
+      },
+      {
+        "url": "https://coindcx.com/options",
+        "pageTitle": "Options Web - CoinDCX Trading Platform",
+        "status": "completed",
+        "score": 94,
+        "wcagLevel": "WCAG 2.1 Level AA Compliant",
+        "statusBadge": "success",
+        "counts": {
+          "critical": 0,
+          "major": 1,
+          "minor": 0,
+          "total": 1
+        },
+        "categoryScores": {
+          "Images & Media": 100,
+          "Color & Contrast": 100,
+          "Forms & Controls": 100,
+          "Headings & Structure": 94,
+          "Links & Navigation": 100,
+          "ARIA & Semantics": 100
+        },
+        "issues": [
+          {
+            "id": "issue-001",
+            "ruleId": "heading-h1-missing",
+            "category": "Headings & Structure",
+            "severity": "Major",
+            "element": "body",
+            "selector": "body",
+            "wcag": "WCAG 1.3.1 Info and Relationships (Level A)",
+            "context": "Page is missing a primary <h1> heading tag.",
+            "originalSnippet": "<body> ... </body>",
+            "explanation": "A page without a main H1 heading makes it difficult for assistive technology users to identify the primary page topic.",
+            "suggestedFixCode": "<h1>Main Page Title</h1>",
+            "quickTip": "Always test headings & structure elements using assistive tools and keyboard navigation."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "scan-1789821075265-eungk",
+    "websiteId": "coindcx.com",
+    "userId": "6aae675ec7d1624d31f03bea",
+    "contentHash": "51e00ccb17ec474f00150fc289066d3c49fa4fa2d4e730f5ff49c8ccddea6b42",
+    "inputType": "url",
+    "source": {
+      "type": "url",
+      "url": "https://coindcx.com/futures/B-ONE_USDT",
+      "fileSize": 80475,
+      "htmlSnippet": "<!DOCTYPE html><html lang=\"en\" data-theme=\"dark\"><head><meta charSet=\"utf-8\" data-next-head=\"\"/><meta name=\"viewport\" content=\"width=device-width\" data-next-head=\"\"/><meta name=\"google-site-verification\" content=\"tBwhy4prc9xNGdgSKBOXM2Gs2BU-ETEZAZpJfwGQqu4\" data-next-head=\"\"/><title data-next-head=\"\">B-ONE_USDT Perpetual | CoinDCX Futures Trading</title><meta name=\"description\" content=\"Trade B-ONE_USDT perpetual contracts on CoinDCX Futures | Start Crypto Futures Trading in India with high liqu",
+      "contentHash": "51e00ccb17ec474f00150fc289066d3c49fa4fa2d4e730f5ff49c8ccddea6b42"
+    },
+    "url": "https://coindcx.com/futures/B-ONE_USDT",
+    "pageTitle": "B-ONE_USDT Perpetual | CoinDCX Futures Trading",
+    "mode": "url",
+    "isBatch": false,
+    "status": "completed",
+    "timestamp": "2026-09-19T12:31:15.265Z",
+    "durationSeconds": 2.27,
+    "score": 28,
+    "wcagLevel": "WCAG Non-Compliant (Critical Violations)",
+    "statusBadge": "danger",
+    "counts": {
+      "critical": 6,
+      "major": 0,
+      "minor": 0,
+      "total": 6
+    },
+    "categoryScores": {
+      "Images & Media": 100,
+      "Color & Contrast": 100,
+      "Forms & Controls": 88,
+      "Headings & Structure": 100,
+      "Links & Navigation": 100,
+      "ARIA & Semantics": 40
+    },
+    "manualReviewItems": [
+      {
+        "id": "mr-01",
+        "title": "Meaningful Alt Text Quality",
+        "description": "Verify image alt text provides equivalent context and meaning, not just superficial image tags.",
+        "wcag": "WCAG 1.1.1"
+      },
+      {
+        "id": "mr-02",
+        "title": "Keyboard Focus Order & Visibility",
+        "description": "Navigate the entire site using Tab and Shift+Tab keys to ensure all interactive elements receive visible focus rings in logical order.",
+        "wcag": "WCAG 2.4.7"
+      },
+      {
+        "id": "mr-03",
+        "title": "Screen Reader Interaction Testing",
+        "description": "Test interactive dropdowns, modals, and dynamic content updates with NVDA, VoiceOver, or JAWS.",
+        "wcag": "WCAG 4.1.2"
+      },
+      {
+        "id": "mr-04",
+        "title": "Responsive Text Scaling (200% Zoom)",
+        "description": "Zoom page to 200% in browser settings and ensure text does not truncate, overlap, or require horizontal scrolling.",
+        "wcag": "WCAG 1.4.4"
+      }
+    ],
+    "performanceImpact": {
+      "loadDurationSeconds": 2.27,
+      "speedBadge": "Moderate",
+      "disclaimer": "Note: Accessibility improvements support better mobile user experience and search engine discoverability. Measured accessibility scores represent WCAG 2.1 compliance and do not guarantee search engine ranking placement.",
+      "impactNotes": [
+        {
+          "title": "Mobile Form Completion Rate",
+          "category": "Mobile Usability",
+          "icon": "FormInput",
+          "benefit": "Explicitly associated labels increase touch target area on mobile screens, reducing form abandonment and input frustration."
+        }
+      ]
+    },
+    "issues": [
+      {
+        "id": "issue-001",
+        "ruleId": "form-label-missing",
+        "category": "Forms & Controls",
+        "severity": "Critical",
+        "element": "input",
+        "selector": "input[name=\"range\"]",
+        "wcag": "WCAG 1.3.1 / 4.1.2 Name, Role, Value (Level A)",
+        "context": "Form element <input name=\"range\"> lacks a associated <label> or aria-label.",
+        "originalSnippet": "<input data-index=\"0\" aria-valuenow=\"0\" aria-valuetext=\"0\" aria-orientation=\"horizontal\" aria-valuemax=\"100\" aria-valuemin=\"0\" type=\"range\" min=\"0\" max=\"100\" step=\"1\" style=\"border:0;clip:rect(0 0 0 0);height:100%;margin:-1px;overflow:hidden;padding:0;position:absolute;white-space:nowrap;width:100%;direction:ltr\" value=\"0\">",
+        "explanation": "Form controls without labels cannot be announced correctly by screen readers, making forms impossible to complete.",
+        "suggestedFixCode": "<label for=\"input-id\">Field Label</label>\n<input id=\"input-id\" type=\"range\" name=\"range\">",
+        "quickTip": "Always test forms & controls elements using assistive tools and keyboard navigation."
+      },
+      {
+        "id": "issue-002",
+        "ruleId": "button-name-missing",
+        "category": "ARIA & Semantics",
+        "severity": "Critical",
+        "element": "button",
+        "selector": "button",
+        "wcag": "WCAG 4.1.2 Name, Role, Value (Level A)",
+        "context": "Interactive <button> has no inner text or aria-label attribute.",
+        "originalSnippet": "<button id=\"awt-user-dp\" data-testid=\"awt-user-dp\" class=\"flex justify-center items-center bg-accent rounded-full w-24 h-24 relative\"><div class=\"user-dp_user_dp__XGaCU  relative flex justify-center items-center rounded-full place-content-center\"><img alt=\"Display picture\" loading=\"lazy\" decoding=\"async\" data-nimg=\"fill\" style=\"position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;object-fit:contain;color:transparent\" src=\"/trade-assets/images/component-assets/user-anonymous.svg\"></div></button>",
+        "explanation": "Icon buttons or empty buttons without accessible names are announced as \"unlabelled button\" by screen readers.",
+        "suggestedFixCode": "<button type=\"button\" aria-label=\"Close dialog\">\n  <svg>...</svg>\n</button>",
+        "quickTip": "Always test aria & semantics elements using assistive tools and keyboard navigation."
+      },
+      {
+        "id": "issue-003",
+        "ruleId": "button-name-missing",
+        "category": "ARIA & Semantics",
+        "severity": "Critical",
+        "element": "button",
+        "selector": "button",
+        "wcag": "WCAG 4.1.2 Name, Role, Value (Level A)",
+        "context": "Interactive <button> has no inner text or aria-label attribute.",
+        "originalSnippet": "<button class=\"mr-12 mr-0\"><img alt=\"star\" loading=\"lazy\" width=\"16\" height=\"16\" decoding=\"async\" data-nimg=\"1\" class=\"opacity-60 h-[1.6rem] w-[1.6rem] min-w-[1.6rem] min-h-[1.6rem] w-[2.4rem] h-[2.4rem] min-h-[2.4rem] min-w-[2.4rem] \" style=\"color:transparent\" src=\"/trade-assets/icons/star-empty.svg\"></button>",
+        "explanation": "Icon buttons or empty buttons without accessible names are announced as \"unlabelled button\" by screen readers.",
+        "suggestedFixCode": "<button type=\"button\" aria-label=\"Close dialog\">\n  <svg>...</svg>\n</button>",
+        "quickTip": "Always test aria & semantics elements using assistive tools and keyboard navigation."
+      },
+      {
+        "id": "issue-004",
+        "ruleId": "button-name-missing",
+        "category": "ARIA & Semantics",
+        "severity": "Critical",
+        "element": "button",
+        "selector": "button",
+        "wcag": "WCAG 4.1.2 Name, Role, Value (Level A)",
+        "context": "Interactive <button> has no inner text or aria-label attribute.",
+        "originalSnippet": "<button class=\"ml-auto\"><img alt=\"contract-details\" loading=\"lazy\" width=\"20\" height=\"20\" decoding=\"async\" data-nimg=\"1\" class=\"h-[2.4rem] w-[2.4rem]\" style=\"color:transparent\" src=\"/trade-assets/images/component-assets/info_icon.svg\"></button>",
+        "explanation": "Icon buttons or empty buttons without accessible names are announced as \"unlabelled button\" by screen readers.",
+        "suggestedFixCode": "<button type=\"button\" aria-label=\"Close dialog\">\n  <svg>...</svg>\n</button>",
+        "quickTip": "Always test aria & semantics elements using assistive tools and keyboard navigation."
+      },
+      {
+        "id": "issue-005",
+        "ruleId": "button-name-missing",
+        "category": "ARIA & Semantics",
+        "severity": "Critical",
+        "element": "button",
+        "selector": "button",
+        "wcag": "WCAG 4.1.2 Name, Role, Value (Level A)",
+        "context": "Interactive <button> has no inner text or aria-label attribute.",
+        "originalSnippet": "<button class=\"input_disabled__lbjmz\"><img alt=\"Subtract\" loading=\"lazy\" width=\"14\" height=\"14\" decoding=\"async\" data-nimg=\"1\" class=\"w-[1.4rem] h-[1.4rem]\" style=\"color:transparent\" src=\"/trade-assets/icons/minus-light.svg\"></button>",
+        "explanation": "Icon buttons or empty buttons without accessible names are announced as \"unlabelled button\" by screen readers.",
+        "suggestedFixCode": "<button type=\"button\" aria-label=\"Close dialog\">\n  <svg>...</svg>\n</button>",
+        "quickTip": "Always test aria & semantics elements using assistive tools and keyboard navigation."
+      },
+      {
+        "id": "issue-006",
+        "ruleId": "button-name-missing",
+        "category": "ARIA & Semantics",
+        "severity": "Critical",
+        "element": "button",
+        "selector": "button",
+        "wcag": "WCAG 4.1.2 Name, Role, Value (Level A)",
+        "context": "Interactive <button> has no inner text or aria-label attribute.",
+        "originalSnippet": "<button class=\"input_disabled__lbjmz\"><img alt=\"Add\" loading=\"lazy\" width=\"14\" height=\"14\" decoding=\"async\" data-nimg=\"1\" class=\"w-[1.4rem] h-[1.4rem]\" style=\"color:transparent\" src=\"/trade-assets/icons/plus-light.svg\"></button>",
+        "explanation": "Icon buttons or empty buttons without accessible names are announced as \"unlabelled button\" by screen readers.",
+        "suggestedFixCode": "<button type=\"button\" aria-label=\"Close dialog\">\n  <svg>...</svg>\n</button>",
+        "quickTip": "Always test aria & semantics elements using assistive tools and keyboard navigation."
+      }
+    ]
+  }
+]

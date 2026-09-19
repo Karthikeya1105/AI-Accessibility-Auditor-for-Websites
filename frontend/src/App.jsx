@@ -217,8 +217,8 @@ export const App = () => {
         onLogout={handleLogoutClear}
       />
 
-      {/* Main Container */}
-      <main class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
+      {/* Main Container - Blurred & Locked until user logs in / signs up */}
+      <main class={`flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8 transition-all duration-300 ${!isAuthenticated ? 'filter blur-sm pointer-events-none select-none opacity-30' : ''}`}>
         
         {/* Hero Section & Scan Form */}
         <section>
